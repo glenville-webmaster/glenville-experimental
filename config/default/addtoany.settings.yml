@@ -1,0 +1,10 @@
+buttons_size: 32
+additional_html: '<a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a>'
+additional_css: ''
+additional_js: ''
+universal_button: custom
+custom_universal_button: /profiles/contrib/openedu/themes/oedu/images/addtoany-universal.png
+universal_button_placement: after
+no_3p: false
+_core:
+  default_config_hash: 8aJF-FDdnrk-N2gLGWFQcLZIpuJZA0BE9NtgXTVJfVk

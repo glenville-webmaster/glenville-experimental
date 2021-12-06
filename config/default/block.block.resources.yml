@@ -1,0 +1,26 @@
+uuid: d3ef19b2-96f9-4a99-bc92-bfc6ef05addc
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.resources
+  module:
+    - system
+  theme:
+    - oedu_sub
+_core:
+  default_config_hash: 9dJxVZ_sbkkj_vBm3pFQNkNgN9PtzJ9xCGBaZdRnxvs
+id: resources
+theme: oedu_sub
+region: header_bar
+weight: -3
+provider: null
+plugin: 'system_menu_block:resources'
+settings:
+  id: 'system_menu_block:resources'
+  label: Resources
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

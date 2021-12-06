@@ -1,0 +1,30 @@
+uuid: ae7168a2-6fd2-4eb4-9c1c-518ac33906f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_class
+    - system
+  theme:
+    - glenville
+third_party_settings:
+  block_class:
+    classes: ''
+_core:
+  default_config_hash: MZwfCAwwZ2gf9cGtDOmV0FPlKhlDT2W_k14FSjmZTVM
+id: glenville_mainnavigation_2
+theme: glenville
+region: mobile_menu
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

@@ -1,0 +1,45 @@
+uuid: ac741822-f4c9-4d81-b507-2cc90d405e95
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.icon_block
+    - field.field.block_content.icon_block.field_link
+  module:
+    - content_moderation
+    - datetime
+    - link
+id: block_content.icon_block.default
+targetEntityType: block_content
+bundle: icon_block
+mode: default
+content:
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 4
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  scheduled_publication:
+    type: datetime_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,25 @@
+uuid: aedb3037-5e7d-428e-aa9a-f110b5d7d1f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.openedu_search
+  module:
+    - views
+  theme:
+    - glenville
+_core:
+  default_config_hash: h7AyV-gB0R-Fhb1QaFh16sHQJvVdRjI8Bf_rbBuC7-o
+id: glenville_exposedformopenedu_searchblock_1
+theme: glenville
+region: search_bar
+weight: -4
+provider: null
+plugin: 'views_exposed_filter_block:openedu_search-block_1'
+settings:
+  id: 'views_exposed_filter_block:openedu_search-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility: {  }

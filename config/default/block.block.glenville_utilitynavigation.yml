@@ -1,0 +1,30 @@
+uuid: 382b45dc-98ec-4822-90cd-d800ab1e1f1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.utility-navigation
+  module:
+    - block_class
+    - system
+  theme:
+    - glenville
+third_party_settings:
+  block_class:
+    classes: ''
+_core:
+  default_config_hash: 6grcWzlhfe37WRMiRz7AFGpaMSYkl0DJUhIhdMNut24
+id: glenville_utilitynavigation
+theme: glenville
+region: header_bar_right
+weight: -4
+provider: null
+plugin: 'system_menu_block:utility-navigation'
+settings:
+  id: 'system_menu_block:utility-navigation'
+  label: 'Top Right Menu (Utility)'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

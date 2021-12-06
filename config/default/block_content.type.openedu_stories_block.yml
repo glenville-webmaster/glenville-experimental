@@ -1,0 +1,10 @@
+uuid: e013bb21-f078-4abf-bbac-111c2d935cbb
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 5_qqit3pKVbifMMf0bRTrCChfGfEZPaYzJzGaHWTv5w
+id: openedu_stories_block
+label: 'Stories Block'
+revision: 1
+description: 'Presents a block of related stories content'

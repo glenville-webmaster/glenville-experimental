@@ -1,0 +1,23 @@
+uuid: faf645c9-083c-4882-946c-6ec0e11baba9
+langcode: en
+status: true
+dependencies:
+  theme:
+    - oedu_sub
+_core:
+  default_config_hash: TElGasDZ64w8qwQBEoobPSfjTcHQEvSRV0eun5BVEQU
+id: sitebrandingfooter
+theme: oedu_sub
+region: footer
+weight: 1
+provider: null
+plugin: 'block_content:dfeaf394-b019-4aac-a26e-17d384e0a184'
+settings:
+  id: 'block_content:dfeaf394-b019-4aac-a26e-17d384e0a184'
+  label: 'Site Branding Footer'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

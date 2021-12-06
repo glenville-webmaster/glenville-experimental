@@ -1,0 +1,29 @@
+uuid: 5b749a75-ff73-4751-a846-35647ed48592
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:icon_block:6bae1eb9-097d-41fc-a228-5b96fe7d7f02'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - glenville
+third_party_settings:
+  block_class:
+    classes: 'col-12 col-md-6 text-center text-md-right d-flex align-items-center justify-content-center justify-content-md-end'
+id: socialmediaicons_2
+theme: glenville
+region: footer_top
+weight: 0
+provider: null
+plugin: 'block_content:6bae1eb9-097d-41fc-a228-5b96fe7d7f02'
+settings:
+  id: 'block_content:6bae1eb9-097d-41fc-a228-5b96fe7d7f02'
+  label: 'Social Media Icons'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

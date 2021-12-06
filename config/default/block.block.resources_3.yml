@@ -1,0 +1,28 @@
+uuid: 4b36fb43-2a8a-4696-aa86-5bdd8e4a437f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.resources
+  module:
+    - block_class
+    - system
+  theme:
+    - glenville
+third_party_settings:
+  block_class:
+    classes: ''
+id: resources_3
+theme: glenville
+region: mobile_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:resources'
+settings:
+  id: 'system_menu_block:resources'
+  label: 'Gateway for:'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

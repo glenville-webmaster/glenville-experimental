@@ -1,0 +1,73 @@
+uuid: 47cd7e69-d40e-4784-85c2-9dbf07f809d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_group
+    - field.field.block_content.card_group.body
+    - field.field.block_content.card_group.field_cards
+    - field.field.block_content.card_group.field_grid_layout
+    - field.field.block_content.card_group.field_group_title
+    - field.field.block_content.card_group.field_group_type
+  module:
+    - paragraphs
+    - text
+id: block_content.card_group.default
+targetEntityType: block_content
+bundle: card_group
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_cards:
+    type: paragraphs
+    weight: 4
+    settings:
+      title: Card
+      title_plural: Cards
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: bootstrap_card
+    third_party_settings: {  }
+    region: content
+  field_grid_layout:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_group_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_group_type:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  moderation_state: true
+  scheduled_publication: true

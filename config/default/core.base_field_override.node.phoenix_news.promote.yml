@@ -1,0 +1,22 @@
+uuid: f13f73f0-c4ed-4474-b9d7-fe918e956dcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.phoenix_news
+id: node.phoenix_news.promote
+field_name: promote
+entity_type: node
+bundle: phoenix_news
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

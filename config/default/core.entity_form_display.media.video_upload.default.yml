@@ -1,0 +1,68 @@
+uuid: c8867491-98d4-403c-b63e-3fd8e8e1d4e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.video_upload.field_media_in_library
+    - field.field.media.video_upload.field_media_video_file
+    - media.type.video_upload
+  module:
+    - content_moderation
+    - datetime
+    - file
+    - path
+id: media.video_upload.default
+targetEntityType: media
+bundle: video_upload
+mode: default
+content:
+  field_media_in_library:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 2
+    third_party_settings: {  }
+    region: content
+  field_media_video_file:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 6
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduled_publication:
+    type: datetime_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

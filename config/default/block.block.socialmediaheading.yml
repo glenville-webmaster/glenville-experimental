@@ -1,0 +1,29 @@
+uuid: ca609f84-26fe-4dd8-a774-9eb24a700529
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:65368561-8e04-49cf-9ff2-2eee5be8342b'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - glenville
+third_party_settings:
+  block_class:
+    classes: 'col-12 col-md-6 text-center text-md-left d-flex align-items-center justify-content-center justify-content-md-start'
+id: socialmediaheading
+theme: glenville
+region: footer_top
+weight: 0
+provider: null
+plugin: 'block_content:65368561-8e04-49cf-9ff2-2eee5be8342b'
+settings:
+  id: 'block_content:65368561-8e04-49cf-9ff2-2eee5be8342b'
+  label: 'Social Media Heading'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,28 @@
+uuid: ea5ef577-978f-4249-984d-9f17eef36a5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.utility-navigation
+  module:
+    - block_class
+    - system
+  theme:
+    - glenville
+third_party_settings:
+  block_class:
+    classes: ''
+id: utilitynavigation_2
+theme: glenville
+region: mobile_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:utility-navigation'
+settings:
+  id: 'system_menu_block:utility-navigation'
+  label: 'Quick Links:'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

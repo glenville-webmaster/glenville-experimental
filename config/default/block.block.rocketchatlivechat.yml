@@ -1,0 +1,39 @@
+uuid: 53324e55-04ff-4b35-be5a-8b688430b60c
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - ctools
+    - livechat
+    - user
+  theme:
+    - glenville
+third_party_settings:
+  block_class:
+    classes: ''
+id: rocketchatlivechat
+theme: glenville
+region: footer_bottom
+weight: 0
+provider: null
+plugin: LiveChatBlock
+settings:
+  id: LiveChatBlock
+  label: 'RocketChat Livechat'
+  provider: livechat
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles: {  }
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

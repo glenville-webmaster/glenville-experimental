@@ -1,0 +1,38 @@
+uuid: b3a74d53-5bb5-4eeb-af07-8b934a474f15
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.scripts
+    - field.field.block_content.scripts.field_code_snippet
+  module:
+    - text
+id: block_content.scripts.default
+targetEntityType: block_content
+bundle: scripts
+mode: default
+content:
+  field_code_snippet:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  scheduled_publication:
+    type: datetime_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  moderation_state: true

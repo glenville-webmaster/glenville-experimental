@@ -1,0 +1,26 @@
+uuid: 76a61680-9584-4a6c-876e-29ab605b64be
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.next-steps
+  module:
+    - system
+  theme:
+    - oedu_sub
+_core:
+  default_config_hash: L7VpZ9bhjyY-66iQFXnUf4pr-Xm5pB_ABr0of506mfE
+id: nextsteps
+theme: oedu_sub
+region: footer
+weight: -1
+provider: null
+plugin: 'system_menu_block:next-steps'
+settings:
+  id: 'system_menu_block:next-steps'
+  label: 'Next Steps'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

@@ -1,0 +1,84 @@
+uuid: f7f9f264-97c6-408b-b3eb-a5ef2f2f4892
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.openedu_hero
+    - core.entity_form_mode.media.hero_image
+    - entity_browser.browser.media_browser
+    - field.field.block_content.openedu_hero.body
+    - field.field.block_content.openedu_hero.field_hero_image
+    - field.field.block_content.openedu_hero.field_hero_video
+  module:
+    - content_moderation
+    - datetime
+    - entity_browser
+    - entity_browser_entity_form
+    - inline_entity_form
+    - text
+_core:
+  default_config_hash: wGbKPB9C8QmHSjIpNTY1AkNXRsjaXZltaLBWN6hb9_c
+id: block_content.openedu_hero.default
+targetEntityType: block_content
+bundle: openedu_hero
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_hero_image:
+    type: inline_entity_form_complex
+    weight: 2
+    settings:
+      form_mode: hero_image
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: media_browser
+    region: content
+  field_hero_video:
+    type: entity_browser_entity_reference
+    weight: 3
+    settings:
+      entity_browser: media_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: thumbnail
+      open: false
+    region: content
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 5
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  scheduled_publication:
+    type: datetime_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

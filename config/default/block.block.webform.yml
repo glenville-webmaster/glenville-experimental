@@ -1,0 +1,26 @@
+uuid: 70a07a32-0ef7-4045-96bb-b88a3674d6d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.join_our_newsletter_
+  module:
+    - webform
+  theme:
+    - oedu_sub
+_core:
+  default_config_hash: xdfJF5X9A2nsXz01PHUHPqht4HOCPQpV2Lci0WFc-pQ
+id: webform
+theme: oedu_sub
+region: footer
+weight: -4
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Join Our Newsletter:'
+  provider: webform
+  label_display: visible
+  webform_id: join_our_newsletter_
+  default_data: ''
+visibility: {  }

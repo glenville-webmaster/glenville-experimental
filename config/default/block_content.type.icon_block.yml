@@ -1,0 +1,8 @@
+uuid: c3903eec-66ff-4e31-8584-fe50f5dd82c6
+langcode: en
+status: true
+dependencies: {  }
+id: icon_block
+label: 'Icon Block'
+revision: 1
+description: 'Used for displaying a list/menu of icons.'

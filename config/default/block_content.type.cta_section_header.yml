@@ -1,0 +1,10 @@
+uuid: 96cfb029-05dd-4c5d-84b6-5c0623ec2ed4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wPMHZXyrNfU4lxntokvIMfcFKghhVftzoUX_VMqo7Eo
+id: cta_section_header
+label: 'Generic CTA'
+revision: 1
+description: 'A simple content CTA block'

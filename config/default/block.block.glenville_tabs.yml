@@ -1,0 +1,22 @@
+uuid: bd22daf5-67c1-4366-9b05-68b7ab9d082b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - glenville
+_core:
+  default_config_hash: CFy3yd0PyUNZwKA9yhkr2r0kUnUPHMiblQ20DwGzSG4
+id: glenville_tabs
+theme: glenville
+region: content
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

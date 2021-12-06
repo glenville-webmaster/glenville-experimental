@@ -1,0 +1,8 @@
+uuid: 7a929e72-2be3-4eb4-a1d5-2012fb7fd515
+langcode: en
+status: true
+dependencies: {  }
+id: slideshow
+label: Slideshow
+revision: 1
+description: 'A block to display media entities in a slideshow.'

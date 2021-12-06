@@ -1,0 +1,41 @@
+uuid: 97ef1845-3bf1-46c3-89fc-50962fa4edbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta_section_header
+    - field.field.block_content.cta_section_header.body
+  module:
+    - content_moderation
+    - text
+_core:
+  default_config_hash: Pguv1TwCN5wLYCpUtvFyTguQYuSq7OjbY4Jy5cdjdt0
+id: block_content.cta_section_header.default
+targetEntityType: block_content
+bundle: cta_section_header
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+hidden: {  }

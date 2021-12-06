@@ -1,0 +1,304 @@
+uuid: 306d570b-de9a-49ed-8a5b-d1a97d31ee72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.program.body
+    - field.field.node.program.field_major_minor_info
+    - field.field.node.program.field_majors_minors
+    - field.field.node.program.field_meta_tags
+    - field.field.node.program.field_outcome
+    - field.field.node.program.field_program_course_intro
+    - field.field.node.program.field_program_courses
+    - field.field.node.program.field_program_faculty
+    - field.field.node.program.field_program_hero
+    - field.field.node.program.field_programs_course_link
+    - field.field.node.program.field_seo
+    - field.field.node.program.field_student_experience
+    - field.field.node.program.field_success_stories
+    - field.field.node.program.panelizer
+    - node.type.program
+  module:
+    - content_moderation
+    - entity_browser_entity_form
+    - field_group
+    - inline_entity_form
+    - link
+    - metatag
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_program_details:
+      children:
+        - group_outcome_information
+        - group_student_experience
+        - group_majors_minors
+        - group_program_courses
+      parent_name: ''
+      weight: 3
+      format_type: tabs
+      format_settings:
+        label: 'Program Details'
+        direction: vertical
+        id: ''
+        classes: ''
+      label: 'Program Details'
+    group_program_courses:
+      children:
+        - field_program_course_intro
+        - field_program_courses
+        - field_programs_course_link
+      parent_name: group_program_details
+      weight: 24
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Program Courses'
+    group_outcome_information:
+      children:
+        - field_outcome
+        - field_success_stories
+      parent_name: group_program_details
+      weight: 21
+      format_type: tab
+      format_settings:
+        label: 'Program Outcomes'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Program Outcomes'
+    group_majors_minors:
+      children:
+        - field_majors_minors
+        - field_major_minor_info
+      parent_name: group_program_details
+      weight: 23
+      format_type: tab
+      format_settings:
+        label: 'Program Majors Minors'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Program Majors Minors'
+    group_student_experience:
+      children:
+        - field_student_experience
+        - field_program_faculty
+      parent_name: group_program_details
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Student Experience'
+_core:
+  default_config_hash: YKwry0y-fplaVbwZfAXGoMpcx7QqXkgChraimnWC_68
+id: node.program.default
+targetEntityType: node
+bundle: program
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_major_minor_info:
+    weight: 37
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_majors_minors:
+    weight: 36
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_meta_tags:
+    weight: 51
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_outcome:
+    weight: 31
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: 'Outcome Grid'
+      label_plural: 'Outcome Grids'
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
+    region: content
+  field_program_course_intro:
+    weight: 27
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_program_courses:
+    weight: 28
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Course
+      label_plural: Courses
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
+    region: content
+  field_program_faculty:
+    weight: 37
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_program_hero:
+    weight: 1
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Hero
+      label_plural: Hero
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
+    region: content
+  field_programs_course_link:
+    weight: 29
+    settings:
+      placeholder_url: ''
+      placeholder_title: 'More Info'
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_student_experience:
+    weight: 34
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_success_stories:
+    weight: 32
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Story
+      label_plural: Stories
+      allow_new: true
+      match_operator: CONTAINS
+      allow_existing: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 5
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    third_party_settings: {  }
+    region: content
+  scheduled_publication:
+    type: datetime_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 11
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 10
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  url_redirects:
+    weight: 50
+    region: content
+hidden:
+  field_seo: true
+  panelizer: true

@@ -1,0 +1,67 @@
+uuid: e152b0d1-7388-4718-927c-1a60104d94d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.openedu_stories_block
+    - field.field.block_content.openedu_stories_block.body
+    - field.field.block_content.openedu_stories_block.field_stories_title
+    - field.field.block_content.openedu_stories_block.field_story_reference
+  module:
+    - content_moderation
+    - datetime
+    - text
+_core:
+  default_config_hash: f2rgwgvY12bozA7JxRVxF8dyx3BT-3b2u18TQOBb3Wg
+id: block_content.openedu_stories_block.default
+targetEntityType: block_content
+bundle: openedu_stories_block
+mode: default
+content:
+  body:
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_stories_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_story_reference:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  info:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 5
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  scheduled_publication:
+    type: datetime_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,77 @@
+uuid: 0c36d1ce-020c-4a96-853b-907211c804a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.openedu_grid_block
+    - field.field.block_content.openedu_grid_block.field_grid_content
+    - field.field.block_content.openedu_grid_block.field_grid_cta
+    - field.field.block_content.openedu_grid_block.field_grid_description
+    - field.field.block_content.openedu_grid_block.field_grid_label
+    - field.field.block_content.openedu_grid_block.field_grid_layout
+  module:
+    - link_attributes
+    - text
+_core:
+  default_config_hash: yZ_ya6j9b6bqNeyjeond2EtHRWxBX_UbS5mJG1-IHQM
+id: block_content.openedu_grid_block.default
+targetEntityType: block_content
+bundle: openedu_grid_block
+mode: default
+content:
+  field_grid_content:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_grid_cta:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        target: true
+        rel: true
+        class: true
+        id: false
+        name: false
+        accesskey: false
+    third_party_settings: {  }
+    type: link_attributes
+    region: content
+  field_grid_description:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_grid_label:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_grid_layout:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  moderation_state: true
+  scheduled_publication: true

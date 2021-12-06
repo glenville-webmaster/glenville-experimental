@@ -1,0 +1,26 @@
+uuid: 7e69e81c-a2e1-4b97-aef2-8d57cb9e5574
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - oedu_sub
+_core:
+  default_config_hash: MZwfCAwwZ2gf9cGtDOmV0FPlKhlDT2W_k14FSjmZTVM
+id: mainnavigation_2
+theme: oedu_sub
+region: header_bar
+weight: -2
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

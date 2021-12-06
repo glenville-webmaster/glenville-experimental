@@ -1,0 +1,59 @@
+uuid: 99d86806-976e-4feb-be2f-4d19bc9b42fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.hero_image
+    - field.field.media.image.field_media_in_library
+    - field.field.media.image.image
+    - image.style.thumbnail
+    - media.type.image
+  module:
+    - image_widget_crop
+    - lightning_media
+_core:
+  default_config_hash: Cl_1Zz38s0hXegLcCN7ozxjvrSsSb0eiGXyHDPNSDOE
+id: media.image.hero_image
+targetEntityType: media
+bundle: image
+mode: hero_image
+content:
+  field_media_in_library:
+    type: boolean_checkbox
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    region: content
+  image:
+    type: image_widget_crop
+    weight: 0
+    settings:
+      show_crop_area: true
+      show_default_crop: true
+      warn_multiple_usages: true
+      preview_image_style: thumbnail
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - hero_crop
+      progress_indicator: throbber
+    third_party_settings:
+      lightning_media:
+        file_links: true
+        remove_button: true
+    region: content
+  name:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  moderation_state: true
+  path: true
+  scheduled_publication: true
+  status: true
+  uid: true

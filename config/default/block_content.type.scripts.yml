@@ -1,0 +1,8 @@
+uuid: cb2239c6-1f50-43fa-8ac9-32759a3f8402
+langcode: en
+status: true
+dependencies: {  }
+id: scripts
+label: Scripts
+revision: 1
+description: 'Used to place Javascript or CSS, This should only be allowed by administrators.'

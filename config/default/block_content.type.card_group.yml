@@ -1,0 +1,8 @@
+uuid: 432b262c-6bb3-46ab-9b42-90f9c777feab
+langcode: en
+status: true
+dependencies: {  }
+id: card_group
+label: 'Card Group'
+revision: 1
+description: 'A Group of Bootstrap Cards output in 1-4 columns per row.'

@@ -1,0 +1,28 @@
+uuid: 27404b2e-6f19-4409-806d-de4cffbc75d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-links
+  module:
+    - block_class
+    - system
+  theme:
+    - glenville
+third_party_settings:
+  block_class:
+    classes: ''
+id: footerlinks
+theme: glenville
+region: footer_bottom
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-links'
+settings:
+  id: 'system_menu_block:footer-links'
+  label: 'Footer Links'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

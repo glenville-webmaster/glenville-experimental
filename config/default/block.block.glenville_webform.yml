@@ -1,0 +1,30 @@
+uuid: f525a9da-bc37-4f9e-9b7c-e8cfe929a30c
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.join_our_newsletter_
+  module:
+    - block_class
+    - webform
+  theme:
+    - glenville
+third_party_settings:
+  block_class:
+    classes: 'col-12 col-md-3 mt-4 mt-md-0'
+_core:
+  default_config_hash: xdfJF5X9A2nsXz01PHUHPqht4HOCPQpV2Lci0WFc-pQ
+id: glenville_webform
+theme: glenville
+region: footer
+weight: -2
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Get the GSC Pioneer Newsletter'
+  provider: webform
+  label_display: visible
+  webform_id: join_our_newsletter_
+  default_data: ''
+visibility: {  }

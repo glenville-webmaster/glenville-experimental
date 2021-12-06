@@ -1,0 +1,25 @@
+uuid: d23beb69-47d9-4e08-92e0-7e8c06517854
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - glenville
+_core:
+  default_config_hash: STj-Nvs2ApGcRovqSMwKmg2RRBMSSTdHmn2GSdK43rQ
+id: glenville_sitebranding
+theme: glenville
+region: navigation
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

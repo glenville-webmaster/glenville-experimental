@@ -1,0 +1,31 @@
+uuid: 6c1b4f53-0336-4398-8c77-10cbcd2ed420
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:dfeaf394-b019-4aac-a26e-17d384e0a184'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - glenville
+third_party_settings:
+  block_class:
+    classes: 'col-12 col-md-3 text-center text-md-left mb-4 mb-md-0'
+_core:
+  default_config_hash: TElGasDZ64w8qwQBEoobPSfjTcHQEvSRV0eun5BVEQU
+id: glenville_sitebrandingfooter
+theme: glenville
+region: footer
+weight: -5
+provider: null
+plugin: 'block_content:dfeaf394-b019-4aac-a26e-17d384e0a184'
+settings:
+  id: 'block_content:dfeaf394-b019-4aac-a26e-17d384e0a184'
+  label: 'Footer Logo/Contact'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

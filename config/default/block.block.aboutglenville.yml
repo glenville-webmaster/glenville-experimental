@@ -1,0 +1,28 @@
+uuid: c8c1b453-dcaa-4312-bfc5-4bc4b0b46ce5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - block_class
+    - system
+  theme:
+    - glenville
+third_party_settings:
+  block_class:
+    classes: 'col-6 col-md-2'
+id: aboutglenville
+theme: glenville
+region: footer
+weight: -4
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'About Glenville'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 1
+visibility: {  }

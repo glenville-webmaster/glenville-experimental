@@ -1,0 +1,25 @@
+uuid: f0747098-3380-42a5-a74b-9ba64a0c0c69
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.openedu_search
+  module:
+    - views
+  theme:
+    - oedu_sub
+_core:
+  default_config_hash: h7AyV-gB0R-Fhb1QaFh16sHQJvVdRjI8Bf_rbBuC7-o
+id: exposedformopenedu_searchblock_1
+theme: oedu_sub
+region: search_bar
+weight: -4
+provider: null
+plugin: 'views_exposed_filter_block:openedu_search-block_1'
+settings:
+  id: 'views_exposed_filter_block:openedu_search-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility: {  }

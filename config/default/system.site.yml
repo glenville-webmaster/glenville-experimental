@@ -1,0 +1,14 @@
+uuid: 2de04fe7-a22e-4f68-8961-e19102190176
+name: 'Glenville State College'
+mail: noreply@glenville.edu
+slogan: ''
+page:
+  403: /node/25901
+  404: /node/112
+  front: /node/1
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

@@ -1,0 +1,201 @@
+uuid: 0caa07d5-c482-4a4c-85c7-5b14480e5973
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 446
+template: false
+archive: false
+id: interlibrary_loan
+title: 'InterLibrary Loan'
+description: 'InterLibrary Loan form for the Library'
+category: ''
+elements: "patron_information:\n  '#type': processed_text\n  '#text': \"<h4>Patron Information</h4>\\n\"\n  '#format': rich_text\nflexbox:\n  '#type': webform_flexbox\n  status:\n    '#type': radios\n    '#title': Status\n    '#options':\n      Faculty/Staff: Faculty/Staff\n      Student: Student\n    '#options_display': side_by_side\n  requestor_s_name:\n    '#type': textfield\n    '#title': 'Requestor''s Name'\n    '#required': true\n  gsc_id:\n    '#type': textfield\n    '#title': 'GSC ID #'\n    '#description_display': invisible\n    '#placeholder': 'GSC 10-digit ID Number'\n    '#input_mask': '9999999999'\nflexbox_patron_2:\n  '#type': webform_flexbox\n  todays_date:\n    '#type': datetime\n    '#title': 'Today''s Date'\n    '#default_value': today\n    '#date_time_element': none\n    '#datepicker': true\n  email_address:\n    '#type': email\n    '#title': 'Email Address'\n    '#required': true\n  telephone_number:\n    '#type': textfield\n    '#title': 'Telephone Number'\n    '#required': true\nadditional_information:\n  '#type': processed_text\n  '#text': \"<p>Fill in information for the desired format. Multiple publications/productions may exist – provide enough information to ensure proper identification of requested materials.</p>\\n\"\n  '#format': rich_text\nbooks:\n  '#type': processed_text\n  '#text': \"<h4>Books</h4>\\n\"\n  '#format': rich_text\nflexbox_books_1:\n  '#type': webform_flexbox\n  book_authors:\n    '#type': textfield\n    '#title': Author(s)\n  book_title:\n    '#type': textfield\n    '#title': Title\n  book_edition:\n    '#type': textfield\n    '#title': Edition\nflexbox_books_2:\n  '#type': webform_flexbox\n  books_copyright_year:\n    '#type': textfield\n    '#title': 'Copyright Year'\n  books_publisher:\n    '#type': textfield\n    '#title': Publisher\n  books_other:\n    '#type': textfield\n    '#title': Other\nperiodicals:\n  '#type': processed_text\n  '#text': \"<h4>Periodicals</h4>\\n\"\n  '#format': rich_text\nflexbox_periodicals_1:\n  '#type': webform_flexbox\n  periodicals_title:\n    '#type': textfield\n    '#title': Title\n  periodicals_authors:\n    '#type': textfield\n    '#title': Author(s)\n  periodicals_journal_newspaper:\n    '#type': textfield\n    '#title': 'Journal / Newspaper'\nflexbox_periodicals_2:\n  '#type': webform_flexbox\n  periodicals_volume_issue:\n    '#type': textfield\n    '#title': 'Volume / Issue'\n  periodicals_publication_date:\n    '#type': textfield\n    '#title': 'Publication Date'\n  periodicals_page_numbers:\n    '#type': textfield\n    '#title': 'Page Numbers'\n  periodicals_other:\n    '#type': textfield\n    '#title': Other\naudio_visual:\n  '#type': processed_text\n  '#text': \"<h4>Audio/Visual</h4>\\n\"\n  '#format': rich_text\nflexbox_audiovisual_1:\n  '#type': webform_flexbox\n  audiovisual_title:\n    '#type': textfield\n    '#title': Title\n  audiovisual_writer:\n    '#type': textfield\n    '#title': 'Writer / Person of Responsibility'\nflexbox_audiovisual_2:\n  '#type': webform_flexbox\n  audiovisual_format:\n    '#type': textfield\n    '#title': Format\n    '#placeholder': '(example: DVD)'\n  audiovisual_copyright_year:\n    '#type': textfield\n    '#title': 'Copyright Year'\naudiovisual_performer:\n  '#type': textfield\n  '#title': 'Performer / Director / Producer / Narrator, etc.'\naudiovisual_other:\n  '#type': textfield\n  '#title': Other\nsubmission:\n  '#type': processed_text\n  '#text': \"<p>&nbsp;</p>\\n\\n<p>Double-check your input, then click to submit to library staff:</p>\\n\"\n  '#format': rich_text\n"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_login: false
+  form_login_message: ''
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_login: false
+  submission_login_message: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  email:
+    id: email
+    label: Email
+    handler_id: email
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: lib.circ@glenville.edu
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: webmaster@glenville.edu
+      from_options: {  }
+      from_name: webmaster@glenville.edu
+      subject: 'Inter-Library Loan Request - Form Submission'
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+  action:
+    id: action
+    label: Action
+    handler_id: action
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      notes: ''
+      sticky: null
+      locked: null
+      data: ''
+      message: "Thank you for submitting your request!<br />\n<br />\nWe look forward to locating your item, and we appreciate your patronage."
+      message_type: status
+      debug: false

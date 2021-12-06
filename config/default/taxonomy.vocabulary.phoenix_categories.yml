@@ -1,0 +1,9 @@
+uuid: ef85bc61-163d-4a69-bb07-c5eefa2fc67b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Phoenix Categories'
+vid: phoenix_categories
+description: ''
+hierarchy: 0
+weight: 0

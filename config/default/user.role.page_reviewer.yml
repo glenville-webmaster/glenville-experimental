@@ -1,0 +1,39 @@
+uuid: 81c2485c-a8b4-4b4b-81bf-cfe09c54a3a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: page_reviewer
+label: 'Content reviewer'
+weight: -7
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'delete any course content'
+  - 'delete any department content'
+  - 'delete any event content'
+  - 'delete any landing_page content'
+  - 'delete any page content'
+  - 'delete any profile content'
+  - 'delete any program content'
+  - 'delete any protected_content content'
+  - 'delete any story content'
+  - 'edit any course content'
+  - 'edit any department content'
+  - 'edit any event content'
+  - 'edit any landing_page content'
+  - 'edit any page content'
+  - 'edit any profile content'
+  - 'edit any program content'
+  - 'edit any protected_content content'
+  - 'edit any story content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'view the administration theme'

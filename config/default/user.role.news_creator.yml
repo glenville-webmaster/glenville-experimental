@@ -1,0 +1,55 @@
+uuid: 3a33a0bf-b50f-40f7-9fc1-93ce566a85a8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pZ5ANM94v-5huJjO9vgorQ_8j32nQiUc3ohafZCB99c
+id: news_creator
+label: 'News creator'
+weight: -6
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media overview'
+  - 'access media_browser entity browser pages'
+  - 'access panels in-place editing'
+  - 'access toolbar'
+  - 'change layouts in place editing'
+  - 'create document media'
+  - 'create image media'
+  - 'create instagram media'
+  - 'create media'
+  - 'create news content'
+  - 'create tweet media'
+  - 'create url aliases'
+  - 'create video media'
+  - 'create video_upload media'
+  - 'delete media'
+  - 'delete own document media'
+  - 'delete own image media'
+  - 'delete own instagram media'
+  - 'delete own news content'
+  - 'delete own tweet media'
+  - 'delete own video media'
+  - 'delete own video_upload media'
+  - 'edit own document media'
+  - 'edit own image media'
+  - 'edit own instagram media'
+  - 'edit own news content'
+  - 'edit own tweet media'
+  - 'edit own video media'
+  - 'edit own video_upload media'
+  - 'update any media'
+  - 'update media'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition review'
+  - 'use text format rich_text'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view media'
+  - 'view news revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'

@@ -1,0 +1,25 @@
+uuid: ee5a735a-4d71-4d1b-ad82-7c55b4b68cfc
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: tB6Pu8UpRDY_ow7FwqpDGee_n1kdleEtDG2hAP8HdR8
+id: news_reviewer
+label: 'News reviewer'
+weight: -5
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access image_browser entity browser pages'
+  - 'access media overview'
+  - 'access media_browser entity browser pages'
+  - 'access toolbar'
+  - 'delete any news content'
+  - 'edit any news content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view the administration theme'

@@ -1,0 +1,9 @@
+uuid: 41c19530-2836-4367-844b-6ad225d5850e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Phoenix Tags'
+vid: phoenix_tags
+description: ''
+hierarchy: 0
+weight: 0

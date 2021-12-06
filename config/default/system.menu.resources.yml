@@ -1,0 +1,10 @@
+uuid: 90ba3992-9c5f-4c4f-979e-5492a0cefae5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: CBtDFVzd74IQnDjQL4xRJ8ebouieAJN0EH85fRkjVJE
+id: resources
+label: Resources
+description: ''
+locked: false

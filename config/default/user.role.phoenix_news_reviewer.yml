@@ -1,0 +1,15 @@
+uuid: 19ff2674-3c28-4d9a-8e6d-70be82a75b90
+langcode: en
+status: true
+dependencies: {  }
+id: phoenix_news_reviewer
+label: 'Phoenix News reviewer'
+weight: 0
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'delete any phoenix_news content'
+  - 'edit any phoenix_news content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'

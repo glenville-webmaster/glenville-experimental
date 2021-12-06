@@ -1,0 +1,11 @@
+uuid: 8f27f59b-ada6-42cf-85c4-f9cd28ba865e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vbCRFChxfcIg8nFVq5jOAizMUr1Sx8tawnO6Zg2mI1g
+name: Interests
+vid: interests
+description: 'Research Interests that can be used with profiles or other content types'
+hierarchy: 0
+weight: 0

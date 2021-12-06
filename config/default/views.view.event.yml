@@ -1,0 +1,1094 @@
+uuid: d04912f2-28bb-403f-baa4-ba2ab55f93ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.openedu
+    - taxonomy.vocabulary.event_categories
+  module:
+    - better_exposed_filters
+    - flickity_views
+    - query_filter_cards
+    - search_api
+    - user
+_core:
+  default_config_hash: OrqbKepnKutvJuj8T-1tD8k9Vs0fgYYnUV1DTbNOtgM
+id: event
+label: Events
+module: views
+description: ''
+tag: ''
+base_table: search_api_index_openedu
+base_field: search_api_id
+core: 8.x
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          bypass_access: false
+          skip_access: false
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        type: none
+        options:
+          items_per_page: null
+          offset: 0
+      style:
+        type: flickity_views
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              course: default
+              department: default
+              event: featured_content
+              landing_page: default
+              news: default
+              page: default
+              profile: default
+              program: default
+              story: default
+      fields:
+        title:
+          table: search_api_index_openedu
+          field: title
+          id: title
+          entity_type: null
+          entity_field: null
+          plugin_id: search_api_field
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            multi_type: separator
+            multi_separator: ', '
+      filters:
+        type:
+          id: type
+          table: search_api_index_openedu
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            event: event
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: search_api_options
+        status:
+          id: status
+          table: search_api_index_openedu
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_boolean
+        field_event_featured:
+          id: field_event_featured
+          table: search_api_index_openedu
+          field: field_event_featured
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_boolean
+        field_event_date_end_value:
+          id: field_event_date_end_value
+          table: search_api_index_openedu
+          field: field_event_date_end_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: '+2 hours'
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_date
+      sorts:
+        sticky:
+          id: sticky
+          table: search_api_index_openedu
+          field: sticky
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+        field_news_date:
+          id: field_news_date
+          table: search_api_index_openedu
+          field: field_news_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+      title: 'Featured Events'
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user.permissions
+      tags: {  }
+  featured_events_block:
+    display_plugin: block
+    id: featured_events_block
+    display_title: 'Featured Events'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      pager:
+        type: mini
+        options:
+          items_per_page: 2
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+      defaults:
+        pager: false
+        filters: false
+        filter_groups: false
+      filters:
+        type:
+          id: type
+          table: search_api_index_openedu
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            event: event
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: search_api_options
+        status:
+          id: status
+          table: search_api_index_openedu
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_boolean
+        field_event_featured:
+          id: field_event_featured
+          table: search_api_index_openedu
+          field: field_event_featured
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_boolean
+        field_event_date_end_value:
+          id: field_event_date_end_value
+          table: search_api_index_openedu
+          field: field_event_date_end_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: date
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_date
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      block_hide_empty: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  latest_events_block:
+    display_plugin: block
+    id: latest_events_block
+    display_title: 'Latest Events'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+      defaults:
+        style: false
+        row: false
+        filters: false
+        filter_groups: false
+        exposed_form: false
+        header: false
+        footer: false
+        pager: false
+        use_ajax: false
+        sorts: false
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              course: default
+              department: default
+              event: teaser
+              landing_page: default
+              news: default
+              page: default
+              profile: default
+              program: default
+              story: default
+      filters:
+        type:
+          id: type
+          table: search_api_index_openedu
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            event: event
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: search_api_options
+        status:
+          id: status
+          table: search_api_index_openedu
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_boolean
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_openedu
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: and
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            identifier: search
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              page_creator: '0'
+              page_reviewer: '0'
+              news_creator: '0'
+              news_reviewer: '0'
+              glenville_faculty: '0'
+              glenville_staff: '0'
+              glenville_student: '0'
+              phoenix_news_creator: '0'
+              phoenix_news_reviewer: '0'
+              content_manager: '0'
+              site_admin: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields:
+            title: title
+            body: body
+          plugin_id: search_api_fulltext
+        field_events_category:
+          id: field_events_category
+          table: search_api_index_openedu
+          field: field_events_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_events_category_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_events_category_op
+            identifier: categories
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              page_creator: '0'
+              layout_manager: '0'
+              page_reviewer: '0'
+              course_creator: '0'
+              course_reviewer: '0'
+              landing_page_creator: '0'
+              department_creator: '0'
+              landing_page_reviewer: '0'
+              media_creator: '0'
+              department_reviewer: '0'
+              media_manager: '0'
+              news_creator: '0'
+              program_creator: '0'
+              news_reviewer: '0'
+              program_reviewer: '0'
+              profile_creator: '0'
+              profile_reviewer: '0'
+              story_creator: '0'
+              story_reviewer: '0'
+              event_creator: '0'
+              event_reviewer: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: event_categories
+          hierarchy: true
+          error_message: true
+          plugin_id: search_api_term
+        field_event_department:
+          id: field_event_department
+          table: search_api_index_openedu
+          field: field_event_department
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_event_department_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_event_department_op
+            identifier: field_event_department
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              page_creator: '0'
+              page_reviewer: '0'
+              news_creator: '0'
+              news_reviewer: '0'
+              glenville_faculty: '0'
+              glenville_staff: '0'
+              glenville_student: '0'
+              phoenix_news_creator: '0'
+              phoenix_news_reviewer: '0'
+              content_manager: '0'
+              site_admin: '0'
+              administrator: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_numeric
+        field_event_date_end_value:
+          id: field_event_date_end_value
+          table: search_api_index_openedu
+          field: field_event_date_end_value
+          relationship: none
+          group_type: group
+          admin_label: 'End Date'
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_event_date_end_value_op
+            label: 'End Date'
+            description: ''
+            use_operator: false
+            operator: field_event_date_end_value_op
+            identifier: field_event_date_end_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              page_creator: '0'
+              page_reviewer: '0'
+              news_creator: '0'
+              news_reviewer: '0'
+              glenville_faculty: '0'
+              glenville_staff: '0'
+              glenville_student: '0'
+              phoenix_news_creator: '0'
+              phoenix_news_reviewer: '0'
+              content_manager: '0'
+              site_admin: '0'
+              administrator: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_date
+        field_event_date:
+          id: field_event_date
+          table: search_api_index_openedu
+          field: field_event_date
+          relationship: none
+          group_type: group
+          admin_label: 'Start Date'
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_event_date_op
+            label: 'Start Date'
+            description: ''
+            use_operator: false
+            operator: field_event_date_op
+            identifier: field_event_date_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              page_creator: '0'
+              layout_manager: '0'
+              page_reviewer: '0'
+              course_creator: '0'
+              course_reviewer: '0'
+              landing_page_creator: '0'
+              department_creator: '0'
+              landing_page_reviewer: '0'
+              media_creator: '0'
+              department_reviewer: '0'
+              media_manager: '0'
+              news_creator: '0'
+              program_creator: '0'
+              news_reviewer: '0'
+              program_reviewer: '0'
+              profile_creator: '0'
+              profile_reviewer: '0'
+              story_creator: '0'
+              story_reviewer: '0'
+              event_creator: '0'
+              event_reviewer: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_date
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Search
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          input_required: false
+          text_input_required: 'Select any filter and click on Apply to see results'
+          bef:
+            general:
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              autosubmit: false
+              autosubmit_exclude_textfield: false
+              autosubmit_hide: false
+            search_api_fulltext:
+              bef_format: default
+              more_options:
+                is_secondary: false
+                rewrite:
+                  filter_rewrite_values: ''
+            field_event_audience:
+              bef_format: default
+              more_options:
+                bef_select_all_none: false
+                bef_collapsible: false
+                is_secondary: false
+                rewrite:
+                  filter_rewrite_values: ''
+            field_event_date:
+              bef_format: default
+              more_options:
+                is_secondary: false
+            field_event_date_1:
+              bef_format: default
+              more_options:
+                is_secondary: false
+            field_event_department:
+              bef_format: default
+              slider_options:
+                bef_slider_min: null
+                bef_slider_max: null
+                bef_slider_step: !!float 1
+                bef_slider_animate: ''
+                bef_slider_orientation: ''
+              more_options:
+                is_secondary: false
+          text_input_required_format: rich_text
+      exposed_block: true
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: '<strong>@start-@end</strong> of <strong>@total</strong>'
+          plugin_id: result
+        query_filter_cards:
+          id: query_filter_cards
+          table: views
+          field: query_filter_cards
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: 1
+          content: ''
+          pager_embed: false
+          plugin_id: query_filter_cards
+      footer:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: '<strong>@start-@end</strong> of <strong>@total</strong>'
+          plugin_id: result
+      pager:
+        type: full
+        options:
+          items_per_page: null
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: «
+            next: »
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      use_ajax: true
+      sorts:
+        sticky:
+          id: sticky
+          table: search_api_index_openedu
+          field: sticky
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+        field_event_date:
+          id: field_event_date
+          table: search_api_index_openedu
+          field: field_event_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - user.permissions
+      tags: {  }

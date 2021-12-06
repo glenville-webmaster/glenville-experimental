@@ -1,0 +1,201 @@
+uuid: 78b23c75-50f2-4064-95b4-d6de177f5529
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 446
+template: false
+archive: false
+id: purchase_request
+title: 'Purchase Request'
+description: 'Purchase request form for the Library'
+category: ''
+elements: "flexbox:\n  '#type': webform_flexbox\n  requsition_date:\n    '#type': datetime\n    '#title': 'Requsition Date'\n    '#title_display': before\n    '#description_display': before\n    '#default_value': today\n    '#date_time_element': none\n    '#datepicker': true\n  title:\n    '#type': textfield\n    '#title': Title\n    '#title_display': before\n    '#description_display': before\n    '#required': true\n  author:\n    '#type': textfield\n    '#title': Author\n    '#title_display': before\n    '#description_display': after\n    '#placeholder': '(put NA if not applicable)'\n    '#required': true\nflexbox_row2:\n  '#type': webform_flexbox\n  isbn:\n    '#type': textfield\n    '#title': ISBN\n  edition:\n    '#type': textfield\n    '#title': Edition\n  volumes:\n    '#type': textfield\n    '#title': Volumes\n  publisher:\n    '#type': textfield\n    '#title': Publisher\nflexbox_row3:\n  '#type': webform_flexbox\n  year:\n    '#type': textfield\n    '#title': Year\n  list_price:\n    '#type': textfield\n    '#title': 'List Price'\n  format:\n    '#type': select\n    '#title': Format\n    '#options':\n      Book: Book\n      eBook: eBook\n      DVD: DVD\n      'Other (specify below)': 'Other (specify below)'\n    '#required': true\n  number_of_copies:\n    '#type': textfield\n    '#title': 'Number of Copies'\nother:\n  '#type': textarea\n  '#title': Other\nflexbox_row4:\n  '#type': webform_flexbox\n  requested_by:\n    '#type': textfield\n    '#title': 'Requested By'\n    '#required': true\n  email:\n    '#type': email\n    '#title': Email\n    '#required': true\n  faculty_staff_student:\n    '#type': select\n    '#title': Faculty/Staff/Student\n    '#options':\n      Faculty: Faculty\n      Staff: Staff\n      Student: Student\n    '#required': true\n"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: ''
+  page_confirm_path: /student-life/robert-f-kidd-library/purchase-request/confirmation
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: "If you have any questions, please call the Library at 304-462-6164.<br />\r\n*Required fields are marked with an asterisk."
+  form_close_message: 'You may also contact the library via&nbsp;<a href="mailto:library@glenville.edu?Subject=Purchase%20Request">email</a>'
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_login: false
+  form_login_message: ''
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_login: false
+  submission_login_message: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  email:
+    id: email
+    label: Email
+    handler_id: email
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: Gail.Westbrook@glenville.edu
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: webmaster@glenville.edu
+      from_options: {  }
+      from_name: webmaster@glenville.edu
+      subject: 'Purchase Request - Form Submission'
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+  action:
+    id: action
+    label: Action
+    handler_id: action
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      notes: ''
+      sticky: null
+      locked: null
+      data: ''
+      message: "Thank you for submitting a Purchase Request to the Robert F. Kidd Library at Glenville State College.<br />\n<br />\nYour request has been sent and you should be hearing from us soon."
+      message_type: status
+      debug: false

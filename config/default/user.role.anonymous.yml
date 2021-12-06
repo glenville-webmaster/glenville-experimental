@@ -1,0 +1,15 @@
+uuid: 666ac399-9d25-47b4-9908-6622518eb01b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: -10
+is_admin: false
+permissions:
+  - 'access content'
+  - 'use search_api_autocomplete for openedu_search'
+  - 'view media'
+  - 'view published simple mega menu entities'

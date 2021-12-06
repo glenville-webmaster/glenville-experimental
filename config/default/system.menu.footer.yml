@@ -1,0 +1,10 @@
+uuid: 013a2c4e-8001-4091-94ef-9a8ec78fe3ef
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7yrlW5z9zdg2eBucB2GPqXKSMQfH9lSRSO4DbWF7AFc
+id: footer
+label: 'About Glenville'
+description: 'About Glenville Footer Links'
+locked: true

@@ -1,0 +1,54 @@
+# Exclude hidden OS files.
+.DS_Store
+._*
+Thumbs.db
+
+# Ignore Development tool files.
+.idea
+node_modules
+.sass-cache/
+console/
+drush/drush.yml
+
+# Ignore custom theme build artifacts
+docroot/themes/custom/*/dist
+docroot/themes/custom/*/src/scss/fonts
+docroot/themes/custom/*/src/scss/_base.scss
+docroot/themes/custom/*/src/scss/_init.scss
+
+
+# Ignore non-custom parts of Drupal.
+/docroot/core
+/docroot/libraries
+/docroot/modules/contrib
+/docroot/profiles/contrib
+/docroot/themes/contrib
+/docroot/sites/*/files
+/docroot/sites/*/private
+
+# Ignore Composer-managed dependencies.
+vendor/
+
+# Sass
+.sass-cache
+*.css.map
+
+# Ignore configuration files that may contain sensitive information.
+/docroot/sites/*/settings.*.php
+/docroot/sites/*/services.*.yml
+/docroot/sites/local.services.yml
+/.csslintrc
+/.editorconfig
+/.eslintignore
+/.eslintrc.json
+/.gitattributes
+/.ht.router.php
+/.htaccess
+/INSTALL.txt
+/README.txt
+/autoload.php
+/example.gitignore
+/index.php
+/robots.txt
+/update.php
+/web.config

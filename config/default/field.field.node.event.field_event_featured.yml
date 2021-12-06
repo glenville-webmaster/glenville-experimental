@@ -1,0 +1,25 @@
+uuid: cd89419c-e5ea-471a-b13f-1af28b8ea636
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_featured
+    - node.type.event
+_core:
+  default_config_hash: K6voaX5Sn0JkahTO8JjkoQUkVI9znJszYqG2mZHgTEg
+id: node.event.field_event_featured
+field_name: field_event_featured
+entity_type: node
+bundle: event
+label: Featured
+description: 'Featured events are displayed on top of lists and in separate formats'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

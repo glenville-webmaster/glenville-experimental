@@ -1,0 +1,23 @@
+uuid: 16505850-0037-442a-90ac-c41037400d16
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_group
+    - field.storage.block_content.field_group_type
+  module:
+    - options
+id: block_content.card_group.field_group_type
+field_name: field_group_type
+entity_type: block_content
+bundle: card_group
+label: 'Group Type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: card-columns
+default_value_callback: ''
+settings: {  }
+field_type: list_string

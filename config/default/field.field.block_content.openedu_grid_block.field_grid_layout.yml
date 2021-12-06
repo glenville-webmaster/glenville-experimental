@@ -1,0 +1,25 @@
+uuid: 25d67d61-d17d-4296-a630-fdbd6badf715
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.openedu_grid_block
+    - field.storage.block_content.field_grid_layout
+  module:
+    - options
+_core:
+  default_config_hash: 0-00AuR3FwGfL9w0so58ERAbUFMsAb99MeEhs_HqfP8
+id: block_content.openedu_grid_block.field_grid_layout
+field_name: field_grid_layout
+entity_type: block_content
+bundle: openedu_grid_block
+label: 'Grid Layout'
+description: 'Select the amount of items to be displayed in a row. This will add classes to the blocks for theming.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 3
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

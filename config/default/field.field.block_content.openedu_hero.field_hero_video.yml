@@ -1,0 +1,28 @@
+uuid: 50c0c216-3165-4bb0-906a-6c106d2efd8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.openedu_hero
+    - field.storage.block_content.field_hero_video
+    - media.type.video_upload
+id: block_content.openedu_hero.field_hero_video
+field_name: field_hero_video
+entity_type: block_content
+bundle: openedu_hero
+label: 'Hero Video'
+description: 'If a video is provided, it will be shown in place of the hero image on desktop displays.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video_upload: video_upload
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: video
+field_type: entity_reference

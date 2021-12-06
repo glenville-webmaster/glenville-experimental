@@ -1,0 +1,16 @@
+uuid: 68ed2201-d55d-4ab2-8d58-6be2f58dae79
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: ''
+_core:
+  default_config_hash: NFaU0WYMRV-44JIiYtAD3cpfTpwuFlJQ18r38FQKz_g
+id: node.teaser_card
+label: 'Teaser Card'
+targetEntityType: node
+cache: true

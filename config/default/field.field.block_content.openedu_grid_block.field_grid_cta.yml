@@ -1,0 +1,25 @@
+uuid: 85b8594b-8b6a-457c-b715-2caa8035b7db
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.openedu_grid_block
+    - field.storage.block_content.field_grid_cta
+  module:
+    - link
+_core:
+  default_config_hash: FvQ4INeggQf89Wg-Oh0cG0_ChRPbdKodfR8dZRPmMh0
+id: block_content.openedu_grid_block.field_grid_cta
+field_name: field_grid_cta
+entity_type: block_content
+bundle: openedu_grid_block
+label: 'Grid CTA'
+description: 'Optional CTA for the entire grid'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

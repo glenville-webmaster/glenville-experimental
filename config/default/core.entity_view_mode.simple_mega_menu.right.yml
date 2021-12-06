@@ -1,0 +1,14 @@
+uuid: 18372b40-88b2-466c-8438-5da8345bce02
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - simple_megamenu
+third_party_settings:
+  lightning_core:
+    description: ''
+id: simple_mega_menu.right
+label: Right
+targetEntityType: simple_mega_menu
+cache: true

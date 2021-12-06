@@ -1,0 +1,21 @@
+uuid: e8d4c02d-dde8-4b53-b45a-bfc2b8207179
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.openedu_grid_block
+    - field.storage.block_content.field_grid_label
+_core:
+  default_config_hash: qWv4M2zgtE0nDOWy0L4EoSZCwH20fQtJtoG8v1sn8rw
+id: block_content.openedu_grid_block.field_grid_label
+field_name: field_grid_label
+entity_type: block_content
+bundle: openedu_grid_block
+label: 'Grid Label'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

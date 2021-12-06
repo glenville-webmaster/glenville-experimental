@@ -1,0 +1,14 @@
+uuid: 8e9271b8-f51e-43e2-8935-7350541623c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - media
+third_party_settings:
+  lightning_core:
+    description: ''
+id: media.slideshow_media
+label: 'Slideshow Media'
+targetEntityType: media
+cache: true

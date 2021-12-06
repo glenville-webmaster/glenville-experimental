@@ -1,0 +1,74 @@
+uuid: c31feaf2-2a31-45ea-9eab-e28d7b650276
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.rich_text
+  module:
+    - ckeditor
+_core:
+  default_config_hash: 0bVELtfx9sXhjZ6s6W-dJo8SW-IR9jiEIEylzm-2Cro
+format: rich_text
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Strike
+            - Superscript
+            - Subscript
+            - '-'
+            - RemoveFormat
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+        -
+          name: Linking
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - Blockquote
+            - Table
+            - HorizontalRule
+            - media_browser
+            - DrupalImage
+            - code_embed
+        -
+          name: 'Block Formatting'
+          items:
+            - Format
+            - Styles
+        -
+          name: Tools
+          items:
+            - ShowBlocks
+            - Source
+  plugins:
+    stylescombo:
+      styles: "p.lead|Lead In Text\r\np.lead-sm|Lead In Text (small)\r\nspan.text-primary-darker|Text Primary Darker\r\nspan.text-primary|Text Primary\r\nspan.text-secondary|Text Secondary\r\nspan.text-muted|Text Muted\r\nspan.text-warning|Text Warning\r\na.btn.btn-lg.btn-primary|Button Primary\r\na.btn.btn-lg.btn-success|Button Success\r\na.btn.btn-lg.btn-secondary|Button Secondary - Lg\r\na.btn.btn-secondary|Button Secondary - Sm\r\na.btn.btn-lg.btn-light|Button Light\r\ntable.table.table-hover|Table Styled\r\ndiv.card.m-auto.p-4.col-12.col-sm-6.col-md-6.col-lg-5.col-xl-4.rounded|Rounded Card\r\ndiv.glenville-stat-circled.text-center.py-3.py-md-4.py-xl-5.m-auto|Statistic Circled\r\ndiv.glenville-stat-squared.text-center.my-5.m-sm-auto.p-5.p-md-3.p-xl-5 |Statistic Squared\r\ndiv.glenville-stat.text-center|Statistic Gray\r\nol.block-list|Block List"
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: default
+    language:
+      language_list: un
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: 1100
+    height: 600

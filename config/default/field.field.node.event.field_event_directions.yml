@@ -1,0 +1,25 @@
+uuid: f0a3ad6f-04e5-470c-9453-dd65ee2eadba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_directions
+    - node.type.event
+  module:
+    - link
+_core:
+  default_config_hash: eF83EIktaBCHVCU-q2NUMaZgW-b6dptV2ropCPpwjyk
+id: node.event.field_event_directions
+field_name: field_event_directions
+entity_type: node
+bundle: event
+label: 'Get Directions'
+description: 'Directions field, hidden and automatically updated on node save.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

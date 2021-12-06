@@ -1,0 +1,21 @@
+uuid: 9fc6a727-d5cc-41bd-bf94-cd8d0079249e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_department_phone
+    - node.type.department
+  module:
+    - telephone
+id: node.department.field_department_phone
+field_name: field_department_phone
+entity_type: node
+bundle: department
+label: Phone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

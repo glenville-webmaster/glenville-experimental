@@ -1,0 +1,36 @@
+uuid: 9c6e55fe-d50c-45ac-acc4-e78ae253af85
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.slideshow
+    - field.storage.block_content.field_slideshow_media
+    - media.type.image
+    - media.type.instagram
+    - media.type.tweet
+    - media.type.video
+    - media.type.video_upload
+id: block_content.slideshow.field_slideshow_media
+field_name: field_slideshow_media
+entity_type: block_content
+bundle: slideshow
+label: 'Slideshow Media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      instagram: instagram
+      tweet: tweet
+      video: video
+      video_upload: video_upload
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: image
+field_type: entity_reference

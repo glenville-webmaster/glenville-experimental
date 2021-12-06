@@ -1,0 +1,31 @@
+uuid: b7b0ee0d-7922-4add-a70e-3d2052e02435
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.openedu_stories_block
+    - field.storage.block_content.field_story_reference
+    - node.type.story
+_core:
+  default_config_hash: 8cZjpWLg-TBUFGNjgitB8bxZ9i8KYww7tmWNpfN0Sd4
+id: block_content.openedu_stories_block.field_story_reference
+field_name: field_story_reference
+entity_type: block_content
+bundle: openedu_stories_block
+label: Stories
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      story: story
+    sort:
+      field: created
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,30 @@
+uuid: d54322d4-8833-49c1-876a-cf44d4dc7b3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.openedu_hero
+    - field.storage.block_content.field_hero_image
+    - media.type.image
+_core:
+  default_config_hash: z-z-ykBrUIycrBmatB_yfHMDVqTNjuOOXzIITz7CfbY
+id: block_content.openedu_hero.field_hero_image
+field_name: field_hero_image
+entity_type: block_content
+bundle: openedu_hero
+label: 'Hero Image'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

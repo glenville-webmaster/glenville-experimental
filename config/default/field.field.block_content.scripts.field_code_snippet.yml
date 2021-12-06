@@ -1,0 +1,27 @@
+uuid: 66cf8c63-d38a-409a-b401-0002eb349204
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.scripts
+    - field.storage.block_content.field_code_snippet
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    scripts: scripts
+    rich_text: '0'
+    plain_text: '0'
+id: block_content.scripts.field_code_snippet
+field_name: field_code_snippet
+entity_type: block_content
+bundle: scripts
+label: Snippet
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

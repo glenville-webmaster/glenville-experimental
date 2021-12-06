@@ -1,0 +1,14 @@
+uuid: a2fa3743-6c39-459f-9993-65c43b2f58ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - simple_megamenu
+third_party_settings:
+  lightning_core:
+    description: 'Top area used for intro text.'
+id: simple_mega_menu.top
+label: Top
+targetEntityType: simple_mega_menu
+cache: true

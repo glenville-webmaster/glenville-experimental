@@ -1,0 +1,16 @@
+uuid: 49541463-970d-4d5a-a03c-5530b9cf301a
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: 'View for content related to the current node via reference'
+_core:
+  default_config_hash: 9l_xDasY_Lzr5sNEgAPnBjpHK9H8E9ZK4j83NPcsBrk
+id: node.related_content
+label: 'Related Content'
+targetEntityType: node
+cache: true

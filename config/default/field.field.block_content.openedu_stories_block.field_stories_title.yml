@@ -1,0 +1,21 @@
+uuid: 6591952e-307d-4fb3-a486-c528cb2eb2f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.openedu_stories_block
+    - field.storage.block_content.field_stories_title
+_core:
+  default_config_hash: B6ZVQuNVaMt5Yevtt-KlEH2ASKN0qUxLW7YQExnqp3o
+id: block_content.openedu_stories_block.field_stories_title
+field_name: field_stories_title
+entity_type: block_content
+bundle: openedu_stories_block
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

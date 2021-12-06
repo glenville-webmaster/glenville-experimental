@@ -1,0 +1,27 @@
+uuid: a0f4d2f0-897b-4684-83fe-23f8ab14a6eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_video_file
+    - media.type.video_upload
+  module:
+    - file
+id: media.video_upload.field_media_video_file
+field_name: field_media_video_file
+entity_type: media
+bundle: video_upload
+label: 'Video file'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: videos
+  file_extensions: 'mp4 ogv ogg mov cfa'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

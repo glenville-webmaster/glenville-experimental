@@ -1,0 +1,14 @@
+uuid: aa7181db-37e8-4291-9da6-f0c1c5c074c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - paragraphs
+third_party_settings:
+  lightning_core:
+    description: ''
+id: paragraph.teaser
+label: Teaser
+targetEntityType: paragraph
+cache: true

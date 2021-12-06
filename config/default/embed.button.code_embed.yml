@@ -1,0 +1,22 @@
+uuid: aae3c4f6-52ac-4b72-b3a1-fa0eb2a4cda1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.scripts
+  module:
+    - block_content
+    - entity_embed
+label: 'Code Embed'
+id: code_embed
+type_id: entity
+type_settings:
+  entity_type: block_content
+  bundles:
+    - scripts
+  display_plugins:
+    - 'view_mode:block_content.full'
+  entity_browser: ''
+  entity_browser_settings:
+    display_review: false
+icon_uuid: null

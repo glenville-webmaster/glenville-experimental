@@ -1,0 +1,21 @@
+uuid: 20c51f4c-2326-48e4-9cfb-b36e52aef932
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_department_fax
+    - node.type.department
+  module:
+    - telephone
+id: node.department.field_department_fax
+field_name: field_department_fax
+entity_type: node
+bundle: department
+label: Fax
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

@@ -1,0 +1,21 @@
+uuid: f49d9c56-26ff-43b9-886a-fe0e657fb0f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_department_toll_free
+    - node.type.department
+  module:
+    - telephone
+id: node.department.field_department_toll_free
+field_name: field_department_toll_free
+entity_type: node
+bundle: department
+label: 'Toll Free'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

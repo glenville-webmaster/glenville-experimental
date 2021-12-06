@@ -1,0 +1,24 @@
+uuid: 8a1458ad-ce3c-483f-b8b0-0249b158eb95
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta_section_header
+    - field.storage.block_content.body
+  module:
+    - text
+_core:
+  default_config_hash: dOfb8yeAbD20J5LZHo85Xxl6s4GHdQyaQw6dNeuiDw0
+id: block_content.cta_section_header.body
+field_name: body
+entity_type: block_content
+bundle: cta_section_header
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

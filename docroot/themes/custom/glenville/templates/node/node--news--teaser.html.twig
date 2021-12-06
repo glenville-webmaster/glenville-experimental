@@ -1,0 +1,13 @@
+{% extends "@glenville/node/default/node--views--teaser.html.twig" %}
+
+{% block image %}
+  {% if node.field_news_image.value %}
+    {{ content.field_news_image }}
+  {% else %}
+    {{ default_news_image }}
+  {% endif %}
+{% endblock %}
+
+{% block date %}
+  <i class="material-icons mr-2">date_range</i> {{ content.field_news_date }}
+{% endblock %}

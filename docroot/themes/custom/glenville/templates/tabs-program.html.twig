@@ -1,0 +1,19 @@
+
+{%
+  set classes = [
+    'glenville-tabs mb-5',
+    sticky ? 'sticky'
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  <div class="container">
+    <ul class="nav gv-tabs gv-tabs-blue flex-column flex-md-row row align-items-center">
+      {% for key, item in items %}
+        <li class="nav-item col-md text-center">
+          <a class="nav-link text-dark px-0" href=".{{key}}" data-tab-class="{{key}}">{{ item }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

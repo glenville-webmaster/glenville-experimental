@@ -1,0 +1,52 @@
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+  ]
+%}
+{%
+  set title_classes = [
+    'field--label',
+    label_display == 'visually_hidden' ? 'sr-only',
+  ]
+%}
+
+{% set cardClass = card_class | default('card-deck') %}
+
+{% if multiple %}
+
+  {# multiple cards > deck #}
+  {% if cardClass == 'card-deck' %}
+    {% set cols = card_cols | default(2) %}
+    {% for item in items %}
+      {% if loop.index0 % cols == 0 %}
+        <div class="{{ cardClass }} cards-per-row-{{ cols }}">
+        {% endif %}
+          {{ item.content }}
+        {% if (loop.index0 % cols == cols - 1 or loop.last) %}
+        </div>
+      {% endif %}
+    {% endfor %}
+
+  {# multiple cards > columns (masonry) #}
+  {% else %}
+
+    <div class="{{ card_class }}">
+      {% for item in items %}
+        {{ item.content }}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+{# 1 card only #}
+{% else %}
+
+  <div class="{{ card_class }}">
+  {% for item in items %}
+    {{ item.content }}
+  {% endfor %}
+  </div>
+
+{% endif %}

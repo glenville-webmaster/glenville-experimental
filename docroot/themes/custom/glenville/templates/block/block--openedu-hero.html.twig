@@ -1,0 +1,13 @@
+{% extends "block.html.twig" %}
+
+{% block content %}
+  {{ content }}
+
+  {% if has_video %}
+    <div class="video-upload-control">
+      <i class="play material-icons">play_circle_outline</i><i class="pause material-icons">pause_circle_outline</i>
+    </div>
+  {% endif %}
+
+{% endblock %}
+

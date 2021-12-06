@@ -1,0 +1,39 @@
+{#
+/**
+ * @file simple_mega_menu.html.twig
+ * Default theme implementation to present Simple mega menu data.
+ *
+ * This template is used when viewing Simple mega menu pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ * - bundle : the simple mega menu bundle
+ * - view_mode : the view mode used
+ * - simple_mega_menu: the simple mega menu entity
+ *
+ * @see template_preprocess_simple_mega_menu()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+set classes = [
+  'col-12 mb-4',
+  'megamenu-top',
+  'megamenu-column',
+  'simple-mega-menu',
+  'mega-menu-item',
+  'simple-mega-menu-type-' ~ bundle|clean_class,
+  view_mode ? 'view-mode-' ~ view_mode|clean_class,
+]
+%}
+{% if content|render|striptags is not empty %}
+<div class="row">
+  <div{{ attributes.addClass(classes) }}>
+    {{- content -}}
+  </div>
+</div>
+{% endif %}

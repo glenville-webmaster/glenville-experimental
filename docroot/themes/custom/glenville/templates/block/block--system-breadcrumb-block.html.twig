@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Theme override for system blocks.
+ *
+ * @ingroup templates
+ */
+#}
+{% extends "@oedu/block/block--bare.html.twig" %}
+
+{% block content %}
+<div class="breadcrumb-wrapper pb-5">
+  <div class="breadcrumbs">
+    <div class="container">
+      {{ content }}
+    </div>
+  </div>
+</div>
+{% endblock %}

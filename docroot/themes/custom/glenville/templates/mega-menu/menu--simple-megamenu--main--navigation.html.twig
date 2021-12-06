@@ -1,0 +1,78 @@
+{#
+/**
+ * @file
+ * Custom template to display a Mega Menu Block.
+ *
+ * Available variables:
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+{{ attach_library('simple_megamenu/base') }}
+{{ menus.menu_links(items, attributes, 0, view_mode ? view_mode : 'default') }}
+
+{% macro menu_links(items, attributes, menu_level, view_mode) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass('m-0 h-100 d-flex align-items-stretch', 'menu--simple-mega-menu') }}>
+    {% else %}
+      <ul {{ attributes.removeClass('menu--simple-mega-menu') }}>
+    {% endif %}
+    {% for item in items %}
+      {%
+        set classes = [
+        'menu-item h-100 p-0 d-flex align-items-center',
+        has_megamenu(item.url) or item.is_expanded ? 'menu-item--expanded',
+        item.is_collapsed ? 'menu-item--collapsed',
+        item.in_active_trail ? 'menu-item--active-trail',
+      ]
+      %}
+      <li{{ item.attributes.addClass(classes) }}>
+        {{ link(item.title, item.url) }}
+        {% if has_megamenu(item.url) %}
+          <div class="mega-menu-wrapper">
+
+            <div class="row">
+              <div class="col">
+
+                {# intro text #}
+                {{ view_megamenu(item.url, 'top') }}
+
+                <div class="row">
+
+                  {# cta image #}
+                  {{ view_megamenu(item.url, 'before') }}
+
+                  {# links #}
+                  {{ view_megamenu(item.url, 'after') }}
+
+                </div>
+              </div>
+
+              {# cta block #}
+              {{ view_megamenu(item.url, 'right') }}
+
+            </div>
+          </div>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+{% endmacro %}

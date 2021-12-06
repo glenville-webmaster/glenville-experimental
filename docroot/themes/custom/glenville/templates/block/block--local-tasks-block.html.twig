@@ -1,0 +1,24 @@
+{% extends "block--bare.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for tabs.
+ *
+ * @ingroup templates
+ */
+#}
+{% block content %}
+  {% if content %}
+  <div class="d-none">
+    <div class="local-menu-tasks{% if logged_in is not same as(false) %} container pb-5{% endif %}">
+      <div class="row">
+        <div class="w-100">
+          <nav class="tabs" role="navigation" aria-label="{{ 'Tabs'|t }}">
+            {{ content }}
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+{% endblock %}

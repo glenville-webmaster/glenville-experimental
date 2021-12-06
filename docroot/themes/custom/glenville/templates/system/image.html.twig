@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Default theme implementation of an image.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the img tag.
+ * - style_name: (optional) The name of the image style applied.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_image()
+ */
+#}
+{% set classes = [
+  'd-inline-block',
+  'img-fluid',
+  'text-center',
+  'text-sm-left'
+] %}
+<img{{ attributes.addClass(classes) }} />

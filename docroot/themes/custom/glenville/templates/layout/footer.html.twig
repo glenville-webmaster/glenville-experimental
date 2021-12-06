@@ -1,0 +1,57 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display the themes footer.
+  */
+#}
+<footer class="footer" role="contentinfo">
+
+  {% if page.footer_top %}
+    {% block footer_top %}
+      <div class="footer-top py-5">
+        <div class="container">
+          <div class="row py-md-3">
+            {{ page.footer_top }}
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+  {% endif %}
+
+  {% if page.footer %}
+    {% block footer_main %}
+    <div class="footer-main py-5">
+      <div class="container">
+        <div class="row py-md-3">
+          <div class="col-12 col-md-2 text-center text-md-left mb-4 mb-md-0">
+            <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+              <img src="{{ footer_logo }}" class="img-fluid" alt="{{ 'Home'|t }}" />
+            </a>
+          </div>
+          {{ page.footer }}
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+  {% endif %}
+
+  {% if page.footer_bottom %}
+    {% block footer_bottom %}
+    <div class="footer-bottom py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 py-1">
+            <div class="d-flex flex-column flex-md-row align-content-center align-content-md-start text-center text-md-left">
+              <div class="row">
+                <span class="col-12 col-md-auto order-2 order-md-1 pr-md-2 pt-2 pt-md-0 text-light">&copy {{ 'now'|date('Y') ~ ' ' ~ theme_name_pretty }}<span class="hidden d-md-inline pl-2">|</span></span>
+                <span class="col-12 col-md-auto order-1 order-md-2 pl-md-0">{{ page.footer_bottom }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+  {% endif %}
+
+</footer>

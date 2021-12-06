@@ -1,0 +1,33 @@
+{% extends "@glenville/components/cards.html.twig" %}
+
+{%
+  set classes = [
+    node.bundle|clean_class,
+    node.isPromoted() ? 'is-promoted',
+    node.isSticky() ? 'is-sticky',
+    not node.isPublished() ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+    'card',
+  ]
+%}
+
+{# set the card type #}
+{% block card_type %}
+{% set card_type = 'featured border-0 box-shadow-5 my-3' %}
+<div{{ attributes.addClass(classes, card_type) }}>
+{% endblock %}
+
+{% block card_header %}
+<div class="card-header bg-primary d-flex">
+  {{ title_prefix }}
+  {% if not page %}
+    <span class="h3 m-0 text-light font-weight-normal align-self-center">{{ label }}</span>
+  {% endif %}
+  {{ title_suffix }}
+</div>
+{% endblock %}
+
+{# empty the footer #}
+{% block card_footer %}
+{% endblock %}

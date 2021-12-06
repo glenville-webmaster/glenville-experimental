@@ -1,0 +1,31 @@
+{%
+  set classes = [
+    'card',
+  ]
+%}
+
+{% block card_type %}
+<div{{ attributes.addClass(classes) }}>
+{% endblock %}
+
+  {% block card_header %}
+    <div class="card-header d-flex">
+      {{ title_prefix }}
+      {% if not page %}
+        <a href="{{ url }}" rel="bookmark" class="h3 m-0 font-weight-normal align-self-center">{{ label }}</a>
+      {% endif %}
+      {{ title_suffix }}
+    </div>
+  {% endblock %}
+
+  {% block card_content %}
+  <div class="card-body">
+    {{ content }}
+  </div>
+  {% endblock %}
+
+  {% block card_footer %}
+  <div class="card-footer"></div>
+  {% endblock %}
+
+</div>

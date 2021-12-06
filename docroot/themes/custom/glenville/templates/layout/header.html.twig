@@ -1,0 +1,143 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display the themes header.
+  */
+#}
+{% set container = 'container-fluid' %}
+<header class="site-header">
+
+  <div {{ attributes.addClass(container) }}>
+    <div class="row">
+
+      <!-- logo & nav -->
+      {% if page.navigation %}
+        {% set logo_nav_classes = [
+        'bg-primary',
+        'col-12 order-1',
+        breakpoint ? 'order-' ~ breakpoint|clean_class ~ '-2' : '',
+        theme.settings.navbar_colour ? theme.settings.navbar_colour|clean_class : '',
+        ]
+        %}
+        <div{{ navbar_colour.addClass(logo_nav_classes) }}>
+          {% block navbar %}
+            {% set navbar_classes = [
+            'navbar py-1 align-items-end align-items-stretch',
+            breakpoint ? 'py-' ~ breakpoint|clean_class ~ '-0' : '',
+            breakpoint ? 'navbar-expand-' ~ breakpoint|clean_class : '',
+            theme.settings.navbar_position ? theme.settings.navbar_position|clean_class : container,
+            ]
+            %}
+            <nav{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="navigation">
+              {{ page.navigation }}
+
+              <div class="d-flex align-items-center pl-1">
+                <a class="navbar-toggler d-block header__bar--menu_btn header__bar--search_btn text-light" aria-expanded="false" aria-label="Toggle the search bar.">
+                  <i class="material-icons" data-text-alter="close">{{ 'search'|t }}</i>
+                </a>
+                <a id="header__bar--menu_btn" class="navbar-toggler header__bar--menu_btn text-light" aria-expanded="false" aria-label="Toggle navigation.">
+                  <i class="material-icons d-block">{{ 'menu'|t }}</i>
+                  <span class="d-block">{{ 'Menu'|t }}</span>
+                </a>
+              </div>
+            </nav>
+          {% endblock %}
+        </div>
+      {% endif %}
+      <!-- / logo & nav -->
+
+      <!-- search bar -->
+      {% if page.search_bar %}
+        {% set search_bar_attributes = create_attribute() %}
+        {% set search_bar_classes = [
+        'search_bar fade col-12',
+        ]
+        %}
+        <div{{ search_bar_attributes.addClass(search_bar_classes) }}>
+          {% block search_bar %}
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-md-6 m-auto">
+                  {{ page.search_bar }}
+                </div>
+              </div>
+            </div>
+          {% endblock %}
+        </div>
+      {% endif %}
+      <!-- / search bar -->
+
+      <!-- page header -->
+      {% if page.header_bar_left or page.header_bar_right %}
+        {% set header_attributes = create_attribute() %}
+        {% set header_classes = [
+        'header__bar py-2',
+        'collapse col-12 order-3',
+        breakpoint ? 'order-' ~ breakpoint|clean_class ~ '-1' : '',
+        breakpoint ? 'd-' ~ breakpoint|clean_class ~ '-block' : '',
+        breakpoint ? 'navbar-expand-' ~ breakpoint|clean_class : '',
+        ]
+        %}
+        <div{{ header_attributes.addClass(header_classes) }} id="header">
+          <div class="container">
+            <div class="row">
+
+              {# header left #}
+              {% block header_bar_left %}
+                {% set header__bar_attributes = create_attribute() %}
+                {% set header__bar_classes = [
+                'col-12 p-3',
+                breakpoint ? 'col-' ~ breakpoint|clean_class ~ '-7' : '',
+                breakpoint ? 'py-' ~ breakpoint|clean_class ~ '-0' : '',
+                ]
+                %}
+                <div{{ header__bar_attributes.addClass(header__bar_classes) }} role="banner">
+                  {% set header__bar_flex_attributes = create_attribute() %}
+                  {% set header__bar_flex_classes = [
+                    'd-block',
+                    breakpoint ? 'd-' ~ breakpoint|clean_class ~ '-flex' : '',
+                    breakpoint ? 'justify-content-' ~ breakpoint|clean_class ~ '-start' : '',
+                  ]
+                  %}
+                  <div{{ header__bar_flex_attributes.addClass(header__bar_flex_classes) }}>
+                    {{ page.header_bar_left }}
+                  </div>
+                </div>
+              {% endblock %}
+              {# / header right #}
+
+              {# header right #}
+              {% block header_bar_right %}
+                {% set header__bar_attributes = create_attribute() %}
+                {% set header__bar_classes = [
+                'col-12 p-3',
+                breakpoint ? 'col-' ~ breakpoint|clean_class ~ '-5' : '',
+                breakpoint ? 'py-' ~ breakpoint|clean_class ~ '-0' : '',
+                ]
+                %}
+                <div{{ header__bar_attributes.addClass(header__bar_classes) }} role="banner">
+                  {% set header__bar_flex_attributes = create_attribute() %}
+                  {% set header__bar_flex_classes = [
+                    'd-block',
+                    breakpoint ? 'd-' ~ breakpoint|clean_class ~ '-flex' : '',
+                    breakpoint ? 'justify-content-' ~ breakpoint|clean_class ~ '-end' : '',
+                  ]
+                  %}
+                  <div{{ header__bar_flex_attributes.addClass(header__bar_flex_classes) }}>
+                    {{ page.header_bar_right }}
+                  </div>
+                </div>
+              {% endblock %}
+              {# / header right #}
+
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      <!-- / page header -->
+
+    </div>
+  </div>
+</header>
+
+<div class="overlay fade"></div>

@@ -1,0 +1,20 @@
+{% extends "@glenville/node/default/node--views--teaser.html.twig" %}
+
+{% block image %}
+  {{ content.field_event_image }}
+{% endblock %}
+
+{% block date %}
+  {% if event_same_day %}
+  <i class="material-icons mr-2" aria-hidden="true">date_range</i>{{ node.field_event_date.value|date("M j, Y", false) }}
+  {% else %}
+  <i class="material-icons mr-2" aria-hidden="true">date_range</i>{{ node.field_event_date.value|date("M j", false) }} - {{ node.field_event_date.end_value|date("M j, Y", false) }}
+  {% endif %}
+  <i class="material-icons mx-2" aria-hidden="true">access_time</i>
+  {% if start_time == end_time %}
+    {{ start_time }}
+  {% else %}
+    {{ start_time }} - {{ end_time }}
+  {% endif %}
+  </span>
+{% endblock %}

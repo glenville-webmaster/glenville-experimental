@@ -1,0 +1,127 @@
+{% extends "@glenville/components/cards.html.twig" %}
+
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  ]
+%}
+
+{# set the card type #}
+{% block card_type %}
+  {% if field_card_type is not empty %}
+    {% if field_card_type == 'featured' %}
+      {% set card_main_classes = 'border-0 box-shadow-5' %}
+    {% elseif field_card_type == 'underlay-black' %}
+      {% set card_main_classes = 'bg-transparent border-0' %}
+    {% endif %}
+  {% else %}
+    {% set card_main_classes = 'rounded text-dark box-shadow-3' %}
+  {% endif %}
+
+  <div{{ attributes.addClass(classes, field_card_type, card_main_classes, 'my-2 my-sm-3') }}>
+{% endblock %}
+
+{# card header #}
+{% block card_header %}
+  {% if content.field_card_feature|render|striptags is not empty %}
+
+    {% set card_header_attribute = create_attribute() %}
+    {% if field_card_type is not empty %}
+      {% if field_card_type == 'featured' %}
+        {% set card_header_classes = 'bg-primary text-light' %}
+        {% set card_header_size = 'h3' %}
+      {% elseif field_card_type == 'overlay-blue' %}
+        {% set card_header_classes = 'bg-transparent p-3 border-0 text-primary' %}
+      {% elseif field_card_type == 'overlay-black' %}
+        {% set card_header_classes = 'bg-transparent p-3 border-0 text-black' %}
+      {% endif %}
+    {% else %}
+      {% set card_header_classes = 'p-4' %}
+    {% endif %}
+
+    <div {{ card_header_attribute.addClass(card_header_classes, 'card-header') }}>
+      <{{ card_header_size | default('h4') }} class="m-0">
+        {{ content.field_card_feature }}
+      </{{ card_header_size | default('h4') }}>
+    </div>
+  {% endif %}
+{% endblock %}
+
+{# card content #}
+{% block card_content %}
+
+  {% set card_body_attribute = create_attribute() %}
+
+  {% if field_card_type is not empty %}
+    {% if field_card_type == 'featured' %}
+
+      {# check if we have any media #}
+      {% if content.field_card_media|render|striptags is not empty %}
+        {% set card_body_classes = 'card-body card-body-media p-0 m-0' %}
+      {% else %}
+        {% set card_body_classes = 'card-body' %}
+      {% endif %}
+
+    {% elseif field_card_type == 'overlay-black' or field_card_type == 'overlay-blue' %}
+      {% set card_body_classes = 'card-img-overlay text-white' %}
+    {% elseif field_card_type == 'underlay-black' %}
+      {% set card_body_classes = 'text-center' %}
+    {% endif %}
+  {% else %}
+    {% set card_body_classes = 'card-body p-4' %}
+  {% endif %}
+
+  {# card image/video w/ & w/o link #}
+  {% if content.field_card_media|render|striptags is not empty %}
+    {% if content.field_card_link|render|striptags is not empty %}
+    <a href="{{ content.field_card_link|render|striptags }}">{{ content.field_card_media }}</a>
+    {% else %}
+      {{ content.field_card_media }}
+    {% endif %}
+  {% endif %}
+
+  {# card body #}
+  {% if content.field_card_title|render|striptags is not empty or content.field_card_body|render|striptags is not empty %}
+  <div{{ card_body_attribute.addClass(card_body_classes) }}>
+
+    {# card title w/ & w/o link #}
+    {% if content.field_card_title|render|striptags is not empty %}
+      {% if field_card_type is empty %}
+        {% set card_title_size = 'h6' %}
+      {% endif %}
+      <{{ card_title_size | default('h4') }} class="card-title">
+        {% if content.field_card_link|render|striptags is not empty %}
+        <a href="{{ content.field_card_link|render|striptags }}">{{ content.field_card_title }}</a>
+        {% else %}
+          {{ content.field_card_title }}
+        {% endif %}
+      </{{ card_title_size | default('h4') }}>
+    {% endif %}
+
+    {# card body #}
+    {% if content.field_card_body|render|striptags is not empty %}
+      <div class="card-text">
+        {{ content.field_card_body }}
+      </div>
+    {% endif %}
+
+  </div>
+  {% endif %}
+
+{% endblock %}
+
+{# card footer #}
+{% block card_footer %}
+  {% if content.field_card_footer|render|striptags is not empty %}
+
+    {% set card_footer_attribute = create_attribute() %}
+    {% if field_card_type is empty %}
+      {% set card_footer_classes = 'p-4' %}
+    {% endif %}
+    <div{{ card_footer_attribute.addClass(card_footer_classes, 'card-footer') }}>
+      {{ content.field_card_footer }}
+    </div>
+  {% endif %}
+{% endblock %}

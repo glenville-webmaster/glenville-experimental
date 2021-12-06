@@ -1,0 +1,5 @@
+services:
+  glenville_ldap.route_subscriber:
+    class: 'Drupal\glenville_ldap\EventSubscriber\GlenvilleLdapSubscriber'
+    tags:
+      - { name: event_subscriber }

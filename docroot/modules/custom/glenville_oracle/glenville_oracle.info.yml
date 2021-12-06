@@ -1,0 +1,5 @@
+name: Glenville Oracle
+type: module
+description: Custom module to connect, display, and pdf download course information
+core_version_requirement: ^8 || ^9
+package: Glenville

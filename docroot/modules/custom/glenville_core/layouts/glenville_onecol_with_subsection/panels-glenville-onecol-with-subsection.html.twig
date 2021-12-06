@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Template for a one column panel layout.
+ *
+ * This template provides a very simple "one column" panel display layout.
+ *
+ * Variables:
+ * - $id: An optional CSS id to use for the layout.
+ * - $content: An array of content, each item in the array is keyed to one
+ *   panel of the layout. This layout supports the following sections:
+ *   - content.subsection: The content header.
+ *   - content.middle: The main content.
+ */
+#}
+<section class="panel-oedu-1col subsection" {% if css_id %}{{ css_id }}{% endif %} style="background: url('{{ header_image }}');">
+  {% if content.subsection|render|striptags is not empty %}
+  <div class="panel-panel py-5">
+    {{ content.subsection }}
+  </div>
+  {% endif %}
+</section>
+
+<section class="panel-top clearfix">
+  {{ content.top }}
+</section>
+
+<section class="panel-container container block clearfix">
+  <div class="row">
+    <div class="col-12">
+
+      <div class="panel-1col" {% if css_id %}{{ css_id }}{% endif %}>
+        <div class="panel-panel">
+          {{ content.middle }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

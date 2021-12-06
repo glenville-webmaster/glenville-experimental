@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Contains glenville_ldap.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function glenville_ldap_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the glenville_ldap module.
+    case 'help.page.glenville_ldap':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom module to connect LDAP services to drupal users.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function glenville_ldap_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if (in_array('page__user__authenticate', $suggestions)) {
+    $suggestions[] = 'page__user__login';
+  }
+}

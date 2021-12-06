@@ -1,0 +1,16 @@
+/*
+ * @file
+ * Provides the layout styles for 2col_landing_page
+ */
+
+@media(min-width: 768px) {
+  .block--openedu-hero {
+    height: 200px;
+  }
+}
+
+@media(min-width: 992px) {
+  .block--openedu-hero {
+    height: 300px;
+  }
+}

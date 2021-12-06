@@ -1,0 +1,8 @@
+
+glenville_ldap.login_form:
+  path: '/user/authenticate'
+  defaults:
+    _form: '\Drupal\glenville_ldap\Form\LdapLoginForm'
+    _title: 'Glenville User Login'
+  requirements:
+    _permission: 'access content'

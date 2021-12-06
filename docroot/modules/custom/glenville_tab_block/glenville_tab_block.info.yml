@@ -1,0 +1,7 @@
+name: Glenville tab block
+type: module
+description: Defines a custom block for tab menus in program content.
+core_version_requirement: ^8 || ^9
+package: Glenville
+dependencies:
+  - block

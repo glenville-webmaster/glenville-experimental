@@ -1,0 +1,74 @@
+{#
+/**
+ * @file
+ * Template for a one column panel layout.
+ *
+ * This template provides a very simple "one column" panel display layout.
+ *
+ * Variables:
+ * - $id: An optional CSS id to use for the layout.
+ * - $content: An array of content, each item in the array is keyed to one
+ *   panel of the layout. This layout supports the following sections:
+ *   - content.middle: The only panel in the layout.
+ */
+#}
+{% set hasLeft = content.left and content.left|render|striptags|trim %}
+{% set hasRight = content.right and content.right|render|striptags|trim %}
+{% set hasBottom = content.bottom and content.bottom|render|striptags|trim %}
+
+<section class="panel-1col subsection" {% if css_id %}{{ css_id }}{% endif %} style="background: url('{{ header_image }}');">
+  <div class="panel-panel py-5 container">
+    <div class="row text-center text-md-left d-flex align-items-center">
+      <div class="subsection_left col-12 col-md-3 col-lg-2">
+        {{ content.subsection_left }}
+      </div>
+      <div class="subsection_right col-12 col-md-9 col-lg-10">
+        {{ content.subsection_right }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="panel-top clearfix">
+  {{ content.top }}
+</section>
+
+<section class="panel-container container block clearfix">
+  <div class="row">
+
+    {% if hasLeft %}
+      <div class="panel-2col col-lg-8">
+        <div class="panel-panel">
+          {{ content.left }}
+        </div>
+      </div>
+    {% else %}
+      {# needed for panels IPE #}
+      {{ content.left }}
+    {% endif %}
+
+    {% if hasRight %}
+      <aside class="panel-2col col-lg-4 sidebar">
+        <div class="panel-panel">
+          {{ content.right }}
+        </div>
+      </aside>
+    {% else %}
+      {# needed for panels IPE #}
+      {{ content.right }}
+    {% endif %}
+
+  </div>
+</section>
+
+{% if hasBottom %}
+<section class="panel-1col bottom">
+  <div class="panel-panel">
+    {{ content.bottom }}
+  </div>
+</section>
+{% else %}
+  {# needed for panels IPE #}
+  {{ content.bottom }}
+{% endif %}
+

@@ -1,0 +1,63 @@
+{#
+/**
+ * @file
+ * Template for a one column panel layout.
+ *
+ * This template provides a very simple "two column" panel display layout.
+ *
+ * Variables:
+ * - $id: An optional CSS id to use for the layout.
+ * - $content: An array of content, each item in the array is keyed to one
+ *   panel of the layout. This layout supports the following sections:
+ *   - content.subsection: The top panel with the image background.
+ *   - content.left: The left column panel.
+ *   - content.right: The right column panel.
+ *   - content.bottom: The bottom panel.
+ * - $header_image: displays the header image as a background on the 2subsections
+ */
+#}
+
+{{ attach_library('glenville_core/glenville_twocol_landing_page') }}
+
+{% set hasLeft = content.left and content.left|render|striptags|trim %}
+{% set hasRight = content.right and content.right|render|striptags|trim %}
+{% set hasBottom = content.bottom and content.bottom|render|striptags|trim %}
+
+<section class="panel-top clearfix">
+  {{ content.top }}
+</section>
+
+<section class="panel-oedu-container panel-container container block clearfix">
+  <div class="row">
+
+    {% if hasLeft %}
+      <aside class="2col-landing-page col-lg-4 sidebar">
+        <div class="panel-panel">
+          {{ content.left }}
+        </div>
+      </aside>
+    {% else %}
+      {# needed for panels IPE #}
+      {{ content.left }}
+    {% endif %}
+
+    <div class="2col-landing-page col-lg-8">
+      <div class="panel-panel">
+        {{ content.right }}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% if hasBottom %}
+<section class="2col-landing-page bottom container block clearfix">
+  <div class="panel-panel">
+    {{ content.bottom }}
+  </div>
+</section>
+{% else %}
+  {# needed for panels IPE #}
+  {{ content.bottom }}
+{% endif %}
+

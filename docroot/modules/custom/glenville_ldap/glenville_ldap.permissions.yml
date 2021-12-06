@@ -1,0 +1,4 @@
+
+glenville protected content:
+  title: 'Bypass protacted content access'
+  description: 'Allows viewing the protected content type without LDAP'

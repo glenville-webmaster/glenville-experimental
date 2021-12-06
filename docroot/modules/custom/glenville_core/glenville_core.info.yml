@@ -1,0 +1,10 @@
+name: Glenville Custom
+description: 'Provides the core functions needed for Glenville State College.'
+package: Glenville
+type: module
+version: '8.x-3.x'
+core_version_requirement: ^8 || ^9
+libraries:
+  - glenville_core/glenville_twocol_landing_page
+#dependencies:
+#  - ckeditor

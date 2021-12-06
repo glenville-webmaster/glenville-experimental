@@ -1,0 +1,68 @@
+glenville_onecol_with_subsection:
+  label: Single column with subsection header
+  category: 'Glenville'
+  path: layouts/glenville_onecol_with_subsection
+  icon: glenville_onecol_with_subsection.png
+  template: panels-glenville-onecol-with-subsection
+  regions:
+    subsection:
+      label: Subsection
+    top:
+      label: Top
+    middle:
+      label: Middle column
+
+glenville_twocol_with_subsection_left:
+  label: Two columns with subsection header (main right)
+  category: 'Glenville'
+  path: layouts/glenville_twocol_with_subsection_left
+  icon: glenville_twocol_with_subsection_left.png
+  template: panels-glenville-twocol-with-subsection-left
+  regions:
+    subsection:
+      label: Subsection
+    top:
+      label: Top
+    left:
+      label: Left
+    right:
+      label: Right
+    bottom:
+      label: Bottom
+
+glenville_twocol_landing_page:
+  label: Landing Page with Top, Bottom, and Two Columns
+  category: 'Glenville'
+  path: layouts/glenville_twocol_landing_page
+  icon: glenville_twocol_landing_page.png
+  template: panels-glenville-twocol-landing-page
+  library: glenville_core/glenville_twocol_landing_page
+  regions:
+    top:
+      label: Top
+    left:
+      label: Left
+    right:
+      label: Right
+    bottom:
+      label: Bottom
+
+glenville_twocol_with_subsection_split_sidebar_first:
+  label: Two columns with a split subsection, main column stacked reverse
+  category: 'Glenville'
+  path: layouts/glenville_twocol_with_subsection_split_sidebar_first
+  icon: glenville_twocol_with_subsection_split_sidebar_first.png
+  template: panels-glenville-twocol-with-subsection-split-sidebar-first
+  regions:
+    subsection_left:
+      label: Left Subsection
+    subsection_right:
+      label: Right Subsection
+    top:
+      label: Top
+    right:
+      label: Right
+    left:
+      label: Left
+    bottom:
+      label: Bottom

@@ -1,0 +1,6 @@
+services:
+  glenville_core.config_import.subscriber:
+    class: 'Drupal\glenville_core\EventSubscriber\ConfigImportSubscriber'
+    arguments: ['@keyvalue.expirable']
+    tags:
+      - { name: event_subscriber }

@@ -1,0 +1,5 @@
+name: Glenville LDAP
+type: module
+description: Custom module to connect LDAP services to drupal users.
+core_version_requirement: ^8 || ^9
+package: Glenville

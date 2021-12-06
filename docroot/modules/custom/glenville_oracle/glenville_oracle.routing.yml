@@ -1,0 +1,8 @@
+
+glenville_oracle.oracle_controller_generateRotation:
+  path: '/course-rotation'
+  defaults:
+    _controller: '\Drupal\glenville_oracle\Controller\OracleController::generateRotation'
+    _title: 'Generate Course Rotation'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,5 @@
+glenville_twocol_landing_page:
+  version: 1.x
+  css:
+    theme:
+      layouts/glenville_twocol_landing_page/glenville_twocol_landing_page.css: {}

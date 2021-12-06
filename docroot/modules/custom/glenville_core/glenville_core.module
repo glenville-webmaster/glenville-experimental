@@ -1,0 +1,129 @@
+<?php
+
+/**
+ * @file
+ * Contains core functionality for Glenville State College.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function glenville_core_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form['#id'] === 'views-exposed-form-openedu-search-block-1') {
+    $form['keywords']['#attributes']['placeholder'] = t("Search Glenville.edu");
+    $form['#attributes']['class'][] = 'search-form-wrapper';
+  }
+
+  // @todo this is not intented as a permenent solution, use better exposed filters when select dropdown is ported.
+  // Transform the following entity filter fields into selects.
+  if (strpos($form['#id'], 'views-exposed-form-profile-list') !== FALSE) {
+
+      $field_name = 'department';
+      if (isset($form[$field_name])) {
+        $form[$field_name]['#type'] = 'select';
+        $form[$field_name]['#size'] = 0;
+        $form[$field_name]['#empty_option'] = t("Department");
+        $form[$field_name]['#empty_value'] = '';
+        $form[$field_name]['#default_value'] = '';
+        
+        // Attempt to unset variables to get it to work again
+        // See: https://www.drupal.org/project/better_exposed_filters/issues/3159914
+        
+	unset($form[$field_name]['#description']);
+  	unset($form[$field_name]['#context']);
+  	unset($form[$field_name]['#process']);
+  	unset($form[$field_name]['#pre_render']);
+        
+        $nids = \Drupal::entityQuery('node')
+          ->condition('type', ['department', 'program'], 'IN')
+          ->execute();
+        foreach ($nids as $nid) {
+          $node = Node::load($nid);
+          $form[$field_name]['#options'][$nid] = $node->getTitle();
+        }
+      }
+      
+      $form['#after_build'][] = '_sort_alphabetically';
+  }
+}
+
+/**
+ * Implements _sort_alphabetically function to order items in the list alphabetically
+ */
+function _sort_alphabetically($form, $form_state) {
+	if($form_state->getValue('form_id') == "views_exposed_form") {
+		asort($form['department']['#options']);
+	}
+        return $form;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function glenville_core_preprocess_views_view(&$variables) {
+  /** @var Drupal\views\ViewExecutable $view */
+  $view = $variables['view'];
+  if ($view->id() == 'profile_list') {
+    // Check to see if either categories or search have been triggered.
+    $args = $view->getExposedInput();
+
+    if (!empty($args)) {
+      foreach ($args as $filter => $value) {
+        if ($filter == 'department' && $value == "") {
+          $variables['directory_changed'] = TRUE;
+        }
+      }
+    }
+  }
+}
+
+// Add a region variable to a block.
+function glenville_core_preprocess_block(&$variables) {
+  if (isset($variables["elements"]["#id"])) {
+    $block_id = $variables["elements"]["#id"];
+    $block = \Drupal\block\Entity\Block::load($block_id);
+
+    if ($block) {
+      $variables["content"]["#attributes"]["region"] = $block->getRegion();
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function glenville_core_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
+  if (!isset($variables['menu_name'])) {
+    return;
+  }
+  $menu_name = $variables['menu_name'];
+  $menu_name_sanitized = strtr($menu_name, '-', '_');
+
+  /* @var \Drupal\simple_megamenu\SimpleMegaMenuHelperInterface $simple_megamenu_helper */
+  $simple_megamenu_helper = \Drupal::service('simple_megamenu.helper');
+  if ($simple_mega_menu_types = $simple_megamenu_helper->getMegaMenuTypeWhichTargetMenu($menu_name)) {
+
+    if (isset($variables["attributes"]["region"])) {
+      $suggestions[] = 'menu__simple_megamenu__' . $menu_name_sanitized . "__" . $variables["attributes"]["region"];
+    }
+  }
+
+  // Secondary navigation is special and should take precedence.
+  if ($key = array_search('menu__secondary_navigation', $suggestions)) {
+    unset($suggestions[$key]);
+    $suggestions[] = 'menu__secondary_navigation';
+  }
+}
+
+
+/**
+ * Implements hook_page_attachments().
+ */
+function glenville_core_page_attachments(array &$attachments) {
+  // Fix for panels being an ahole.
+  $chosen_conf = \Drupal::config('chosen.settings');
+  $attachments['#attached']['drupalSettings']['chosen']['selector'] = $chosen_conf->get('jquery_selector');
+}

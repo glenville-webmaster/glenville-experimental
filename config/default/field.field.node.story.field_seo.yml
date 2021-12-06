@@ -1,0 +1,31 @@
+uuid: ddbc8c2f-b673-4cc9-9cfb-3dffb42f0101
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seo
+    - node.type.story
+  module:
+    - yoast_seo
+_core:
+  default_config_hash: wAF0F3BVYu2MHckUwzEFQBXqx0OhFxBg6__vvkhaHHk
+id: node.story.field_seo
+field_name: field_seo
+entity_type: node
+bundle: story
+label: SEO
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    yoast_seo:
+      focus_keyword: ''
+      status: '0'
+    status: '0'
+    focus_keyword: ''
+    title: null
+    description: null
+default_value_callback: ''
+settings: {  }
+field_type: yoast_seo

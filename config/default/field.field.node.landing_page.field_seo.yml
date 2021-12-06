@@ -1,0 +1,31 @@
+uuid: 099a6ad3-054b-485b-b4fd-4042bc721048
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seo
+    - node.type.landing_page
+  module:
+    - yoast_seo
+_core:
+  default_config_hash: 5Jza0G2skXswf_JmTdzMaRE0WU921EPFoJD4eCqb5V0
+id: node.landing_page.field_seo
+field_name: field_seo
+entity_type: node
+bundle: landing_page
+label: SEO
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    yoast_seo:
+      focus_keyword: ''
+      status: '0'
+    status: '0'
+    focus_keyword: ''
+    title: null
+    description: null
+default_value_callback: ''
+settings: {  }
+field_type: yoast_seo

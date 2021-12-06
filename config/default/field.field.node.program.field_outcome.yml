@@ -1,0 +1,28 @@
+uuid: d8f64aca-2f7e-4053-b526-a70b77d670bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.openedu_grid_block
+    - field.storage.node.field_outcome
+    - node.type.program
+id: node.program.field_outcome
+field_name: field_outcome
+entity_type: node
+bundle: program
+label: Outcome
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      openedu_grid_block: openedu_grid_block
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

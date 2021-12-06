@@ -1,0 +1,23 @@
+uuid: 686d58ff-e856-4240-a1d8-d0bc5f7152b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_research_projects
+    - node.type.profile
+  module:
+    - text
+_core:
+  default_config_hash: CYLe7TnuZ3r5P7afylHeQHW-s7_oeSIXg7zl8WsovAA
+id: node.profile.field_profile_research_projects
+field_name: field_profile_research_projects
+entity_type: node
+bundle: profile
+label: Presentations
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,34 @@
+uuid: d93d8072-6051-48db-9fcc-232e85121168
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.simple_mega_menu.field_cta_block
+    - paragraphs.paragraphs_type.cta_block
+    - simple_megamenu.simple_mega_menu_type.megamenu_main
+  module:
+    - entity_reference_revisions
+id: simple_mega_menu.megamenu_main.field_cta_block
+field_name: field_cta_block
+entity_type: simple_mega_menu
+bundle: megamenu_main
+label: 'CTA Block'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      cta_block: cta_block
+    target_bundles_drag_drop:
+      cta_block:
+        enabled: true
+        weight: 3
+      link_column:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

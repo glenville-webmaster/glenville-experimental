@@ -1,0 +1,19 @@
+uuid: aa65ab8f-6e1d-4e95-b8db-61fcabd24520
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_feature
+    - paragraphs.paragraphs_type.bootstrap_card
+id: paragraph.bootstrap_card.field_card_feature
+field_name: field_card_feature
+entity_type: paragraph
+bundle: bootstrap_card
+label: 'Card Feature'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

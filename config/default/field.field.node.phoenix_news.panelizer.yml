@@ -1,0 +1,21 @@
+uuid: 29a64d5d-ab23-4674-a1eb-bd13fabdbe1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.panelizer
+    - node.type.phoenix_news
+  module:
+    - panelizer
+id: node.phoenix_news.panelizer
+field_name: panelizer
+entity_type: node
+bundle: phoenix_news
+label: Panelizer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: panelizer

@@ -1,0 +1,27 @@
+uuid: 792dc9c3-45b8-4f23-88b5-05e5738260a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_protected_files
+    - node.type.protected_content
+  module:
+    - file
+id: node.protected_content.field_protected_files
+field_name: field_protected_files
+entity_type: node
+bundle: protected_content
+label: 'File Attachments'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: protected
+  file_extensions: 'txt doc xls docx pdf xlsx'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

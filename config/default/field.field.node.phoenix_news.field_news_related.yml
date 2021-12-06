@@ -1,0 +1,28 @@
+uuid: 746b3498-bd49-46ca-bdcd-92d82e761f5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_related
+    - node.type.phoenix_news
+id: node.phoenix_news.field_news_related
+field_name: field_news_related
+entity_type: node
+bundle: phoenix_news
+label: 'Related News'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      phoenix_news: phoenix_news
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

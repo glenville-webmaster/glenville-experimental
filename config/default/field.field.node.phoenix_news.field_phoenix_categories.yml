@@ -1,0 +1,29 @@
+uuid: b26216c1-e804-452a-8a14-270494fa9a1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phoenix_categories
+    - node.type.phoenix_news
+    - taxonomy.vocabulary.phoenix_categories
+id: node.phoenix_news.field_phoenix_categories
+field_name: field_phoenix_categories
+entity_type: node
+bundle: phoenix_news
+label: Categories
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      phoenix_categories: phoenix_categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: ac166b98-02a8-4580-a2e1-58abcfa2280c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_story_subtitle
+    - node.type.story
+_core:
+  default_config_hash: Y_6AEGq0PfcEYf7jUvF0_iSwy8Q1OJb5kK4NT5DS1LA
+id: node.story.field_story_subtitle
+field_name: field_story_subtitle
+entity_type: node
+bundle: story
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,23 @@
+uuid: 14d42a59-520e-4018-be1a-c19bddbbee42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_course_intro
+    - node.type.program
+  module:
+    - text
+_core:
+  default_config_hash: dQCp__2wXpSDcsKFyKAWKru99cbiK28Ut_pY9a2emd0
+id: node.program.field_program_course_intro
+field_name: field_program_course_intro
+entity_type: node
+bundle: program
+label: 'Courses Description'
+description: 'Introduction to your course listing.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

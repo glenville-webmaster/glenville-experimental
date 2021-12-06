@@ -1,0 +1,40 @@
+uuid: 10dac5f1-07c1-4b39-88b1-38c7e566ad57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_department_position
+    - node.type.profile
+    - paragraphs.paragraphs_type.profile_department_position
+  module:
+    - entity_reference_revisions
+id: node.profile.field_department_position
+field_name: field_department_position
+entity_type: node
+bundle: profile
+label: 'Departments & Programs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      profile_department_position: profile_department_position
+    target_bundles_drag_drop:
+      bootstrap_card:
+        weight: 5
+        enabled: false
+      cta_block:
+        weight: 6
+        enabled: false
+      link_column:
+        weight: 7
+        enabled: false
+      profile_department_position:
+        enabled: true
+        weight: 8
+field_type: entity_reference_revisions

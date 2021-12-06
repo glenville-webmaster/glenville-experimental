@@ -1,0 +1,26 @@
+uuid: d1a2907e-ea4b-4ba7-a5f6-6d67c4a9dfc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_date
+    - node.type.news
+  module:
+    - datetime
+_core:
+  default_config_hash: SG1KZyPCNqgFgpAwtzzYqXu8LdNZm8WYHv643sT34fk
+id: node.news.field_news_date
+field_name: field_news_date
+entity_type: node
+bundle: news
+label: 'Published On'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

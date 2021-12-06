@@ -1,0 +1,30 @@
+uuid: 618407b4-8337-4ffb-93cf-9387a673058c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_department
+    - node.type.department
+    - node.type.program
+    - paragraphs.paragraphs_type.profile_department_position
+id: paragraph.profile_department_position.field_department
+field_name: field_department
+entity_type: paragraph
+bundle: profile_department_position
+label: Department
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      department: department
+      program: program
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: department
+field_type: entity_reference

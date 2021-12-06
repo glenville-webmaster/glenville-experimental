@@ -1,0 +1,21 @@
+uuid: 7d69fc49-ff47-4cd1-9ac4-2f0d4e209f3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_curriculum_vitae
+    - node.type.profile
+  module:
+    - text
+id: node.profile.field_curriculum_vitae
+field_name: field_curriculum_vitae
+entity_type: node
+bundle: profile
+label: 'Curriculum Vitae'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: 151c2fe1-4d43-40ba-8ea1-002b801fd65e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_experience
+    - node.type.program
+  module:
+    - text
+id: node.program.field_student_experience
+field_name: field_student_experience
+entity_type: node
+bundle: program
+label: 'Student Experience'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

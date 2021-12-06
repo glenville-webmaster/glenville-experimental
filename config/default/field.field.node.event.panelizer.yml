@@ -1,0 +1,23 @@
+uuid: 97f2e912-616f-4c4f-b5fe-1fbadd216494
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.panelizer
+    - node.type.event
+  module:
+    - panelizer
+_core:
+  default_config_hash: FDninTP2TWNleGVJF7jUn75Jsga7YDIvL4XmQ9pPEXA
+id: node.event.panelizer
+field_name: panelizer
+entity_type: node
+bundle: event
+label: Panelizer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: panelizer

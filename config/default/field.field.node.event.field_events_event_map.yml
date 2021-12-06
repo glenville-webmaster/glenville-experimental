@@ -1,0 +1,23 @@
+uuid: a8609e7f-dc41-4f4d-9dfb-3a4b2c81f27c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_events_event_map
+    - node.type.event
+  module:
+    - google_map_field
+_core:
+  default_config_hash: JRyta5AkCZxwDcmsV9IKDNmCAAE-PSGqcl1ogns29oQ
+id: node.event.field_events_event_map
+field_name: field_events_event_map
+entity_type: node
+bundle: event
+label: 'Event Map'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: google_map_field

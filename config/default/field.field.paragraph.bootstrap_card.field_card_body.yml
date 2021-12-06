@@ -1,0 +1,21 @@
+uuid: 4d5d3bd5-55a0-461b-a528-f051f7613fa6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_body
+    - paragraphs.paragraphs_type.bootstrap_card
+  module:
+    - text
+id: paragraph.bootstrap_card.field_card_body
+field_name: field_card_body
+entity_type: paragraph
+bundle: bootstrap_card
+label: 'Card Body'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

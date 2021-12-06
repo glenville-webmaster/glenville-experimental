@@ -1,0 +1,21 @@
+uuid: c03cc531-5974-4e96-ad3b-8c1afd4c733e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_protected_visibility
+    - node.type.protected_content
+  module:
+    - options
+id: node.protected_content.field_protected_visibility
+field_name: field_protected_visibility
+entity_type: node
+bundle: protected_content
+label: Visibility
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

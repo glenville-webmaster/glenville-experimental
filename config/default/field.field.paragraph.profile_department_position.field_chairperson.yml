@@ -1,0 +1,23 @@
+uuid: ad030f2c-5969-4bbf-af8e-eba711d69ec8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_chairperson
+    - paragraphs.paragraphs_type.profile_department_position
+id: paragraph.profile_department_position.field_chairperson
+field_name: field_chairperson
+entity_type: paragraph
+bundle: profile_department_position
+label: Chairperson
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

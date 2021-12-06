@@ -1,0 +1,22 @@
+uuid: 236da685-4266-465a-918d-5af1281ab1fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.protected_content
+  module:
+    - text
+id: node.protected_content.body
+field_name: body
+entity_type: node
+bundle: protected_content
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

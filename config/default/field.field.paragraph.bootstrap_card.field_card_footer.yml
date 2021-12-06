@@ -1,0 +1,19 @@
+uuid: 1a7939db-9951-40a1-9429-8274797e4199
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_footer
+    - paragraphs.paragraphs_type.bootstrap_card
+id: paragraph.bootstrap_card.field_card_footer
+field_name: field_card_footer
+entity_type: paragraph
+bundle: bootstrap_card
+label: 'Card Footer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

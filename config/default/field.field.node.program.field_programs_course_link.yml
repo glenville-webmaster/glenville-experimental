@@ -1,0 +1,25 @@
+uuid: 52b922ef-0c04-4367-a787-dd69572d1b98
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_programs_course_link
+    - node.type.program
+  module:
+    - link
+_core:
+  default_config_hash: 5O_VPz8MRUXqVY2WCfJVPu6yFxGSHEsKOJQkvWl5kZQ
+id: node.program.field_programs_course_link
+field_name: field_programs_course_link
+entity_type: node
+bundle: program
+label: 'Course Link'
+description: 'Optional field used to link to courses resource.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

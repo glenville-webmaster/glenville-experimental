@@ -1,0 +1,24 @@
+uuid: a2830b00-41a5-45bf-bf7a-5190718e01f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.profile
+  module:
+    - text
+_core:
+  default_config_hash: NkfZPnRmcVaxFTnqz5ynWHAgLU7Q4BOgizNHV65JD5w
+id: node.profile.body
+field_name: body
+entity_type: node
+bundle: profile
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

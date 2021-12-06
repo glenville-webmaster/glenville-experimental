@@ -1,0 +1,22 @@
+uuid: d2036546-8468-4594-815f-cf9f431f98b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.phoenix_news
+  module:
+    - text
+id: node.phoenix_news.body
+field_name: body
+entity_type: node
+bundle: phoenix_news
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

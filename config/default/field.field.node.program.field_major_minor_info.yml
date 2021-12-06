@@ -1,0 +1,21 @@
+uuid: 42e5a0f7-fec2-49a5-854c-fd6b7fdc0d1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_major_minor_info
+    - node.type.program
+  module:
+    - text
+id: node.program.field_major_minor_info
+field_name: field_major_minor_info
+entity_type: node
+bundle: program
+label: 'Additional Info'
+description: 'This text is displayed on the side of majors and minors'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

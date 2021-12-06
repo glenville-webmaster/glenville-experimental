@@ -1,0 +1,28 @@
+uuid: 9403fdc6-c0c8-4bee-b820-ec5b594dc3af
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.openedu_hero
+    - field.storage.node.field_program_hero
+    - node.type.program
+id: node.program.field_program_hero
+field_name: field_program_hero
+entity_type: node
+bundle: program
+label: Hero
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      openedu_hero: openedu_hero
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

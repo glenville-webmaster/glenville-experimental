@@ -1,0 +1,23 @@
+uuid: 0f4408ad-732a-42a8-9db2-06b33758dfdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_divider
+    - paragraphs.paragraphs_type.link_column
+id: paragraph.link_column.field_divider
+field_name: field_divider
+entity_type: paragraph
+bundle: link_column
+label: Divider
+description: "If checked, a dividing line will separate this list of links from the next. (Appears on the left hand side).\r\n"
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

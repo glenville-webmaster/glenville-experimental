@@ -1,0 +1,31 @@
+uuid: 6a61bade-4055-463d-9021-c1d8b837ca0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seo
+    - node.type.page
+  module:
+    - yoast_seo
+_core:
+  default_config_hash: IXj4AFfgGfil3pzJjkZIsognVCcy1bpTYjtgUk8-nWE
+id: node.page.field_seo
+field_name: field_seo
+entity_type: node
+bundle: page
+label: SEO
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    yoast_seo:
+      focus_keyword: ''
+      status: '0'
+    status: '0'
+    focus_keyword: ''
+    title: null
+    description: null
+default_value_callback: ''
+settings: {  }
+field_type: yoast_seo

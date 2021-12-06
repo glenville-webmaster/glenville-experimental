@@ -1,0 +1,19 @@
+uuid: 91c23878-3bb8-4954-88cd-08f45a2d6c9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_building
+    - node.type.profile
+id: node.profile.field_building
+field_name: field_building
+entity_type: node
+bundle: profile
+label: Building
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

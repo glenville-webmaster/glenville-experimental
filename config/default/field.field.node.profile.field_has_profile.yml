@@ -1,0 +1,23 @@
+uuid: 073ba5d7-f882-434d-abcc-d7b96aa9eaf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_profile
+    - node.type.profile
+id: node.profile.field_has_profile
+field_name: field_has_profile
+entity_type: node
+bundle: profile
+label: 'Has Profile'
+description: 'Check this box to show the full profile link on the directory listing.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

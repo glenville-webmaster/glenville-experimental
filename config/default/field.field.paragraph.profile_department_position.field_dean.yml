@@ -1,0 +1,23 @@
+uuid: a9a0a3ff-e434-4419-892f-ce831b078a59
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dean
+    - paragraphs.paragraphs_type.profile_department_position
+id: paragraph.profile_department_position.field_dean
+field_name: field_dean
+entity_type: paragraph
+bundle: profile_department_position
+label: Dean
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

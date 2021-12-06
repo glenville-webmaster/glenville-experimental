@@ -1,0 +1,24 @@
+uuid: 9ccf1537-3cff-420b-bf6d-3472fbdfbfd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_date
+    - node.type.phoenix_news
+  module:
+    - datetime
+id: node.phoenix_news.field_news_date
+field_name: field_news_date
+entity_type: node
+bundle: phoenix_news
+label: 'Published On'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

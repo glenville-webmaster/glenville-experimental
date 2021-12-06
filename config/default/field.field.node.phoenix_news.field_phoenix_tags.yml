@@ -1,0 +1,29 @@
+uuid: 383afce5-c831-4a21-b3f9-d3e60974d39e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phoenix_tags
+    - node.type.phoenix_news
+    - taxonomy.vocabulary.phoenix_tags
+id: node.phoenix_news.field_phoenix_tags
+field_name: field_phoenix_tags
+entity_type: node
+bundle: phoenix_news
+label: Tags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      phoenix_tags: phoenix_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,28 @@
+uuid: 581e857b-e8fd-47b6-9459-97fba164efaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_group
+    - field.storage.node.field_success_stories
+    - node.type.program
+id: node.program.field_success_stories
+field_name: field_success_stories
+entity_type: node
+bundle: program
+label: 'Success Stories'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      card_group: card_group
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

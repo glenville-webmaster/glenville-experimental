@@ -1,0 +1,23 @@
+uuid: 8a2a87cb-56c8-49aa-b258-c4ffe931a65d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_publications
+    - node.type.profile
+  module:
+    - text
+_core:
+  default_config_hash: hcPbJ_YlsiOVb_ZRK4aZg_WzOtnVNJUzvEXmcPNkjM8
+id: node.profile.field_profile_publications
+field_name: field_profile_publications
+entity_type: node
+bundle: profile
+label: Publications
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

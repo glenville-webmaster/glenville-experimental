@@ -1,0 +1,28 @@
+--- docroot/.htaccess	2021-06-08 14:32:15.541368553 -0400
++++ patches/.htaccess	2021-06-08 14:53:17.457235784 -0400
+@@ -114,6 +114,25 @@
+   # If your site is running in a VirtualDocumentRoot at http://example.com/,
+   # uncomment the following line:
+   # RewriteBase /
++  
++  ##################
++  # GLENVILLE CUSTOM
++  ##################
++
++  # ensure www.
++  RewriteCond %{HTTP_HOST} !^localhost(?::\d+)?$ [NC]  # exclude local
++  RewriteCond %{HTTP_HOST} !\.acquia-sites\.com [NC]  # exclude Acquia domains
++  RewriteCond %{HTTP_HOST} !\.ixm\.ca [NC]  # exclude IXM
++  RewriteCond %{HTTP_HOST} !(stage|dev)\.glenville\.edu [NC]  # exclude glenville dev/stage
++  RewriteCond %{HTTP_HOST} !^www\. [NC]
++  RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
++
++  # ensure https
++  RewriteCond %{HTTP_HOST} !^localhost(?::\d+)?$ [NC] # exclude local
++  RewriteCond %{HTTP:X-Forwarded-Proto} !https
++  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
++
++  # END CUSTOM
+ 
+   # Redirect common PHP files to their new locations.
+   RewriteCond %{REQUEST_URI} ^(.*)?/(install.php) [OR]

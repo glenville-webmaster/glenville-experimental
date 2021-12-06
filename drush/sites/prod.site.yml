@@ -1,0 +1,15 @@
+prod:
+  host: gscipgpw8fgkg.ssh.devcloud.acquia-sites.com
+  options:
+    ac-env: prod
+    ac-realm: devcloud
+    ac-site: gsc
+  paths:
+    drush-script: drush9
+  root: /var/www/html/gsc.prod/docroot
+  uri: prod.glenville.edu
+  user: gsc.prod
+livedev:
+  options:
+    parent: '@gsc.prod'
+  root: /mnt/gfs/gsc.prod/livedev/docroot

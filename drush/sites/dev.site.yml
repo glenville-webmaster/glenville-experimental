@@ -1,0 +1,15 @@
+dev:
+  host: gsc6dm9u4mvkp.ssh.devcloud.acquia-sites.com
+  options:
+    ac-env: dev
+    ac-realm: devcloud
+    ac-site: gsc
+  paths:
+    drush-script: /var/www/html/gsc.dev/vendor/drush/drush/drush
+  root: /var/www/html/gsc.dev/docroot
+  uri: dev.glenville.edu
+  user: gsc.dev
+livedev:
+  options:
+    parent: '@gsc.dev'
+  root: /mnt/gfs/gsc.dev/livedev/docroot

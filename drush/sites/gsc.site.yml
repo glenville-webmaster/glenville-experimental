@@ -1,0 +1,64 @@
+# Application 'gsc', environment 'dev'.
+dev:
+  root: /var/www/html/gsc.dev/docroot
+  ac-site: gsc
+  ac-env: dev
+  ac-realm: devcloud
+  uri: gsc6dm9u4mvkp.devcloud.acquia-sites.com
+  dev.livedev:
+    parent: '@gsc.dev'
+    root: /mnt/gfs/gsc.dev/livedev/docroot
+  host: gsc6dm9u4mvkp.ssh.devcloud.acquia-sites.com
+  user: gsc.dev
+  paths:
+    drush-script: drush10
+
+
+# Application 'gsc', environment 'prod'.
+prod:
+  root: /var/www/html/gsc.prod/docroot
+  ac-site: gsc
+  ac-env: prod
+  ac-realm: devcloud
+  uri: gscipgpw8fgkg.devcloud.acquia-sites.com
+  prod.livedev:
+    parent: '@gsc.prod'
+    root: /mnt/gfs/gsc.prod/livedev/docroot
+  host: gscipgpw8fgkg.ssh.devcloud.acquia-sites.com
+  user: gsc.prod
+  paths:
+    drush-script: drush10
+
+
+# Application 'gsc', environment 'ra'.
+ra:
+  root: /var/www/html/gsc.ra/docroot
+  ac-site: gsc
+  ac-env: ra
+  ac-realm: devcloud
+  uri: gscra.devcloud.acquia-sites.com
+  ra.livedev:
+    parent: '@gsc.ra'
+    root: /mnt/gfs/gsc.ra/livedev/docroot
+  host: gscra.ssh.devcloud.acquia-sites.com
+  user: gsc.ra
+  paths:
+    drush-script: drush10
+
+
+# Application 'gsc', environment 'test'.
+test:
+  root: /var/www/html/gsc.test/docroot
+  ac-site: gsc
+  ac-env: test
+  ac-realm: devcloud
+  uri: gsc668fzwbvej.devcloud.acquia-sites.com
+  test.livedev:
+    parent: '@gsc.test'
+    root: /mnt/gfs/gsc.test/livedev/docroot
+  host: gsc668fzwbvej.ssh.devcloud.acquia-sites.com
+  user: gsc.test
+  paths:
+    drush-script: drush10
+
+

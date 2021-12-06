@@ -1,0 +1,396 @@
+<?php
+
+/**
+ * @file
+ * Custom functions to support theming in the Glenville theme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
+use Drupal\Core\Url;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_preprocess().
+ */
+function glenville_preprocess(&$variables, $hook) {
+
+  // Apply header image subsections..
+  $templates = [
+    'panels_oedu_onecol_with_subsection',
+    'panels_oedu_twocol_with_subsection_split_sidebar_first',
+    'panels_oedu_twocol_with_subsection_sidebar_first',
+    'panels_oedu_twocol_with_subsection',
+    'panels_glenville_onecol_with_subsection',
+    'panels_glenville_twocol_with_subsection_left',
+    'panels_glenville_twocol_with_subsection_split_sidebar_first'
+  ];
+
+  if (in_array($hook, $templates)) {
+
+    // @TODO: this might just be for all...
+    $types = [
+      'page',
+      'news',
+      'phoenix_news',
+      'profile',
+      'department',
+      'protected_content',
+      'course',
+      'alert'
+    ];
+
+    /** @var \Drupal\node\Entity\Node $node */
+    $node = \Drupal::routeMatch()->getParameter('node');
+
+    // Only apply to known types.
+    if ($node instanceof NodeInterface && in_array($node->bundle(), $types)) {
+      $variables['header_image'] = NULL;
+
+      // Check for odd layout.
+      if (isset($variables['content']['subsection'])) {
+        $subsection = &$variables['content']['subsection'];
+      }
+      else {
+        $subsection = &$variables['content']['top'];
+      }
+
+      // Loop into subsection to find header image field.
+      foreach (Element::children($subsection) as $child) {
+        if (isset($subsection[$child]['content']['field']['#field_name']) && $subsection[$child]['content']['field']['#field_name'] == 'field_header_image') {
+          // Just grab it from the node.
+          $media = $node->field_header_image->entity;
+          if ($file = $media->image->entity) {
+            $variables['header_image'] = ImageStyle::load('crop_freeform')->buildUrl($file->getFileUri());
+          }
+          unset($subsection[$child]);
+        }
+      }
+
+      // Set it to the default.
+      if (!$variables['header_image']) {
+        $variables['header_image'] = glenville_default_header_image_by_type($node->bundle());
+      }
+    }
+  }
+
+}
+
+
+/**
+ * Return the default header image by type
+ *
+ * @param $type
+ *   The node type.
+ */
+function glenville_default_header_image_by_type($type) {
+  $image = '';
+
+  switch ($type) {
+    case 'page':
+      $media_id = 16;
+      break;
+
+    case 'news':
+    case 'phoenix_news':
+      $media_id = 21;
+      break;
+
+    case 'event':
+      $media_id = 26;
+      break;
+
+    case 'profile':
+      $media_id = 31;
+      break;
+
+    default:
+      $media_id = 16;
+  }
+
+  if ($media = \Drupal::entityTypeManager()
+    ->getStorage('media')
+    ->load($media_id)) {
+
+    /** @var \Drupal\file\Entity\File $file */
+    if ($file = $media->image->entity) {
+      $image = ImageStyle::load('crop_freeform')->buildUrl($file->getFileUri());
+    }
+  }
+
+  return $image;
+}
+
+/**
+ * Implements THEME_preprocess_paragraph__PARAGRAPH_TYPE().
+ */
+function glenville_preprocess_paragraph__bootstrap_card(&$variables) {
+
+  if (isset($variables['elements']['#paragraph'])) {
+    /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+    $paragraph = $variables['elements']['#paragraph'];
+
+    if ($paragraph->hasField('field_card_type')) {
+      $card_type = $paragraph->field_card_type->value;
+      if (!empty($card_type)) {
+        $variables['attributes']['class'][] = $card_type;
+        $variables['field_card_type'] = $card_type;
+      }
+    }
+  }
+
+}
+
+/**
+ * Implements THEME_preprocess_node().
+ */
+function glenville_preprocess_node(&$variables) {
+  /** @var \Drupal\node\Entity\Node $node */
+  $node = $variables['node'];
+
+  if ($node instanceof NodeInterface) {
+    switch ($node->bundle()) {
+      case 'news':
+      case 'phoenix_news':
+        if ($media = \Drupal::entityTypeManager()
+          ->getStorage('media')
+          ->load(101)) {
+
+          /** @var \Drupal\file\Entity\File $file */
+          if ($file = $media->image->entity) {
+            $image = [
+              '#theme' => 'image_style',
+              '#style_name' => 'news_teaser',
+              '#uri' => $file->getFileUri(),
+            ];
+          }
+        }
+
+        $variables['default_news_image'] = $image;
+        break;
+    }
+  }
+}
+
+/**
+ * Implements THEME_preprocess_field().
+ */
+function glenville_preprocess_field(&$variables, $hook) {
+  $element = $variables['element'];
+  if (isset($element['#field_name'])) {
+    switch ($element['#field_name']) {
+
+      // Card groups.
+      case 'field_cards';
+        /** @var \Drupal\node\Entity\Node $node */
+        $node = $variables['element']['#object'];
+
+        // column or deck
+        $variables['card_class'] = $node->field_group_type->value;
+
+        // number of columns
+        $card_columns = $node->field_grid_layout->value;
+        $variables['card_cols'] = $card_columns;
+        break;
+
+      case 'field_news_categories':
+      case 'field_news_tags':
+
+        $filter = $element['#field_name'] == 'field_news_tags' ? 'tags' : 'categories';
+
+        foreach ($variables['items'] as $key => $item) {
+          /** @var Drupal\taxonomy\Entity\Term $term */
+          $term = $item['content']['#options']['entity'];
+          $variables['items'][$key]['content']['#url'] = Url::fromRoute(
+            'entity.node.canonical',
+            ['node' => 136],
+            [
+              'query' =>
+                [$filter => $term->id()],
+            ]
+          );
+        }
+        break;
+
+      case 'field_phoenix_categories':
+      case 'field_phoenix_tags':
+
+        $filter = $element['#field_name'] == 'field_phoenix_tags' ? 'tags' : 'categories';
+
+        foreach ($variables['items'] as $key => $item) {
+          /** @var Drupal\taxonomy\Entity\Term $term */
+          $term = $item['content']['#options']['entity'];
+          $variables['items'][$key]['content']['#url'] = Url::fromRoute(
+            'entity.node.canonical',
+            ['node' => 161],
+            [
+              'query' =>
+                [$filter => $term->id()],
+            ]
+          );
+        }
+        break;
+
+      case 'field_department':
+        foreach ($variables['items'] as $key => $item) {
+          /** @var \Drupal\node\Entity\Node $node */
+          $node = $item['content']['#options']['entity'];
+
+          if ($node->bundle() == 'department') {
+            $variables['items'][$key]['content']['#url'] = Url::fromRoute(
+              'entity.node.canonical',
+              ['node' => 146],
+              [
+                'query' =>
+                  ['department' => $node->id()],
+              ]
+            );
+          }
+        }
+        break;
+
+    }
+  }
+}
+
+/**
+ * Implements THEME_preprocess_block.
+ */
+function glenville_preprocess_block(&$variables) {
+  $variables['theme_name'] = \Drupal::service('theme.manager')->getActiveTheme()->getName();
+
+  $user = \Drupal::currentUser();
+  $variables['user'] = clone $user;
+  // Remove password and session IDs, since themes should not need nor see them.
+  unset($variables['user']->pass, $variables['user']->sid, $variables['user']->ssid);
+  $variables['logged_in'] = $user->isAuthenticated();
+
+  // Block-type specific classes.
+  if (!empty($variables['content']['#block_content'])) {
+    /** @var \Drupal\block_content\Entity\BlockContent $block_content */
+    $block_content = $variables['content']['#block_content'];
+    switch ($block_content->bundle()) {
+      case 'openedu_hero':
+        $variables['has_video'] = FALSE;
+
+        if (!$block_content->get('field_hero_video')->isEmpty()) {
+          $variables['attributes']['class'][] = 'has-video';
+          $variables['has_video'] = TRUE;
+        }
+
+        $variables['attributes']['class'][] = 'text-shadow-dark';
+
+        break;
+    }
+
+
+  }
+}
+
+/**
+ * Implements hook_preprocess_html() for html.html.twig.
+ */
+function glenville_preprocess_html(array &$variables) {
+
+  // Get the nice name for the copyright message.
+  $variables['theme_name_pretty'] = \Drupal::config('system.site')->getOriginal("name", false);
+
+  // Allow us to print the logo in our html.twig file.
+  $variables['footer_logo'] = file_url_transform_relative(file_create_url(theme_get_setting('footer_logo_path')));
+
+}
+
+/**
+ * Implements hook_theme().
+ */
+function glenville_theme() {
+  return [
+    'tabs-program' => [
+      'variables' => [
+        'items' => NULL,
+        'sticky' => FALSE,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function glenville_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  $block = $variables['elements'];
+  $blockType = $block['#configuration']['provider'];
+  if ($blockType == "block_content" && !empty($block['content']['#block_content'])) {
+    $bundle = $block['content']['#block_content']->bundle();
+    array_splice($suggestions, 2, 0, 'block__' . $bundle);
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function glenville_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form['#id'] === 'views-exposed-form-news-latest-news-block') {
+    $form['tags']['#options']['All'] = t("Search By Tag");
+  }
+  if ($form['#id'] === 'views-exposed-form-phoenix-news-latest-news-block') {
+    $form['categories']['#options']['All'] = t("Search By Category");
+    $form['tags']['#options']['All'] = t("Search By Tag");
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function glenville_preprocess_views_view(&$variables) {
+  /** @var Drupal\views\ViewExecutable $view */
+  $view = $variables['view'];
+  if ($view->current_display == 'latest_news_block') {
+    // Check to see if either categories or search have been triggered.
+    $args = $view->getExposedInput();
+    if (!empty($args)) {
+      foreach ($args as $filter => $value) {
+        if (
+          in_array($filter, ['search', 'categories', 'tags'])
+          && $value != ""
+          && $value != 'All'
+        ) {
+
+          if ($view->id() == 'phoenix_news') {
+            $variables['phoenix_news_changed'] = TRUE;
+          }
+
+          if ($view->id() == 'news') {
+            $variables['news_changed'] = TRUE;
+          }
+
+        }
+      }
+    }
+  }
+
+  // Hide featured news when filtered.
+  if ($view->id() == 'event' && $view->current_display == 'latest_events_block') {
+    // Check to see if either categories or search have been triggered.
+    $args = $view->getExposedInput();
+    if (!empty($args)) {
+      foreach ($args as $filter => $value) {
+        if (
+          in_array($filter, [
+            'search',
+            'categories',
+            'field_event_department',
+            'field_event_date_end_value',
+            'field_event_date_value',
+          ])
+          && $value != ""
+          && $value != 'All'
+        ) {
+          $variables['events_changed'] = TRUE;
+        }
+      }
+    }
+  }
+
+}

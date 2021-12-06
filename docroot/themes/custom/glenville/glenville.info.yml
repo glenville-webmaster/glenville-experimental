@@ -1,0 +1,45 @@
+core_version_requirement: ^8 || ^9
+type: theme
+base theme: oedu
+name: Glenville State College
+description: 'Theme built for Glenville State College. An OpenEDU Sub-Theme.'
+package: Glenville
+regions:
+  mobile_menu: 'Mobile Menu'
+  header_bar_left: 'Header Bar Left'
+  header_bar_right: 'Header Bar Right'
+  search_bar: 'Search Bar'
+  navigation: 'Navigation'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer_top: 'Footer Top'
+  footer: 'Footer'
+  footer_bottom: 'Footer Bottom'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+libraries:
+  - glenville/multi-level-push-menu
+  - glenville/global
+
+libraries-override:
+  oedu/global:
+    css:
+      theme:
+        css/style.css: dist/css/style-glenville.css
+
+  simple_megamenu/base:
+    css:
+      component:
+        css/style.css: dist/css/style-glenville.css
+
+  query_filter_cards/filter-cards:
+    css:
+      theme:
+        css/style.css: false
+
+ckeditor_stylesheets:
+  - dist/css/style-glenville.css

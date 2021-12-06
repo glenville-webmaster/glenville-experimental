@@ -1,0 +1,36 @@
+{
+  "name": "glenville",
+  "version": "1.0.0",
+  "description": "Using Bootstrap 4 (beta) as its the only stable release at this time. Popper.js is loaded without node.",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "bootstrap": "^4.6.0",
+    "breakpoint-sass": "^2.7.0",
+    "cssnano": "^5.0.6",
+    "grunt": "^1.4.1",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-imagemin": "^4.0.0",
+    "grunt-contrib-jshint": "^3.0.0",
+    "grunt-contrib-uglify": "^5.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-dart-sass": "^2.0.1",
+    "grunt-postcss": "~0.9.0",
+    "grunt-sass": "^3.1.0",
+    "grunt-sass-globbing": "^1.5.1",
+    "grunt-sass-lint": "github:glenville-webmaster/grunt-sass-lint#glenville-patch",
+    "grunt-webfonts": "^3.0.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "load-grunt-tasks": "^5.0.0",
+    "node": "^16.0.0",
+    "pixrem": "^5.0.0",
+    "postcss": "^8.3.2",
+    "sass": "^1.34.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
+    "time-grunt": "^2.0.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4"
+  }
+}

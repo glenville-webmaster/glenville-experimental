@@ -1,0 +1,17 @@
+bootstrap:
+  enabled: 1
+  source: /profiles/contrib/openedu/themes/oedu_sub/css/style.css
+css_grid:
+  enabled: 0
+presets:
+  -
+    name: Programs
+    layout: '{"flexible_layout":{"name":"Wrapper","classes":"","children":{"row_1":{"name":"Hero Wrapper","classes":"","children":{"column_1":{"name":"Hero","classes":"","children":{},"type":"column","wrap":{}}},"type":"row","wrap":{}},"row_2":{"name":"One Col","classes":"","children":{"column_3":{"name":"About","classes":"tab-about","children":{},"type":"column","wrap":{}},"column_8":{"name":"Outcomes","classes":"tab-outcomes","children":{},"type":"column","wrap":{}}},"type":"row","wrap":{}},"row_3":{"name":"Experience","classes":"row","children":{"column_4":{"name":"Student Experience","classes":"col-md-8 tab-experience","children":{},"type":"column","wrap":{}},"column_5":{"name":"Info and Faculty","classes":"col-md-4","children":{},"type":"column","wrap":{}}},"type":"row","wrap":{"enabled":"1","container":"container"}},"row_4":{"name":"Majors","classes":"row","children":{"column_6":{"name":"Majors & Minors","classes":"col-md-8 tab-majors-minors","children":{},"type":"column","wrap":{}},"column_7":{"name":"Right Column","classes":"col-md-4","children":{},"type":"column","wrap":{}}},"type":"row","wrap":{"enabled":"1","container":"container"}},"row_5":{"name":"Bottom Area","classes":"","children":{"column_9":{"name":"Courses","classes":"tab-courses","children":{},"type":"column","wrap":{}}},"type":"row","wrap":{}}},"type":"column","wrap":{}}}'
+  -
+    name: 'Standard Hero'
+    layout: '{"flexible_layout":{"name":"Wrapper","classes":"","children":{"row_1":{"name":"hero wrapper","classes":"","children":{"column_1":{"name":"Hero","classes":"","children":{},"type":"column","wrap":{}}},"type":"row","wrap":{}},"row_2":{"name":"Row","classes":"row","children":{"column_3":{"name":"Main Content","classes":"col-lg-12","children":{},"type":"column","wrap":{}}},"type":"row","wrap":{"enabled":"1","container":"container"}},"row_3":{"name":"Row","classes":"row","children":{"column_4":{"name":"Column","classes":"col-lg-12","children":{},"type":"column","wrap":{}}},"type":"row","wrap":{"enabled":"1","container":"container"}}},"type":"column","wrap":{}}}'
+  -
+    name: 'Hero Tabs'
+    layout: '{"flexible_layout":{"name":"Wrapper","classes":"","children":{"row_1":{"name":"Hero Wrapper","classes":"","children":{"column_1":{"name":"Hero","classes":"","children":{},"type":"column","wrap":{}}},"type":"row","wrap":{}},"row_2":{"name":"Breadcrumb Wrap","classes":"","children":{"column_3":{"name":"Breadcrumbs","classes":"","children":{},"type":"column","wrap":{}}},"type":"row","wrap":{}},"row_3":{"name":"Row","classes":"row","children":{"column_4":{"name":"Tabs","classes":"col-md-12","children":{},"type":"column","wrap":{}}},"type":"row","wrap":{"enabled":"1","container":"container pt-5"}},"row_4":{"name":"Main","classes":"row","children":{"column_5":{"name":"Main Content","classes":"col-lg-12","children":{},"type":"column","wrap":{}}},"type":"row","wrap":{"enabled":"1","container":"container"}},"row_5":{"name":"Bottom Wrapper","classes":"","children":{"column_6":{"name":"Bottom Full Width","classes":"","children":{},"type":"column","wrap":{}}},"type":"row","wrap":{}}},"type":"column","wrap":{}}}'
+_core:
+  default_config_hash: RIMQ618DNCZaoV6kL2ovdlMGsukUQacFt3Yyfgxk-hw

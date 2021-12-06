@@ -1,0 +1,16 @@
+uuid: cc1f5b67-4432-423d-858f-4a0f207d6b37
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: NF1zWQzcJXUEJfXujkeLLSWoIzmdUeB4pRN5B85PJ_o
+name: news_teaser
+label: 'News Teaser (200x130)'
+effects:
+  cf19974e-85a6-4712-bae3-c59bb0241fc1:
+    uuid: cf19974e-85a6-4712-bae3-c59bb0241fc1
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 130

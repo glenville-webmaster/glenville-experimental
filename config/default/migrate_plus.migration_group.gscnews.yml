@@ -1,0 +1,18 @@
+uuid: 5b528463-fc29-4227-a926-4d8a049dade4
+langcode: en
+status: true
+dependencies: {  }
+id: gscnews
+label: 'Imports from WordPress site'
+description: null
+source_type: WordPress
+module: null
+shared_configuration:
+  source:
+    namespaces:
+      wp: 'http://wordpress.org/export/1.2/'
+      excerpt: 'http://wordpress.org/export/1.2/excerpt/'
+      content: 'http://purl.org/rss/1.0/modules/content/'
+      wfw: 'http://wellformedweb.org/CommentAPI/'
+      dc: 'http://purl.org/dc/elements/1.1/'
+    urls: modules/custom/glenville_migrate/modules/glenville_wp_migrate/data/gsc.xml

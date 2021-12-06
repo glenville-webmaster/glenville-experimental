@@ -1,0 +1,51 @@
+uuid: 1da678f3-26bc-45a7-8da3-a8efb0088d3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.linkit_result_thumbnail
+  module:
+    - file
+    - image
+    - node
+_core:
+  default_config_hash: Tt8DtxZ3Nooo0PoWPpJvszA3R_5d8MmpUW7LM_R-BzY
+id: default
+label: Default
+description: 'A default Linkit profile'
+matchers:
+  556010a3-e317-48b3-b4ed-854c10f4b950:
+    uuid: 556010a3-e317-48b3-b4ed-854c10f4b950
+    id: 'entity:node'
+    weight: 0
+    settings:
+      metadata: 'by [node:author] | [node:created:medium]'
+      bundles:
+        alert: alert
+        department: department
+        event: event
+        landing_page: landing_page
+        news: news
+        page: page
+        profile: profile
+        program: program
+        protected_content: protected_content
+        story: story
+      group_by_bundle: true
+      include_unpublished: false
+      substitution_type: canonical
+  0b14d121-3ad1-4d02-94b2-1dbd05243e5e:
+    uuid: 0b14d121-3ad1-4d02-94b2-1dbd05243e5e
+    id: 'entity:file'
+    weight: 0
+    settings:
+      file_extensions: ''
+      file_status: 1
+      images:
+        show_dimensions: false
+        show_thumbnail: true
+        thumbnail_image_style: linkit_result_thumbnail
+      substitution_type: file
+      metadata: '[file:basename] | [file:mime]'
+      bundles: null
+      group_by_bundle: null

@@ -1,0 +1,17 @@
+uuid: a77fdff8-0cca-45af-9716-b23d29449dde
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j8oKDiJFpj-VcizV03QwP2wSXKmOFSDX5-hsp1v7X7U
+name: news_image
+label: 'News Image (600 x ?)'
+effects:
+  bc071806-e56f-43d1-ab70-9f6dee48e909:
+    uuid: bc071806-e56f-43d1-ab70-9f6dee48e909
+    id: image_scale
+    weight: 1
+    data:
+      width: 770
+      height: null
+      upscale: false

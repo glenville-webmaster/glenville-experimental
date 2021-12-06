@@ -1,0 +1,73 @@
+uuid: 2075295b-5006-4179-97fa-a94963ea9bde
+langcode: en
+status: true
+dependencies: {  }
+id: gsc_csv_menu_1
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - CSV
+migration_group: gsc_csv
+label: 'CSV File Migrations'
+source:
+  plugin: csv
+  path: modules/custom/glenville_migrate/data/gsc_page.csv
+  constants:
+    bundle: menu_link_content
+    node_path: 'entity:node/'
+  header_row_count: 1
+  keys:
+    - menu_1
+  escape: '"'
+  column_names:
+    -
+      menu_1: 'Menu Level 1'
+    -
+      menu_2: 'Menu Level 2'
+    -
+      menu_3: 'Menu Level 3'
+    -
+      menu_4: 'Menu Level 4'
+    -
+      title: Title
+    -
+      url: 'Page URL'
+    -
+      body: Body
+process:
+  bundle: constants/bundle
+  title:
+    -
+      plugin: skip_on_value
+      value: ''
+      not_equals: true
+      method: row
+      source: menu_2
+    -
+      plugin: get
+      source: menu_1
+    -
+      plugin: callback
+      callable: trim
+  menu_name:
+    plugin: glenville_csv_menu_target
+    source: menu_1
+  menu_lookup:
+    plugin: migration_lookup
+    migration: gsc_csv_page
+    source: url
+  link/uri:
+    plugin: concat
+    source:
+      - constants/node_path
+      - '@menu_lookup'
+  enabled:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity:menu_link_content'
+  no_stub: true
+migration_dependencies:
+  required: {  }
+  optional: {  }

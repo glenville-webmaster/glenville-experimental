@@ -1,0 +1,16 @@
+uuid: cde6deb1-45dd-450f-abf7-c31f71b778ed
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: R4b23G-yTfiv2mjOWh2F8xeoMSwUe_aBvp3T8oK3DiE
+name: news_feature
+label: 'News Feature (550 x 350)'
+effects:
+  c4ab1e19-e6e5-45be-932d-5e3450bc98cc:
+    uuid: c4ab1e19-e6e5-45be-932d-5e3450bc98cc
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 800
+      height: 320

@@ -1,0 +1,25 @@
+cdn_provider: ''
+logo:
+  path: themes/custom/glenville/logo.svg
+  use_default: 0
+breadcrumb_home: 1
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: themes/custom/glenville/favicon.ico
+  use_default: 1
+modal_enabled: 0
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: 1
+  node_user_picture: true
+schemas:
+  bootstrap: 8000
+  oedu_theme: 8000
+navbar_toggle: lg
+_core:
+  default_config_hash: Wl_ykfqi90ajR0yhjeXSsOelcUkWu3lbO8CiDTA0E74
+navbar_position: ''
+navbar_colour: ''
+footer_logo_path: themes/custom/glenville/logo-tall.svg
+footer_logo_upload: ''

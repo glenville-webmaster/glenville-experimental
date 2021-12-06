@@ -1,0 +1,16 @@
+uuid: 77467888-1e91-4a27-a231-e32ed16ad749
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: r_-aeCYPwf7Df4nScVgC6yMsdfooVlAqdgiPM2lNdzc
+name: events_feature
+label: 'Events Feature (900x350)'
+effects:
+  8457e92c-ce8f-42d4-bb7c-978168412b55:
+    uuid: 8457e92c-ce8f-42d4-bb7c-978168412b55
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 900
+      height: 350

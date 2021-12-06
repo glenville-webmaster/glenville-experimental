@@ -1,0 +1,14 @@
+uuid: cae73155-bea8-436b-9527-d8eef8aee40d
+langcode: en
+status: true
+dependencies: {  }
+name: square_tall_510x490_
+label: 'Square - Tall (510x490)'
+effects:
+  a0c686f7-2ad2-44ed-b12d-81643cbe2c29:
+    uuid: a0c686f7-2ad2-44ed-b12d-81643cbe2c29
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 510
+      height: 490

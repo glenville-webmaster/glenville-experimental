@@ -1,0 +1,16 @@
+uuid: 909320f2-25f1-4479-8387-cf7008af1f95
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Vo1MtyoZKMp1CqYXY_XTPTZR8HjkkHN7JWC4h3Tkqi0
+name: story_teaser
+label: 'Story Teaser (170 x 110)'
+effects:
+  2715a04a-d513-4db7-9a9c-d69399db3084:
+    uuid: 2715a04a-d513-4db7-9a9c-d69399db3084
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 170
+      height: 110

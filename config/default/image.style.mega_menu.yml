@@ -1,0 +1,14 @@
+uuid: 51853897-619c-488d-8a5f-4b199293192e
+langcode: en
+status: true
+dependencies: {  }
+name: mega_menu
+label: 'Mega Menu (100×90)'
+effects:
+  4e574f0b-bb2a-4402-8a07-f0dd8dd755cb:
+    uuid: 4e574f0b-bb2a-4402-8a07-f0dd8dd755cb
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 100
+      height: 90

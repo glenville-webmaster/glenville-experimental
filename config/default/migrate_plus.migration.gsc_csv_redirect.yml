@@ -1,0 +1,68 @@
+uuid: 054b5d24-98a7-4fb8-8c15-49e7ed2346e2
+langcode: en
+status: true
+dependencies: {  }
+id: gsc_csv_redirect
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - CSV
+migration_group: gsc_csv
+label: 'CSV Redirect Migrations'
+source:
+  plugin: csv
+  path: modules/custom/glenville_migrate/data/gsc_page.csv
+  constants:
+    node_path: 'entity:node/'
+  header_row_count: 1
+  keys:
+    - url
+  escape: '"'
+  column_names:
+    -
+      menu_1: 'Menu Level 1'
+    -
+      menu_2: 'Menu Level 2'
+    -
+      menu_3: 'Menu Level 3'
+    -
+      menu_4: 'Menu Level 4'
+    -
+      title: Title
+    -
+      url: 'Page URL'
+    -
+      body: Body
+process:
+  menu_lookup:
+    plugin: migration_lookup
+    migration: gsc_csv_page
+    source: url
+  redirect_source:
+    -
+      plugin: substr
+      source: url
+      start: 1
+    -
+      plugin: skip_on_empty
+      method: row
+      message: 'Missing menu URL'
+  redirect_redirect:
+    -
+      plugin: skip_on_empty
+      source: '@menu_lookup'
+      method: row
+    -
+      plugin: concat
+      source:
+        - constants/node_path
+        - '@menu_lookup'
+  status_code:
+    plugin: default_value
+    default_value: 301
+destination:
+  plugin: 'entity:redirect'
+migration_dependencies:
+  required: {  }
+  optional: {  }

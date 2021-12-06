@@ -1,0 +1,16 @@
+uuid: a55a79dc-2cc8-418e-86ad-70555788e8f1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: b9s9c3lzNySHPSOVHPREUqm7cKeLQDXff04Daby6dvw
+name: profile_teaser
+label: 'Profile Teaser (220x130)'
+effects:
+  cf19974e-85a6-4712-bae3-c59bb0241fc1:
+    uuid: cf19974e-85a6-4712-bae3-c59bb0241fc1
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 220
+      height: 130

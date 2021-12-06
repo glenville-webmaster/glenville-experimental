@@ -1,0 +1,13 @@
+uuid: 8e40fdf1-a6b9-4cee-a5ec-6432bc65f937
+langcode: en
+status: true
+dependencies: {  }
+id: video_upload
+label: 'Video Upload'
+description: 'Used to upload your own video files'
+source: video_file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_video_file
+field_map: {  }

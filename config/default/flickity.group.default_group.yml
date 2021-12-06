@@ -1,0 +1,34 @@
+uuid: a241687c-3db3-4499-a0fe-6b2aece59e22
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: AgH0vPOB47GkXhMrpFQobR-iFdjSsznHEaOpkT3aOSI
+id: default_group
+label: Default
+settings:
+  images_loaded: true
+  cell_selector: .gallery-cell
+  initial_index: 0
+  accessibility: false
+  set_gallery_size: true
+  resize: true
+  cell_align: left
+  contain: false
+  percent_position: false
+  right_to_left: false
+  draggable: true
+  free_scroll: false
+  wrap_around: false
+  group_cells: null
+  adaptive_height: true
+  lazy_load: 0
+  auto_play: 0
+  watch_css: false
+  as_nav_for: ''
+  drag_threshold: null
+  selected_attraction: 0.025
+  friction: 0.28
+  free_scroll_friction: 0.075
+  prev_next_buttons: true
+  page_dots: false

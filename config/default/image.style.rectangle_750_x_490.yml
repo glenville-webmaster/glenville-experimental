@@ -1,0 +1,14 @@
+uuid: ba4fed4c-b2b4-4981-a1cc-0c6569e7fa37
+langcode: en
+status: true
+dependencies: {  }
+name: rectangle_750_x_490
+label: 'Rectangle (750 x 490)'
+effects:
+  7224f127-56db-4d62-bef1-3a6f81538ee4:
+    uuid: 7224f127-56db-4d62-bef1-3a6f81538ee4
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 750
+      height: 490

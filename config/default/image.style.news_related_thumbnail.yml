@@ -1,0 +1,16 @@
+uuid: 416c4fbe-589b-4f53-a5a6-5edd507d1ea0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1vvCaPFg-7eknB_s9htmHrT3UI_fPE93kKv1YSRqyoo
+name: news_related_thumbnail
+label: 'News Related Thumbnail (280×120)'
+effects:
+  b7ad27b1-3095-4e33-8e34-07e1fe6e6023:
+    uuid: b7ad27b1-3095-4e33-8e34-07e1fe6e6023
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 280
+      height: 120

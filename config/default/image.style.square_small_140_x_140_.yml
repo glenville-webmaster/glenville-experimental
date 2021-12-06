@@ -1,0 +1,14 @@
+uuid: fb8ea4b0-4fe4-429a-983b-874825b408a3
+langcode: en
+status: true
+dependencies: {  }
+name: square_small_140_x_140_
+label: 'Square - Small (140 x 140)'
+effects:
+  184c78a1-f0d0-43d1-9ebc-67172f7a6cc0:
+    uuid: 184c78a1-f0d0-43d1-9ebc-67172f7a6cc0
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 140
+      height: 140

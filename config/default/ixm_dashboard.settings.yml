@@ -1,0 +1,9 @@
+exclude: {  }
+displays:
+  user:
+    status: true
+    widget: true
+    weight: 10
+    settings: {  }
+_core:
+  default_config_hash: zo_eOTTuV-823L2_rMlSnV6gDu-DjULBp5py06psNAY

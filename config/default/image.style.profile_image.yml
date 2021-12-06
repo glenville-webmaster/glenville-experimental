@@ -1,0 +1,16 @@
+uuid: fcac8a21-8e98-41f7-bf3e-af93e7f74f39
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: O5TYcXm0upakdEOScRmDRqt4fTo6W-w3-Qb5_UkS83M
+name: profile_image
+label: 'Profile Image (210x185)'
+effects:
+  05fba41e-bd45-4aa6-868a-d0cdfd862b93:
+    uuid: 05fba41e-bd45-4aa6-868a-d0cdfd862b93
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 185
+      height: 210

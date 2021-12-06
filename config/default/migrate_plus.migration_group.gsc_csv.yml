@@ -1,0 +1,10 @@
+uuid: eb874a00-24c6-412a-beb0-be51da84515a
+langcode: en
+status: true
+dependencies: {  }
+id: gsc_csv
+label: 'Import from GSC CSVs'
+description: 'Imports basic pages, files and menus from GSC csvs'
+source_type: CSV
+module: null
+shared_configuration: null

@@ -1,0 +1,16 @@
+uuid: eb98c1b0-9d1c-4560-ac07-76fd60629634
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: SivAP6Yomo9NqNnsNGeU1txyPqBazcZDIwvs-P2nif4
+name: card_teaser
+label: 'Card Teaser (260x150)'
+effects:
+  438623cb-fdf2-4095-8c0f-ee318ce9da93:
+    uuid: 438623cb-fdf2-4095-8c0f-ee318ce9da93
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 260
+      height: 150

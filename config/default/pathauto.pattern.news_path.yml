@@ -1,0 +1,24 @@
+uuid: 602372d2-3ed7-42d2-af8f-dc1cf664fd62
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: sSlXYDeiPO12W0JgGSMMUq1U22FTYoskIOxydX0RkH4
+id: news_path
+label: 'News Path'
+type: 'canonical_entities:node'
+pattern: 'news/[node:title]'
+selection_criteria:
+  e9e678ff-e5d7-447c-871c-2e6e2f43200a:
+    id: node_type
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e9e678ff-e5d7-447c-871c-2e6e2f43200a
+selection_logic: and
+weight: -5
+relationships: {  }

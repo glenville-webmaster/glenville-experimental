@@ -1,0 +1,143 @@
+page_display_default:
+  dependencies:
+    config:
+      - field.field.node.page.body
+      - field.field.node.page.field_meta_tags
+      - field.field.node.page.panelizer
+      - field.field.node.page.scheduled_update
+      - node.type.page
+    module:
+      - metatag
+      - panelizer
+      - text
+      - user
+  third_party_settings:
+    panelizer:
+      enable: true
+      custom: true
+      allow: false
+      default: default
+      displays:
+        default:
+          blocks:
+            f357c4df-b6c2-472d-94d7-35b6212180a0:
+              id: 'entity_field:node:body'
+              label: Body
+              provider: ctools_block
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+                weight: 0
+                region: content
+              region: middle
+              weight: 0
+              context_mapping:
+                entity: '@panelizer.entity_context:entity'
+              uuid: f357c4df-b6c2-472d-94d7-35b6212180a0
+            f3e9bed9-4eed-4d09-a746-f720f14dc47b:
+              id: 'entity_field:node:title'
+              label: Title
+              provider: ctools_block
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                weight: 0
+              region: subsection
+              weight: 0
+              uuid: f3e9bed9-4eed-4d09-a746-f720f14dc47b
+              context_mapping:
+                entity: '@panelizer.entity_context:entity'
+            91ebe92c-0d38-47fa-9be3-305f06b96c77:
+              id: system_breadcrumb_block
+              label: Breadcrumbs
+              provider: system
+              label_display: '0'
+              region: subsection
+              weight: 0
+              uuid: 91ebe92c-0d38-47fa-9be3-305f06b96c77
+              context_mapping: {  }
+          id: panels_variant
+          label: Default
+          uuid: 3890da29-65ca-40a7-80e4-a91fec66fa03
+          weight: 0
+          layout: oedu_onecol_with_subsection
+          layout_settings: {  }
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:page:default:default'
+          builder: ipe
+          pattern: panelizer
+          static_context: {  }
+flickity_default:
+  settings:
+    images_loaded: true
+    cell_selector: .gallery-cell
+    initial_index: 0
+    accessibility: false
+    set_gallery_size: true
+    resize: true
+    cell_align: left
+    contain: true
+    percent_position: true
+    right_to_left: false
+    draggable: true
+    free_scroll: false
+    wrap_around: false
+    lazy_load: 0
+    auto_play: 0
+    watch_css: false
+    as_nav_for: ''
+    selected_attraction: 0.025
+    friction: 0.28
+    free_scroll_friction: 0.075
+    prev_next_buttons: true
+    page_dots: false
+flexible_layout:
+  bootstrap:
+    enabled: 1
+    source: /profiles/contrib/openedu/themes/oedu_sub/css/style.css
+sa11y:
+  api_server: 'http://api.ixm.ca:3000'
+  api_key: 60a6-c9f6-4680-9f6d
+  rules:
+    wcag2a: wcag2a
+    wcag2aa: wcag2aa
+    section508: '0'
+    best-practice: '0'
+    experimental: '0'
+  frequency: 1
+simple_sitemap:
+  settings:
+    max_links: 2000
+    cron_generate: true
+    cron_generate_interval: 24
+    remove_duplicates: true
+    skip_untranslated: false
+    batch_process_limit: 1500
+    base_url: ''
+    custom_links_include_images: false
+    excluded_languages: {  }
+    enabled_entity_types:
+      - node
+      - taxonomy_term
+      - menu_link_content
+  custom:
+    links:
+      -
+        path: /
+        priority: '1.0'
+        changefreq: daily
+user_role_anonymous:
+  permissions:
+    - 'access content'
+    - 'use search_api_autocomplete for openedu_search'
+    - 'view media'
+_core:
+  default_config_hash: uK1V0HRA5n-PWQQv2uqO91RcC5bz-teWr6yJSnxvMrc

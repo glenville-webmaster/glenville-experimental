@@ -1,0 +1,22 @@
+uuid: dd988f25-64b6-447a-8db3-d3433527adbe
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: protected_pages
+label: 'Protected Pages'
+type: 'canonical_entities:node'
+pattern: 'protected/[node:title]'
+selection_criteria:
+  d33a461c-3344-416a-9caa-5b2e6dea5242:
+    id: node_type
+    bundles:
+      protected_content: protected_content
+    negate: false
+    context_mapping:
+      node: node
+    uuid: d33a461c-3344-416a-9caa-5b2e6dea5242
+selection_logic: and
+weight: -5
+relationships: {  }

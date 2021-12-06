@@ -1,0 +1,15 @@
+uuid: 0627366f-0c70-424c-832e-5ca3f29241d3
+langcode: en
+status: true
+dependencies: {  }
+id: megamenu_main
+label: 'Megamenu main'
+targetMenu:
+  main: main
+  admin: '0'
+  footer: '0'
+  next-steps: '0'
+  resources: '0'
+  tools: '0'
+  account: '0'
+  utility-navigation: '0'

@@ -1,0 +1,24 @@
+uuid: 59a8c79c-8ed6-42f0-895e-e3823444ef2d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: YEPupe0oEim00WiM1GJH0sZ-jW7D2AF0lzQD-PSpSig
+id: event_path
+label: 'Event Path'
+type: 'canonical_entities:node'
+pattern: 'events/[node:title]'
+selection_criteria:
+  e9e678ff-e5d7-447c-871c-2e6e2f43200a:
+    id: node_type
+    bundles:
+      event: event
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e9e678ff-e5d7-447c-871c-2e6e2f43200a
+selection_logic: and
+weight: -5
+relationships: {  }

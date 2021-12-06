@@ -1,0 +1,24 @@
+cdn_provider: ''
+logo:
+  path: profiles/contrib/openedu/themes/oedu/logo.png
+  use_default: 0
+breadcrumb_home: 1
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: profiles/contrib/lightning/favicon.ico
+  url: 'http://openedu.ixm.ca/profiles/contrib/lightning/favicon.ico'
+  use_default: 1
+modal_enabled: 0
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: 1
+  node_user_picture: true
+schemas:
+  bootstrap: 8000
+  oedu_theme: 8000
+navbar_toggle: lg
+_core:
+  default_config_hash: PdilIvCnFsfrA9gY9hv7FT0oCsKQ9UKUPve5mKcsjtY
+navbar_position: ''
+navbar_colour: ''

@@ -1,0 +1,12 @@
+api_server: 'http://localhost:3000'
+api_key: 43b182-cc1505-73027b-d3abb3-a44ef7
+rules:
+  wcag2a: wcag2a
+  wcag2aa: wcag2aa
+  section508: '0'
+  best-practice: '0'
+  experimental: '0'
+frequency: 1
+emails: {  }
+_core:
+  default_config_hash: sUuKPxvvpQR45NsguOmPU2VS08686LrCzuIZbJQiTjE

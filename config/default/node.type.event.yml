@@ -1,0 +1,20 @@
+uuid: 47543bdb-e6ba-49ee-9470-01068cbb53ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: _fUdV5SxMRT25HGRsoHeXdZIFfJRglA108rF_orAJGA
+name: Event
+type: event
+description: 'A content type to hold event dates, locations and details displayed in a variety of ways'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

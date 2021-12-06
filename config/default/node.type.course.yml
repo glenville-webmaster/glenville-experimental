@@ -1,0 +1,20 @@
+uuid: 32ea9365-9426-4915-a844-5b81822971a5
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: h33vg8yimbFR1OXwN9HjzsBt37LwChcfUW5DmzOlfVI
+name: Course
+type: course
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

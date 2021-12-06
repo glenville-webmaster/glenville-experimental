@@ -1,0 +1,24 @@
+uuid: 7d62fa1c-0fd4-4dca-8ade-d4feccd77faa
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: OZOcctvAc5RDpV9FgnCjJD4Uzpa0EOqacwhkaO5YW84
+id: story_path
+label: 'Story Path'
+type: 'canonical_entities:node'
+pattern: 'story/[node:title]'
+selection_criteria:
+  a82ca53b-91e8-4f2a-b0c8-3f538e1f964d:
+    id: node_type
+    bundles:
+      story: story
+    negate: false
+    context_mapping:
+      node: node
+    uuid: a82ca53b-91e8-4f2a-b0c8-3f538e1f964d
+selection_logic: and
+weight: -5
+relationships: {  }

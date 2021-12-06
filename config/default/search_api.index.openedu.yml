@@ -1,0 +1,245 @@
+uuid: c432ff25-81ec-43a0-9f8c-2a5c6b75be62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_news_featured
+    - field.storage.node.field_news_date
+    - field.storage.node.field_news_categories
+    - field.storage.node.field_profile_name
+    - field.storage.node.field_profile_type
+    - field.storage.node.field_events_category
+    - field.storage.node.field_event_date
+    - field.storage.node.field_event_department
+    - field.storage.node.field_event_featured
+    - field.storage.node.field_department_position
+    - field.storage.paragraph.field_department
+    - field.storage.node.field_phoenix_categories
+    - field.storage.node.field_news_tags
+    - field.storage.node.field_phoenix_tags
+    - search_api.server.openedu
+  module:
+    - paragraphs
+    - search_api
+    - node
+_core:
+  default_config_hash: jkvXnm8JoJUGuOdRyxSHCYrbLCbmZWCBE0yJYZvMNR4
+id: openedu
+name: OpenEDU
+description: ''
+read_only: false
+field_settings:
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+  promote:
+    label: 'Promoted to front page'
+    datasource_id: 'entity:node'
+    property_path: promote
+    type: boolean
+  sticky:
+    label: 'Sticky at top of lists'
+    datasource_id: 'entity:node'
+    property_path: sticky
+    type: boolean
+  status:
+    label: 'Publishing status'
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+  field_news_featured:
+    label: Featured
+    datasource_id: 'entity:node'
+    property_path: field_news_featured
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_news_featured
+  field_news_date:
+    label: 'Published On'
+    datasource_id: 'entity:node'
+    property_path: field_news_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_news_date
+  field_news_categories:
+    label: Categories
+    datasource_id: 'entity:node'
+    property_path: field_news_categories
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_news_categories
+  given:
+    label: 'Name » Given'
+    datasource_id: 'entity:node'
+    property_path: 'field_profile_name:given'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_profile_name
+  family:
+    label: 'Name » Family'
+    datasource_id: 'entity:node'
+    property_path: 'field_profile_name:family'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_profile_name
+  field_profile_type:
+    label: 'Profile Type'
+    datasource_id: 'entity:node'
+    property_path: field_profile_type
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_profile_type
+  field_events_category:
+    label: Category
+    datasource_id: 'entity:node'
+    property_path: field_events_category
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_events_category
+  field_event_date:
+    label: 'Event Date'
+    datasource_id: 'entity:node'
+    property_path: field_event_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_event_date
+  field_event_department:
+    label: Department
+    datasource_id: 'entity:node'
+    property_path: field_event_department
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_event_department
+  field_event_featured:
+    label: Featured
+    datasource_id: 'entity:node'
+    property_path: field_event_featured
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_event_featured
+  field_event_date_end_value:
+    label: 'Event Date » End date value'
+    datasource_id: 'entity:node'
+    property_path: 'field_event_date:end_value'
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_event_date
+  uid:
+    label: uid
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+  changed:
+    label: Changed
+    datasource_id: 'entity:node'
+    property_path: changed
+    type: date
+  field_department:
+    label: 'Departments & Programs » Paragraph » Department'
+    datasource_id: 'entity:node'
+    property_path: 'field_department_position:entity:field_department'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_department_position
+        - field.storage.paragraph.field_department
+      module:
+        - paragraphs
+  field_phoenix_categories:
+    label: Categories
+    datasource_id: 'entity:node'
+    property_path: field_phoenix_categories
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_phoenix_categories
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+  field_news_tags:
+    label: Tags
+    datasource_id: 'entity:node'
+    property_path: field_news_tags
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_news_tags
+  field_phoenix_tags:
+    label: 'Phoenix Tags'
+    datasource_id: 'entity:node'
+    property_path: field_phoenix_tags
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_phoenix_tags
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  rendered_item: {  }
+  add_url: {  }
+  aggregated_field: {  }
+  entity_status: {  }
+  ignorecase:
+    fields:
+      - title
+      - body
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+    all_fields: false
+  content_access:
+    weights:
+      preprocess_query: -30
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: openedu

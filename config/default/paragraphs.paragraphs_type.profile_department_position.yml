@@ -1,0 +1,9 @@
+uuid: 6b6320b1-41db-427e-99ed-89eec484973e
+langcode: en
+status: true
+dependencies: {  }
+id: profile_department_position
+label: 'Profile Department Position'
+icon_uuid: null
+description: 'Links a profile to a Department and describes their position in the department.'
+behavior_plugins: {  }

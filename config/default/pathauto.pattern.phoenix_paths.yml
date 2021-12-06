@@ -1,0 +1,22 @@
+uuid: de7aa7fb-ca75-4304-8cab-0342d5f2348c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: phoenix_paths
+label: 'Phoenix Paths'
+type: 'canonical_entities:node'
+pattern: 'phoenix/[node:title]'
+selection_criteria:
+  47d07ed9-df1c-4eaa-a6e5-55e33579040b:
+    id: node_type
+    bundles:
+      phoenix_news: phoenix_news
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 47d07ed9-df1c-4eaa-a6e5-55e33579040b
+selection_logic: and
+weight: -5
+relationships: {  }

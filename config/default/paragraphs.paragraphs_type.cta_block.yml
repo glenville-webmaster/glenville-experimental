@@ -1,0 +1,9 @@
+uuid: 8c4c5ac2-2add-4646-b36f-b12f7cc2f559
+langcode: en
+status: true
+dependencies: {  }
+id: cta_block
+label: 'CTA Block'
+icon_uuid: null
+description: 'The right-hand CTA Block used in the mega menu.'
+behavior_plugins: {  }

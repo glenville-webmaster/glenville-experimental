@@ -1,0 +1,9 @@
+uuid: 7d8b8658-9f4a-4a02-9b91-3ce0ce656374
+langcode: en
+status: true
+dependencies: {  }
+id: bootstrap_card
+label: 'Bootstrap Card'
+icon_uuid: null
+description: 'Outputs a bootstrap card'
+behavior_plugins: {  }

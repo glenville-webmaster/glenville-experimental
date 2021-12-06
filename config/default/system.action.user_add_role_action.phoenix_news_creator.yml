@@ -1,0 +1,14 @@
+uuid: 5fe16ee4-14dc-43dd-b415-444565dafbe0
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.phoenix_news_creator
+  module:
+    - user
+id: user_add_role_action.phoenix_news_creator
+label: 'Add the Phoenix News creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: phoenix_news_creator

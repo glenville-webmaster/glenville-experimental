@@ -1,0 +1,14 @@
+uuid: 4dc3a5c2-f731-4b0a-80d8-41808b25265a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.phoenix_news_creator
+  module:
+    - user
+id: user_remove_role_action.phoenix_news_creator
+label: 'Remove the Phoenix News creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: phoenix_news_creator

@@ -1,0 +1,14 @@
+uuid: 5f121431-47fa-4545-a9de-f92c3d9b9cfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.phoenix_news_reviewer
+  module:
+    - user
+id: user_remove_role_action.phoenix_news_reviewer
+label: 'Remove the Phoenix News reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: phoenix_news_reviewer

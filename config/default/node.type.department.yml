@@ -1,0 +1,21 @@
+uuid: 61012a12-1677-4465-b970-0a065cf5cd45
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+      - resources
+    parent: 'main:'
+_core:
+  default_config_hash: ZyxkLoxUXNlo7j22sxg1zAswGLwlxpVAZ8oDdx1BcD4
+name: Department
+type: department
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

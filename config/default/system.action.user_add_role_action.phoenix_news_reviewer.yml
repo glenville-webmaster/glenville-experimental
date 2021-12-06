@@ -1,0 +1,14 @@
+uuid: 4736b0f8-b103-436e-bbc7-4ef231e1d8b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.phoenix_news_reviewer
+  module:
+    - user
+id: user_add_role_action.phoenix_news_reviewer
+label: 'Add the Phoenix News reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: phoenix_news_reviewer

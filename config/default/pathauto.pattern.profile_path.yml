@@ -1,0 +1,24 @@
+uuid: 266089f4-bee8-4ed6-acbf-e2f219ba9251
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: WP2lO7B_ERg7wSSNVzfqwJzcTJj4zn8uDBmBtkDSwc4
+id: profile_path
+label: 'Profile Path '
+type: 'canonical_entities:node'
+pattern: 'directory/[node:title]'
+selection_criteria:
+  1aa94120-25d7-4f24-b01b-b4cfa429e41a:
+    id: node_type
+    bundles:
+      profile: profile
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 1aa94120-25d7-4f24-b01b-b4cfa429e41a
+selection_logic: and
+weight: -5
+relationships: {  }

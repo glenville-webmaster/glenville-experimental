@@ -1,0 +1,19 @@
+uuid: cb7574e1-a3e3-4ac5-ac8b-9c72205f134a
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+_core:
+  default_config_hash: E2RJyWl8idzsOEuyXXXSjzXCEMrytF5B3nQPCFEPMo8
+id: openedu
+name: OpenEDU
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 1
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true
+  matching: words

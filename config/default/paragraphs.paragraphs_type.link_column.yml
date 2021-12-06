@@ -1,0 +1,9 @@
+uuid: 80669112-fc29-4e9c-be8a-10e6739480bb
+langcode: en
+status: true
+dependencies: {  }
+id: link_column
+label: 'Link Column'
+icon_uuid: null
+description: 'Links column for the mega menu.'
+behavior_plugins: {  }

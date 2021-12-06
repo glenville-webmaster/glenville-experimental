@@ -1,0 +1,54 @@
+uuid: ad45d720-8183-4df7-a8c0-faf1ac4f896c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.protected_content.body
+    - field.field.node.protected_content.field_header_image
+    - field.field.node.protected_content.field_protected_files
+    - field.field.node.protected_content.field_protected_visibility
+    - node.type.protected_content
+  module:
+    - file
+    - options
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.protected_content.default
+targetEntityType: node
+bundle: protected_content
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_protected_files:
+    weight: 2
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_protected_visibility:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  addtoany: true
+  field_header_image: true
+  links: true
+  scheduled_publication: true

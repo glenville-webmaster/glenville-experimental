@@ -1,0 +1,39 @@
+uuid: b782d8c6-992c-4bd8-b256-c200d8283257
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.department.body
+    - field.field.node.department.panelizer
+    - node.type.department
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+_core:
+  default_config_hash: _2aSotwXFQ4tQNpez_7zvsbq7uteiW2lMsrIRA0YECQ
+id: node.department.search_result
+targetEntityType: node
+bundle: department
+mode: search_result
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  links: true
+  panelizer: true
+  scheduled_publication: true

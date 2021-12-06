@@ -1,0 +1,61 @@
+uuid: 882468d7-0bc3-44e5-b5d5-e07bfdd6313b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.program.body
+    - field.field.node.program.field_major_minor_info
+    - field.field.node.program.field_majors_minors
+    - field.field.node.program.field_outcome
+    - field.field.node.program.field_program_course_intro
+    - field.field.node.program.field_program_courses
+    - field.field.node.program.field_program_faculty
+    - field.field.node.program.field_program_hero
+    - field.field.node.program.field_programs_course_link
+    - field.field.node.program.field_seo
+    - field.field.node.program.field_student_experience
+    - field.field.node.program.field_success_stories
+    - field.field.node.program.panelizer
+    - node.type.program
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+_core:
+  default_config_hash: P7reBR78KxkgHcxHWXjlLWsCZnogfwiHxNHubr29xgI
+id: node.program.search_result
+targetEntityType: node
+bundle: program
+mode: search_result
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_major_minor_info: true
+  field_majors_minors: true
+  field_outcome: true
+  field_program_course_intro: true
+  field_program_courses: true
+  field_program_faculty: true
+  field_program_hero: true
+  field_programs_course_link: true
+  field_seo: true
+  field_student_experience: true
+  field_success_stories: true
+  links: true
+  panelizer: true
+  scheduled_publication: true

@@ -1,0 +1,87 @@
+uuid: 8f9baab7-d5cd-45ef-81e9-997065c45965
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.body
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_department
+    - field.field.node.event.field_event_directions
+    - field.field.node.event.field_event_featured
+    - field.field.node.event.field_event_image
+    - field.field.node.event.field_event_location
+    - field.field.node.event.field_events_additional_links
+    - field.field.node.event.field_events_category
+    - field.field.node.event.field_events_event_map
+    - field.field.node.event.field_events_related_events
+    - field.field.node.event.field_header_image
+    - field.field.node.event.field_meta_tags
+    - field.field.node.event.panelizer
+    - image.style.event_teaser
+    - node.type.event
+  module:
+    - datetime_range
+    - image
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+_core:
+  default_config_hash: d3-NLwsIpjadOJEiJ8iH8UbRdJzaopuVWqjVq1ORKvA
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_trimmed
+    weight: 2
+    settings:
+      trim_length: 100
+    third_party_settings: {  }
+    region: content
+  field_event_date:
+    type: daterange_custom
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'M j, Y ha'
+      separator: '-'
+    third_party_settings: {  }
+    region: content
+  field_event_image:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: event_teaser
+      image_link: content
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_event_department: true
+  field_event_directions: true
+  field_event_featured: true
+  field_event_location: true
+  field_events_additional_links: true
+  field_events_category: true
+  field_events_event_map: true
+  field_events_related_events: true
+  field_header_image: true
+  field_meta_tags: true
+  panelizer: true
+  scheduled_publication: true

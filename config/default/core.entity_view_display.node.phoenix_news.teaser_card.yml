@@ -1,0 +1,70 @@
+uuid: da4382d6-fa3f-4d73-bad1-e7123e534455
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_card
+    - field.field.node.phoenix_news.body
+    - field.field.node.phoenix_news.field_header_image
+    - field.field.node.phoenix_news.field_news_date
+    - field.field.node.phoenix_news.field_news_featured
+    - field.field.node.phoenix_news.field_news_image
+    - field.field.node.phoenix_news.field_news_related
+    - field.field.node.phoenix_news.field_phoenix_categories
+    - field.field.node.phoenix_news.field_phoenix_tags
+    - field.field.node.phoenix_news.panelizer
+    - image.style.card_teaser
+    - node.type.phoenix_news
+  module:
+    - datetime
+    - image
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.phoenix_news.teaser_card
+targetEntityType: node
+bundle: phoenix_news
+mode: teaser_card
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 2
+    settings:
+      trim_length: 50
+    third_party_settings: {  }
+    region: content
+  field_news_date:
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'M j, Y'
+    third_party_settings: {  }
+    type: datetime_custom
+    region: content
+  field_news_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: card_teaser
+      image_link: content
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  addtoany: true
+  field_header_image: true
+  field_news_featured: true
+  field_news_related: true
+  field_phoenix_categories: true
+  field_phoenix_tags: true
+  links: true
+  panelizer: true
+  scheduled_publication: true

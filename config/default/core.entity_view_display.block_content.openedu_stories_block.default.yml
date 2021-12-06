@@ -1,0 +1,46 @@
+uuid: 43869df4-b225-4179-bd1a-125875fe6687
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.openedu_stories_block
+    - field.field.block_content.openedu_stories_block.body
+    - field.field.block_content.openedu_stories_block.field_stories_title
+    - field.field.block_content.openedu_stories_block.field_story_reference
+  module:
+    - flickity_fields
+    - text
+_core:
+  default_config_hash: t_gB7sAl07dRlYPJM2wI-ql7yI0tpsgEio3NWNEYUTs
+id: block_content.openedu_stories_block.default
+targetEntityType: block_content
+bundle: openedu_stories_block
+mode: default
+content:
+  body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_stories_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_story_reference:
+    weight: 2
+    label: hidden
+    settings:
+      flickity_settings: default_group
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: flickity_entity_view
+    region: content
+hidden:
+  scheduled_publication: true

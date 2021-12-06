@@ -1,0 +1,44 @@
+uuid: 795846ec-9223-48d1-afba-1529a64b7101
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page.field_meta_tags
+    - field.field.node.landing_page.field_seo
+    - field.field.node.landing_page.panelizer
+    - node.type.landing_page
+  module:
+    - metatag
+    - user
+_core:
+  default_config_hash: SkxeWojHNSc5vLeE-XSjLhntXats7kNY7Vhbzy21xRU
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  content_moderation_control:
+    weight: -20
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    region: content
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  workbench_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_seo: true
+  panelizer: true
+  scheduled_publication: true

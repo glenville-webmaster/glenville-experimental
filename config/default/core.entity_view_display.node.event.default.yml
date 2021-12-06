@@ -1,0 +1,411 @@
+uuid: d53e126b-bd32-4caf-a22c-8eb5a7624f88
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.body
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_department
+    - field.field.node.event.field_event_directions
+    - field.field.node.event.field_event_featured
+    - field.field.node.event.field_event_image
+    - field.field.node.event.field_event_location
+    - field.field.node.event.field_events_additional_links
+    - field.field.node.event.field_events_category
+    - field.field.node.event.field_events_event_map
+    - field.field.node.event.field_events_related_events
+    - field.field.node.event.field_header_image
+    - field.field.node.event.field_meta_tags
+    - field.field.node.event.panelizer
+    - node.type.event
+  module:
+    - address
+    - addtocal
+    - google_map_field
+    - image
+    - link
+    - metatag
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: true
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          8134858c-cc68-42aa-b59a-327276ca80be:
+            id: 'entity_field:node:body'
+            label: 'Event Details'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: right
+            weight: -6
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 8134858c-cc68-42aa-b59a-327276ca80be
+          a8326718-c723-47db-b47a-3e3ceba12fac:
+            id: 'entity_field:node:field_event_date'
+            label: 'Event Date'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: addtocal_view
+              settings:
+                timezone_override: ''
+                date_format: 'M j, Y ha'
+                separator: '-'
+                location:
+                  value: '0'
+                  tokenized: ''
+                description:
+                  value: '0'
+                  tokenized: ''
+                past_events: 0
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: right
+            weight: -8
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: a8326718-c723-47db-b47a-3e3ceba12fac
+          6b8f2551-d403-4ded-9d0b-bfae7e9c41d8:
+            id: 'entity_field:node:field_event_image'
+            label: 'Event Image'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: image
+              settings:
+                image_style: ''
+                image_link: ''
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: right
+            weight: -7
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 6b8f2551-d403-4ded-9d0b-bfae7e9c41d8
+          63e6446a-3657-4ead-bd1e-bba301a3c6b9:
+            id: 'entity_field:node:field_event_location'
+            label: 'Event Location'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: address_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: left
+            weight: -5
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 63e6446a-3657-4ead-bd1e-bba301a3c6b9
+          33deaa01-7000-4392-bce2-889f464304fe:
+            id: 'entity_field:node:title'
+            label: Title
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+            region: right
+            weight: -9
+            uuid: 33deaa01-7000-4392-bce2-889f464304fe
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          f026650b-edeb-4316-bd12-41d74d04e36e:
+            id: system_breadcrumb_block
+            label: Breadcrumbs
+            provider: system
+            label_display: '0'
+            region: top
+            weight: -6
+            uuid: f026650b-edeb-4316-bd12-41d74d04e36e
+            context_mapping: {  }
+          f9dcdc6e-0ce6-448d-9247-05d7294e5828:
+            id: 'entity_field:node:field_events_additional_links'
+            label: 'Additional Links:'
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: link
+              settings:
+                trim_length: 80
+                url_only: false
+                url_plain: false
+                rel: '0'
+                target: '0'
+              third_party_settings: {  }
+              weight: 0
+            region: right
+            weight: -5
+            uuid: f9dcdc6e-0ce6-448d-9247-05d7294e5828
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          f08f6b48-5c96-4916-9027-fe76e4f8e47e:
+            id: addtoany_block
+            label: 'Share article on:'
+            provider: addtoany
+            label_display: visible
+            region: right
+            weight: -4
+            uuid: f08f6b48-5c96-4916-9027-fe76e4f8e47e
+            context_mapping: {  }
+          5154bb75-04cb-44b4-a172-463c11a95215:
+            id: 'entity_field:node:field_events_category'
+            label: 'Category:'
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: entity_reference_label
+              settings:
+                link: true
+              third_party_settings: {  }
+              weight: 0
+            region: left
+            weight: -1
+            uuid: 5154bb75-04cb-44b4-a172-463c11a95215
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          94c359fd-c44d-45d4-a9e1-565556c3ee58:
+            id: 'entity_field:node:field_events_related_events'
+            label: 'Related Events'
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: entity_reference_entity_view
+              settings:
+                view_mode: related_content
+              third_party_settings: {  }
+              weight: 0
+            region: left
+            weight: -2
+            uuid: 94c359fd-c44d-45d4-a9e1-565556c3ee58
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          ad62b899-7f3a-43f5-af8f-b51853d92502:
+            id: 'entity_field:node:field_events_event_map'
+            label: 'Event Map'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: google_map_field_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+            region: left
+            weight: -3
+            uuid: ad62b899-7f3a-43f5-af8f-b51853d92502
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          083e38c6-cfc0-4e94-b67d-bca112c4ca4b:
+            id: 'entity_field:node:field_event_directions'
+            label: 'Get Directions'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: link
+              settings:
+                trim_length: 80
+                url_only: false
+                url_plain: false
+                rel: '0'
+                target: _blank
+              third_party_settings: {  }
+              weight: 0
+            region: left
+            weight: -4
+            uuid: 083e38c6-cfc0-4e94-b67d-bca112c4ca4b
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          60fa28c5-eb26-48ec-aaef-9cc91f0f3ae0:
+            id: 'entity_field:node:field_header_image'
+            label: 'Header Image'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: entity_reference_entity_view
+              settings:
+                view_mode: default
+              third_party_settings: {  }
+              weight: 0
+            region: subsection
+            weight: -10
+            uuid: 60fa28c5-eb26-48ec-aaef-9cc91f0f3ae0
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          8645fbec-549b-4452-bd4d-0756cedab248:
+            id: 'menu_block:utility-navigation'
+            label: 'Secondary Navigation'
+            provider: menu_block
+            label_display: '0'
+            follow: 0
+            follow_parent: 0
+            level: 1
+            depth: 0
+            expand: 1
+            parent: 'utility-navigation:menu_link_content:d0ff49e0-72dd-44a5-aae7-229df9329091'
+            suggestion: secondary_navigation
+            region: left
+            weight: -6
+            uuid: 8645fbec-549b-4452-bd4d-0756cedab248
+            context_mapping: {  }
+        id: panels_variant
+        label: Default
+        uuid: 01c9b627-badb-4efe-9aea-bdd491d1953e
+        weight: 0
+        layout: glenville_twocol_with_subsection_left
+        layout_settings: {  }
+        page_title: ''
+        storage_type: panelizer_default
+        storage_id: 'node:event:default:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
+_core:
+  default_config_hash: d4slCypyOKO2zNbndk8w-FVTJjms6q8_AucErJVvDO0
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_event_date:
+    weight: 1
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: 'Y-m-d\TH:i:s'
+      separator: '-'
+      location:
+        value: field_event_location
+        tokenized: ''
+      description:
+        value: body
+        tokenized: ''
+      past_events: 0
+    third_party_settings: {  }
+    type: addtocal_view
+    region: content
+  field_event_directions:
+    weight: 9
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_event_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_event_location:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_events_additional_links:
+    weight: 5
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_events_category:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_events_event_map:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: google_map_field_default
+    region: content
+  field_events_related_events:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_header_image:
+    weight: 10
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_meta_tags:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  links:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_event_department: true
+  field_event_featured: true
+  panelizer: true
+  scheduled_publication: true

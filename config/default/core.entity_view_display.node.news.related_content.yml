@@ -1,0 +1,152 @@
+uuid: acd8e81c-a417-4a44-ae9c-9a7193e9be43
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.related_content
+    - field.field.node.news.body
+    - field.field.node.news.field_header_image
+    - field.field.node.news.field_meta_tags
+    - field.field.node.news.field_news_categories
+    - field.field.node.news.field_news_date
+    - field.field.node.news.field_news_featured
+    - field.field.node.news.field_news_image
+    - field.field.node.news.field_news_related
+    - field.field.node.news.field_news_tags
+    - field.field.node.news.panelizer
+    - image.style.news_teaser
+    - node.type.news
+  module:
+    - datetime
+    - image
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          d235d546-6d08-46f5-b1b2-de46f1f8eeee:
+            id: 'entity_field:node:field_news_date'
+            label: 'Published On'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: datetime_plain
+              settings:
+                timezone_override: ''
+              third_party_settings: {  }
+              weight: 0
+            region: middle
+            weight: 1
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: d235d546-6d08-46f5-b1b2-de46f1f8eeee
+          2873025a-5611-4c43-a0a1-bebf5794f5dd:
+            id: 'entity_field:node:field_news_image'
+            label: Image
+            provider: ctools_block
+            label_display: '0'
+            region: middle
+            weight: 0
+            formatter:
+              label: hidden
+              settings:
+                image_style: news_related_thumbnail
+                image_link: content
+              third_party_settings: {  }
+              type: image
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 2873025a-5611-4c43-a0a1-bebf5794f5dd
+          e3359889-84af-4f42-be67-37e47e47bf93:
+            id: 'entity_field:node:field_news_categories'
+            label: Categories
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: entity_reference_label
+              settings:
+                link: true
+              third_party_settings: {  }
+              weight: 0
+            region: middle
+            weight: 2
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: e3359889-84af-4f42-be67-37e47e47bf93
+          0bf35a83-a4af-411e-8f34-2d0c4aac0755:
+            id: 'entity_field:node:title'
+            label: Title
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: string
+              settings:
+                link_to_entity: true
+              third_party_settings: {  }
+              weight: 0
+            region: middle
+            weight: -1
+            uuid: 0bf35a83-a4af-411e-8f34-2d0c4aac0755
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+        id: panels_variant
+        label: Default
+        uuid: c0411fa6-2f38-472a-a921-3787c84ef445
+        weight: 0
+        layout: layout_onecol
+        layout_settings: {  }
+        page_title: ''
+        storage_type: panelizer_default
+        storage_id: 'node:news:related_content:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
+_core:
+  default_config_hash: uw4nxGY_jQTaaKIW1_K9-qdKHSBGFHHqwD10ohkEcfE
+id: node.news.related_content
+targetEntityType: node
+bundle: news
+mode: related_content
+content:
+  content_moderation_control:
+    weight: -20
+    region: content
+  field_news_date:
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'F j, Y'
+    third_party_settings: {  }
+    type: datetime_custom
+    region: content
+  field_news_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: news_teaser
+      image_link: content
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  addtoany: true
+  body: true
+  field_header_image: true
+  field_meta_tags: true
+  field_news_categories: true
+  field_news_featured: true
+  field_news_related: true
+  field_news_tags: true
+  links: true
+  panelizer: true
+  scheduled_publication: true

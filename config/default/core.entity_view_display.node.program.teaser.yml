@@ -1,0 +1,134 @@
+uuid: 1af897ce-5676-43a1-8e42-d3fb9143428a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.program.body
+    - field.field.node.program.field_major_minor_info
+    - field.field.node.program.field_majors_minors
+    - field.field.node.program.field_outcome
+    - field.field.node.program.field_program_course_intro
+    - field.field.node.program.field_program_courses
+    - field.field.node.program.field_program_faculty
+    - field.field.node.program.field_program_hero
+    - field.field.node.program.field_programs_course_link
+    - field.field.node.program.field_seo
+    - field.field.node.program.field_student_experience
+    - field.field.node.program.field_success_stories
+    - field.field.node.program.panelizer
+    - node.type.program
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          0c0f02ee-0e15-4fd2-9fc5-93a6a3fb5f69:
+            id: 'entity_field:node:uid'
+            label: 'Authored by'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: author
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 0
+            uuid: 0c0f02ee-0e15-4fd2-9fc5-93a6a3fb5f69
+          669a61b2-6a2a-42fc-b686-ca0f32455384:
+            id: 'entity_field:node:created'
+            label: 'Authored on'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: timestamp
+              settings:
+                date_format: medium
+                custom_date_format: ''
+                timezone: ''
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 0
+            uuid: 669a61b2-6a2a-42fc-b686-ca0f32455384
+          31e79abe-4adb-4d48-8fb5-c33bddee2281:
+            id: 'entity_field:node:body'
+            label: About
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_summary_or_trimmed
+              settings:
+                trim_length: 600
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 101
+            uuid: 31e79abe-4adb-4d48-8fb5-c33bddee2281
+        id: panels_variant
+        label: Default
+        uuid: e3ff612f-abbc-4767-88c0-c9327399dcbe
+        weight: 0
+        layout: layout_onecol
+        layout_settings: {  }
+        page_title: '[node:title]'
+        storage_type: ''
+        storage_id: ''
+        builder: ipe
+        pattern: panelizer
+_core:
+  default_config_hash: qcPFiYDB4YWnZHQGXqooscDqh1Xm9IJ5atq5LfXMFr8
+id: node.program.teaser
+targetEntityType: node
+bundle: program
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_major_minor_info: true
+  field_majors_minors: true
+  field_outcome: true
+  field_program_course_intro: true
+  field_program_courses: true
+  field_program_faculty: true
+  field_program_hero: true
+  field_programs_course_link: true
+  field_seo: true
+  field_student_experience: true
+  field_success_stories: true
+  panelizer: true
+  scheduled_publication: true

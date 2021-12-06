@@ -1,0 +1,507 @@
+uuid: c2e5f714-12c5-460f-8e6c-a3b2096b8143
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.program.body
+    - field.field.node.program.field_major_minor_info
+    - field.field.node.program.field_majors_minors
+    - field.field.node.program.field_meta_tags
+    - field.field.node.program.field_outcome
+    - field.field.node.program.field_program_course_intro
+    - field.field.node.program.field_program_courses
+    - field.field.node.program.field_program_faculty
+    - field.field.node.program.field_program_hero
+    - field.field.node.program.field_programs_course_link
+    - field.field.node.program.field_seo
+    - field.field.node.program.field_student_experience
+    - field.field.node.program.field_success_stories
+    - field.field.node.program.panelizer
+    - node.type.program
+  module:
+    - field_group
+    - link
+    - metatag
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: true
+    custom: false
+    allow: false
+    default: programs
+    displays:
+      programs:
+        blocks:
+          827d2ed2-d8f6-4a60-bdc2-8c8d21ff4e01:
+            id: 'entity_field:node:field_program_hero'
+            label: Hero
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: entity_reference_entity_view
+              settings:
+                view_mode: default
+              third_party_settings: {  }
+              weight: 0
+            region: column_1
+            weight: -10
+            uuid: 827d2ed2-d8f6-4a60-bdc2-8c8d21ff4e01
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          a6065c2e-48cd-4f52-862e-fae820628e01:
+            id: 'entity_field:node:body'
+            label: About
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+            region: column_3
+            weight: -4
+            uuid: a6065c2e-48cd-4f52-862e-fae820628e01
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          0dbc4143-f5e4-4d40-ae9d-27468318afba:
+            id: 'entity_field:node:field_outcome'
+            label: Outcomes
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: entity_reference_entity_view
+              settings:
+                view_mode: default
+              third_party_settings: {  }
+              weight: 0
+            region: column_8
+            weight: -3
+            uuid: 0dbc4143-f5e4-4d40-ae9d-27468318afba
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          7a8c337f-5378-45f9-ab97-380ad6ee6586:
+            id: 'entity_field:node:field_program_courses'
+            label: 'Course Items'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: entity_reference_entity_view
+              settings:
+                view_mode: default
+              third_party_settings: {  }
+              weight: 0
+            region: column_9
+            weight: -9
+            uuid: 7a8c337f-5378-45f9-ab97-380ad6ee6586
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          d8bc994d-5901-427d-93b8-da455e605549:
+            id: 'entity_field:node:field_programs_course_link'
+            label: 'Course Link'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: link
+              settings:
+                trim_length: 80
+                url_only: false
+                url_plain: false
+                rel: '0'
+                target: '0'
+              third_party_settings: {  }
+              weight: 0
+            region: column_9
+            weight: -8
+            uuid: d8bc994d-5901-427d-93b8-da455e605549
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          b4014fc9-5edf-4fbc-99c8-f67f1e7992bf:
+            id: 'entity_field:node:field_program_course_intro'
+            label: Courses
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+            region: column_9
+            weight: -10
+            uuid: b4014fc9-5edf-4fbc-99c8-f67f1e7992bf
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          27485b74-ef70-48a5-8374-07d25c4fad7e:
+            id: 'entity_field:node:field_student_experience'
+            label: 'Student Experience'
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+            region: column_4
+            weight: 0
+            uuid: 27485b74-ef70-48a5-8374-07d25c4fad7e
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          008bbdb3-6f2a-44a3-9c41-f122e49433df:
+            id: 'entity_field:node:field_majors_minors'
+            label: 'Majors & Minors'
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+            region: column_6
+            weight: 0
+            uuid: 008bbdb3-6f2a-44a3-9c41-f122e49433df
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          6c0467ae-3ecc-40aa-b165-d02c4f5a0704:
+            id: 'entity_field:node:field_program_faculty'
+            label: 'Meet the Faculty'
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: entity_reference_entity_view
+              settings:
+                view_mode: teaser_card
+              third_party_settings: {  }
+              weight: 0
+            region: column_5
+            weight: 0
+            uuid: 6c0467ae-3ecc-40aa-b165-d02c4f5a0704
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          04ee8109-8794-430b-9509-723f57deff3d:
+            id: 'entity_field:node:field_major_minor_info'
+            label: 'Additional Info'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+            region: column_7
+            weight: 0
+            uuid: 04ee8109-8794-430b-9509-723f57deff3d
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          493c4098-382b-49d8-a41a-5131aac72164:
+            id: 'entity_field:node:field_success_stories'
+            label: 'Success Stories'
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: entity_reference_entity_view
+              settings:
+                view_mode: default
+              third_party_settings: {  }
+              weight: 0
+            region: column_8
+            weight: 0
+            uuid: 493c4098-382b-49d8-a41a-5131aac72164
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          2f9cb27e-73e8-4533-8f54-bf00c6a06881:
+            id: glenville_tab_block
+            label: 'Tab block'
+            provider: glenville_tab_block
+            label_display: '0'
+            region: column_3
+            weight: -5
+            uuid: 2f9cb27e-73e8-4533-8f54-bf00c6a06881
+            tabs:
+              tab-about: About
+              tab-outcomes: Outcomes
+              tab-experience: Experience
+              tab-majors-minors: 'Majors & Minors'
+              tab-courses: Courses
+            context_mapping: {  }
+            sticky: 1
+          f2e9ff7b-78d0-4ca0-9d1d-cc716c5dc95e:
+            id: webform_block
+            label: 'Request More Info'
+            provider: webform
+            label_display: visible
+            webform_id: request_more_info
+            default_data: ''
+            region: column_11
+            weight: -6
+            uuid: f2e9ff7b-78d0-4ca0-9d1d-cc716c5dc95e
+            context_mapping: {  }
+        id: panels_variant
+        uuid: 8fec9a92-6bbc-4d27-8ba3-8e218968ae3b
+        label: Programs
+        weight: 0
+        layout: flexible_layout
+        layout_settings:
+          layout:
+            flexible_layout:
+              name: Wrapper
+              classes: bg_clock-tower
+              children:
+                row_1:
+                  name: 'Hero Wrapper'
+                  classes: 'band-hero mb-5'
+                  children:
+                    column_1:
+                      name: Hero
+                      classes: ''
+                      children: {  }
+                      type: column
+                      wrap: {  }
+                  type: row
+                  wrap:
+                    enabled: '0'
+                    wrapper: ''
+                row_2:
+                  name: 'One Col'
+                  classes: row
+                  children:
+                    column_3:
+                      name: About
+                      classes: 'tab-about col-12 mb-5'
+                      children: {  }
+                      type: column
+                      wrap: {  }
+                    column_8:
+                      name: Outcomes
+                      classes: 'tab-outcomes col-12 mb-5'
+                      children: {  }
+                      type: column
+                      wrap: {  }
+                  type: row
+                  wrap:
+                    enabled: '1'
+                    wrapper: band-wrapper
+                    container: container
+                row_3:
+                  name: Experience
+                  classes: row
+                  children:
+                    column_4:
+                      name: 'Student Experience'
+                      classes: 'tab-experience col-lg-8 mb-5'
+                      children: {  }
+                      type: column
+                      wrap: {  }
+                    column_5:
+                      name: 'Info and Faculty'
+                      classes: 'col-lg-4 mb-5'
+                      children: {  }
+                      type: column
+                      wrap: {  }
+                  type: row
+                  wrap:
+                    enabled: '1'
+                    wrapper: band-wrapper
+                    container: container
+                row_4:
+                  name: Majors
+                  classes: row
+                  children:
+                    column_6:
+                      name: 'Majors & Minors'
+                      classes: 'tab-majors-minors col-lg-8 mb-5'
+                      children: {  }
+                      type: column
+                      wrap: {  }
+                    column_7:
+                      name: 'More Info'
+                      classes: 'col-lg-4 mb-5'
+                      children: {  }
+                      type: column
+                      wrap: {  }
+                  type: row
+                  wrap:
+                    enabled: '1'
+                    wrapper: band-wrapper
+                    container: container
+                row_5:
+                  name: 'Bottom Area'
+                  classes: row
+                  children:
+                    column_9:
+                      name: Courses
+                      classes: 'tab-courses col-lg-12 mb-5'
+                      children: {  }
+                      type: column
+                      wrap: {  }
+                  type: row
+                  wrap:
+                    enabled: '1'
+                    wrapper: band-wrapper
+                    container: container
+                row_6:
+                  name: Row
+                  classes: row
+                  children:
+                    column_11:
+                      name: 'Request Info'
+                      classes: col-lg-12
+                      children: {  }
+                      type: column
+                      wrap: {  }
+                  type: row
+                  wrap:
+                    enabled: '1'
+                    wrapper: 'band-wrapper bg_request-info bg_fixed '
+                    container: container
+              type: column
+              wrap: {  }
+        page_title: ''
+        storage_type: panelizer_default
+        storage_id: 'node:program:default:programs'
+        pattern: panelizer
+        builder: ipe
+        static_context: {  }
+  field_group:
+    group_program_courses:
+      children:
+        - field_program_course_intro
+        - field_program_courses
+        - field_programs_course_link
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        label: Courses
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: program-courses
+        classes: ''
+      label: Courses
+_core:
+  default_config_hash: dsxi9zpRnYpwbXt1wiqCU-p-zbXwdPdc0jhzwETImYI
+id: node.program.default
+targetEntityType: node
+bundle: program
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_major_minor_info:
+    weight: 21
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_majors_minors:
+    weight: 19
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_meta_tags:
+    weight: 23
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_outcome:
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_program_course_intro:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_program_courses:
+    weight: 7
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_program_faculty:
+    weight: 20
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_program_hero:
+    weight: 18
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_programs_course_link:
+    weight: 8
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_student_experience:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_success_stories:
+    weight: 22
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_seo: true
+  panelizer: true
+  scheduled_publication: true

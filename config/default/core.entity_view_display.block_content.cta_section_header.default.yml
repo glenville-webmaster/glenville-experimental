@@ -1,0 +1,24 @@
+uuid: 14c48689-3db4-4a9b-a81e-4a98903e3463
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta_section_header
+    - field.field.block_content.cta_section_header.body
+  module:
+    - text
+_core:
+  default_config_hash: SVKhPnEClfwxGV1QlkTbvjaWpSm0lwKOFNK5lUzkuNM
+id: block_content.cta_section_header.default
+targetEntityType: block_content
+bundle: cta_section_header
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

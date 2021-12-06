@@ -1,0 +1,90 @@
+uuid: 75364eca-d0c6-400a-9d6d-974fea7e49f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.course.body
+    - node.type.course
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: true
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          b1022e52-2adc-4712-a2e1-d9c9619cd883:
+            id: 'entity_field:node:body'
+            label: Body
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: middle
+            weight: -10
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: b1022e52-2adc-4712-a2e1-d9c9619cd883
+          04cdd665-5bda-44ab-9e4c-977934ebadb4:
+            id: page_title_block
+            label: 'Page title'
+            provider: core
+            label_display: '0'
+            region: subsection
+            weight: 0
+            uuid: 04cdd665-5bda-44ab-9e4c-977934ebadb4
+            context_mapping: {  }
+          91604a5a-999a-4572-b3c4-efee05c0d1f1:
+            id: system_breadcrumb_block
+            label: Breadcrumbs
+            provider: system
+            label_display: '0'
+            region: top
+            weight: 0
+            uuid: 91604a5a-999a-4572-b3c4-efee05c0d1f1
+            context_mapping: {  }
+        id: panels_variant
+        label: Default
+        uuid: 4a2aa795-3316-4790-92dc-f2c4b045e00b
+        weight: 0
+        layout: glenville_onecol_with_subsection
+        layout_settings: {  }
+        page_title: '[node:title]'
+        storage_type: panelizer_default
+        storage_id: 'node:course:full:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
+_core:
+  default_config_hash: DLu2kjVXMC_gv9BlfF7AFfzQWA1mJDPOxnNPFx3a1ik
+id: node.course.full
+targetEntityType: node
+bundle: course
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  scheduled_publication: true

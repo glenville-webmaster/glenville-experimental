@@ -1,0 +1,32 @@
+uuid: 4f48b71b-3563-4fd4-967c-70f06106a1b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.simple_mega_menu.top
+    - field.field.simple_mega_menu.megamenu_main.field_cta_block
+    - field.field.simple_mega_menu.megamenu_main.field_image
+    - field.field.simple_mega_menu.megamenu_main.field_link
+    - field.field.simple_mega_menu.megamenu_main.field_text
+    - simple_megamenu.simple_mega_menu_type.megamenu_main
+  module:
+    - text
+id: simple_mega_menu.megamenu_main.top
+targetEntityType: simple_mega_menu
+bundle: megamenu_main
+mode: top
+content:
+  field_text:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_cta_block: true
+  field_image: true
+  field_link: true
+  name: true
+  scheduled_publication: true
+  user_id: true

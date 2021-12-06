@@ -1,0 +1,29 @@
+uuid: f2cf5ec3-9a24-4e7e-b961-13d8464bfe79
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.teaser
+    - field.field.paragraph.profile_department_position.field_chairperson
+    - field.field.paragraph.profile_department_position.field_dean
+    - field.field.paragraph.profile_department_position.field_department
+    - field.field.paragraph.profile_department_position.field_position
+    - paragraphs.paragraphs_type.profile_department_position
+id: paragraph.profile_department_position.teaser
+targetEntityType: paragraph
+bundle: profile_department_position
+mode: teaser
+content:
+  field_department:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_chairperson: true
+  field_dean: true
+  field_position: true
+  scheduled_publication: true

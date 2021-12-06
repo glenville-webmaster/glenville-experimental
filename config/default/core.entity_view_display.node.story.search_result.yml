@@ -1,0 +1,59 @@
+uuid: c7293d4d-b3ac-4a20-9ae4-1c3034ae1eaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.story.body
+    - field.field.node.story.field_header_image
+    - field.field.node.story.field_meta_tags
+    - field.field.node.story.field_seo
+    - field.field.node.story.field_story_image
+    - field.field.node.story.field_story_subtitle
+    - field.field.node.story.panelizer
+    - image.style.thumbnail
+    - node.type.story
+  module:
+    - image
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+_core:
+  default_config_hash: 8n8CyAEvlpFegNDnpWoXJhQzVO0HVfBIBy2EjwdyzAY
+id: node.story.search_result
+targetEntityType: node
+bundle: story
+mode: search_result
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_story_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: content
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  addtoany: true
+  field_header_image: true
+  field_meta_tags: true
+  field_seo: true
+  field_story_subtitle: true
+  links: true
+  panelizer: true
+  scheduled_publication: true

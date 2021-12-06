@@ -1,0 +1,32 @@
+uuid: dfc02186-9df1-4065-8ef3-5789b767c954
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.protected_content.body
+    - node.type.protected_content
+  module:
+    - text
+    - user
+id: node.protected_content.teaser
+targetEntityType: node
+bundle: protected_content
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  field_protected_files: true
+  field_protected_visibility: true
+  scheduled_publication: true

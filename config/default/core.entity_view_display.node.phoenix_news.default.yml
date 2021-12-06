@@ -1,0 +1,325 @@
+uuid: 1a61c480-15d4-4301-83da-a5a717cd1e55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.phoenix_news.body
+    - field.field.node.phoenix_news.field_header_image
+    - field.field.node.phoenix_news.field_meta_tags
+    - field.field.node.phoenix_news.field_news_date
+    - field.field.node.phoenix_news.field_news_featured
+    - field.field.node.phoenix_news.field_news_image
+    - field.field.node.phoenix_news.field_news_related
+    - field.field.node.phoenix_news.field_phoenix_categories
+    - field.field.node.phoenix_news.field_phoenix_tags
+    - field.field.node.phoenix_news.panelizer
+    - node.type.phoenix_news
+  module:
+    - datetime
+    - image
+    - metatag
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: true
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          90d8cc37-fb66-4533-9dee-80d36d3632ad:
+            id: 'entity_field:node:body'
+            label: Body
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: right
+            weight: -1
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 90d8cc37-fb66-4533-9dee-80d36d3632ad
+          814ab3aa-bd3b-456e-9a58-f1314835a606:
+            id: 'entity_field:node:field_header_image'
+            label: 'Header Image'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: entity_reference_label
+              settings:
+                link: true
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: subsection
+            weight: -10
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 814ab3aa-bd3b-456e-9a58-f1314835a606
+          6db0d789-184e-4037-873b-33d60256edd3:
+            id: 'entity_field:node:field_phoenix_categories'
+            label: Categories
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: entity_reference_label
+              settings:
+                link: true
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: left
+            weight: -2
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 6db0d789-184e-4037-873b-33d60256edd3
+          3e4b33d2-e44b-4a75-87e6-b794572f9b2c:
+            id: 'entity_field:node:field_news_date'
+            label: 'Published On'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: datetime_custom
+              settings:
+                timezone_override: ''
+                date_format: 'D M j, Y'
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: right
+            weight: -3
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 3e4b33d2-e44b-4a75-87e6-b794572f9b2c
+          8113f8cb-b99a-4704-a1f2-9f872f36ed5d:
+            id: 'entity_field:node:field_news_image'
+            label: Image
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: image
+              settings:
+                image_style: news_image
+                image_link: ''
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: right
+            weight: -2
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 8113f8cb-b99a-4704-a1f2-9f872f36ed5d
+          60221b7a-e3c3-42e2-a4ec-f3f85245da44:
+            id: 'entity_field:node:field_news_related'
+            label: 'Related News'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: entity_reference_label
+              settings:
+                link: true
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: left
+            weight: -3
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 60221b7a-e3c3-42e2-a4ec-f3f85245da44
+          e266fa8e-116f-4308-b652-ab1d152390e5:
+            id: 'entity_field:node:field_phoenix_tags'
+            label: Tags
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: entity_reference_label
+              settings:
+                link: true
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: left
+            weight: -1
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: e266fa8e-116f-4308-b652-ab1d152390e5
+          d3266517-bede-4274-b65d-f222934ffc7a:
+            id: system_breadcrumb_block
+            label: Breadcrumbs
+            provider: system
+            label_display: '0'
+            region: top
+            weight: 0
+            uuid: d3266517-bede-4274-b65d-f222934ffc7a
+            context_mapping: {  }
+          d7cc9777-49e4-48e6-812e-cfc084fd3178:
+            id: 'entity_field:node:title'
+            label: Title
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+            region: right
+            weight: -4
+            uuid: d7cc9777-49e4-48e6-812e-cfc084fd3178
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          4a4c314a-a8b6-4ea2-aa9f-e6337261295a:
+            id: addtoany_block
+            label: 'Share article on:'
+            provider: addtoany
+            label_display: visible
+            region: right
+            weight: 0
+            uuid: 4a4c314a-a8b6-4ea2-aa9f-e6337261295a
+            context_mapping: {  }
+          d3a14d84-f9f4-4636-b05e-241fe95b21be:
+            id: 'menu_block:utility-navigation'
+            label: 'Secondary Navigation'
+            provider: menu_block
+            label_display: '0'
+            follow: 0
+            follow_parent: '0'
+            level: 1
+            depth: 0
+            expand: 1
+            parent: 'utility-navigation:menu_link_content:d0ff49e0-72dd-44a5-aae7-229df9329091'
+            suggestion: secondary_navigation
+            region: left
+            weight: -4
+            uuid: d3a14d84-f9f4-4636-b05e-241fe95b21be
+            context_mapping: {  }
+          4f7c6437-7dde-4767-b67c-c4a49e2323d6:
+            id: 'block_content:7ea00cca-da9e-4e39-940d-603fff15ab6a'
+            label: 'Phoenix Logo'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: full
+            region: left
+            weight: -5
+            uuid: 4f7c6437-7dde-4767-b67c-c4a49e2323d6
+            context_mapping: {  }
+        id: panels_variant
+        label: Default
+        uuid: 41e36133-5e13-47de-ae65-5b1ff4a4bff4
+        weight: 0
+        layout: glenville_twocol_with_subsection_left
+        layout_settings: {  }
+        page_title: '[node:title]'
+        storage_type: panelizer_default
+        storage_id: 'node:phoenix_news:default:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
+id: node.phoenix_news.default
+targetEntityType: node
+bundle: phoenix_news
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
+    region: content
+  field_header_image:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_meta_tags:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_news_date:
+    weight: 106
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_news_featured:
+    weight: 103
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_news_image:
+    weight: 105
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_news_related:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_phoenix_categories:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_phoenix_tags:
+    weight: 108
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  panelizer: true
+  scheduled_publication: true

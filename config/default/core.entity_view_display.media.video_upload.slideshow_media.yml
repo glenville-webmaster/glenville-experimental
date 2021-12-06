@@ -1,0 +1,38 @@
+uuid: 8495f5ca-7b53-41e4-991a-0437a3b820e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.slideshow_media
+    - field.field.media.video_upload.field_media_in_library
+    - field.field.media.video_upload.field_media_video_file
+    - media.type.video_upload
+  module:
+    - file
+id: media.video_upload.slideshow_media
+targetEntityType: media
+bundle: video_upload
+mode: slideshow_media
+content:
+  field_media_video_file:
+    type: file_video
+    weight: 0
+    label: hidden
+    settings:
+      controls: true
+      multiple_file_display_type: sources
+      width: 640
+      height: 480
+      autoplay: false
+      loop: false
+      muted: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_media_in_library: true
+  name: true
+  scheduled_publication: true
+  thumbnail: true
+  uid: true

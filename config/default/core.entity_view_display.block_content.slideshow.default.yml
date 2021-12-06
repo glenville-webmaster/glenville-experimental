@@ -1,0 +1,35 @@
+uuid: 611461e7-a0fa-4a40-be19-891602556871
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.slideshow
+    - field.field.block_content.slideshow.body
+    - field.field.block_content.slideshow.field_slideshow_media
+  module:
+    - flickity_fields
+    - text
+id: block_content.slideshow.default
+targetEntityType: block_content
+bundle: slideshow
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_slideshow_media:
+    type: flickity_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      flickity_settings: slideshow
+      view_mode: slideshow_media
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  scheduled_publication: true

@@ -1,0 +1,141 @@
+uuid: 81824bea-c44e-4180-939b-c816d2fc9d82
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.profile.body
+    - field.field.node.profile.field_building
+    - field.field.node.profile.field_curriculum_vitae
+    - field.field.node.profile.field_department_position
+    - field.field.node.profile.field_has_profile
+    - field.field.node.profile.field_header_image
+    - field.field.node.profile.field_meta_tags
+    - field.field.node.profile.field_profile_cv
+    - field.field.node.profile.field_profile_education
+    - field.field.node.profile.field_profile_email
+    - field.field.node.profile.field_profile_image
+    - field.field.node.profile.field_profile_name
+    - field.field.node.profile.field_profile_phone
+    - field.field.node.profile.field_profile_publications
+    - field.field.node.profile.field_profile_research_projects
+    - field.field.node.profile.field_profile_type
+    - field.field.node.profile.field_room
+    - field.field.node.profile.field_seo
+    - field.field.node.profile.panelizer
+    - image.style.profile_image
+    - node.type.profile
+  module:
+    - entity_reference_revisions
+    - image
+    - name
+    - panelizer
+    - telephone
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+_core:
+  default_config_hash: rEQL59pd-BRsdNLhj4eJfifEHEN2sg4BADdRKNSJekc
+id: node.profile.teaser
+targetEntityType: node
+bundle: profile
+mode: teaser
+content:
+  field_building:
+    type: string
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_department_position:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_has_profile:
+    type: boolean
+    weight: 8
+    region: content
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_profile_email:
+    type: email_mailto
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_profile_image:
+    type: image
+    weight: 1
+    label: hidden
+    settings:
+      image_style: profile_image
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  field_profile_name:
+    type: name_default
+    weight: 2
+    label: hidden
+    settings:
+      format: short_full
+      output: default
+      multiple: default
+      multiple_delimiter: ', '
+      multiple_and: text
+      multiple_delimiter_precedes_last: never
+      multiple_el_al_min: '3'
+      multiple_el_al_first: '1'
+      markup: false
+    third_party_settings: {  }
+    region: content
+  field_profile_phone:
+    type: telephone_link
+    weight: 6
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    region: content
+  field_room:
+    type: string
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_curriculum_vitae: true
+  field_header_image: true
+  field_meta_tags: true
+  field_profile_cv: true
+  field_profile_education: true
+  field_profile_publications: true
+  field_profile_research_projects: true
+  field_profile_type: true
+  field_seo: true
+  panelizer: true
+  scheduled_publication: true

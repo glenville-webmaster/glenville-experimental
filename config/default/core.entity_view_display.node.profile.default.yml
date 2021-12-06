@@ -1,0 +1,482 @@
+uuid: a23f9f5c-3467-4772-850a-d34845c7ebdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.profile.body
+    - field.field.node.profile.field_building
+    - field.field.node.profile.field_curriculum_vitae
+    - field.field.node.profile.field_department_position
+    - field.field.node.profile.field_has_profile
+    - field.field.node.profile.field_header_image
+    - field.field.node.profile.field_meta_tags
+    - field.field.node.profile.field_profile_cv
+    - field.field.node.profile.field_profile_education
+    - field.field.node.profile.field_profile_email
+    - field.field.node.profile.field_profile_image
+    - field.field.node.profile.field_profile_name
+    - field.field.node.profile.field_profile_phone
+    - field.field.node.profile.field_profile_publications
+    - field.field.node.profile.field_profile_research_projects
+    - field.field.node.profile.field_profile_type
+    - field.field.node.profile.field_room
+    - field.field.node.profile.field_seo
+    - field.field.node.profile.panelizer
+    - node.type.profile
+  module:
+    - entity_reference_revisions
+    - file
+    - image
+    - metatag
+    - name
+    - options
+    - panelizer
+    - telephone
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: true
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          0b57faa9-20c7-45f6-99a5-76e1c375159d:
+            id: 'entity_field:node:body'
+            label: About
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+            region: left
+            weight: -8
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 0b57faa9-20c7-45f6-99a5-76e1c375159d
+          f53bdb50-5ca8-4d43-a2fc-2bd289da5936:
+            id: 'entity_field:node:field_profile_cv'
+            label: CV
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: file_default
+              settings:
+                use_description_as_link_text: true
+              third_party_settings: {  }
+              weight: 0
+            region: right
+            weight: -8
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: f53bdb50-5ca8-4d43-a2fc-2bd289da5936
+          574c474f-8d2c-4629-b839-8d0c60ab808b:
+            id: 'entity_field:node:field_profile_education'
+            label: Education
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+            region: right
+            weight: -10
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 574c474f-8d2c-4629-b839-8d0c60ab808b
+          0803706c-3cfd-40b7-a391-f08961397eb0:
+            id: 'entity_field:node:field_profile_email'
+            label: 'Email Address'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: email_mailto
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+            region: subsection_right
+            weight: -2
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 0803706c-3cfd-40b7-a391-f08961397eb0
+          edf7dbd8-74c3-4e9c-afe6-bea846063b8f:
+            id: 'entity_field:node:field_profile_image'
+            label: Image
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: image
+              settings:
+                image_style: profile_image
+                image_link: ''
+              third_party_settings: {  }
+              weight: 0
+            region: subsection_left
+            weight: -7
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: edf7dbd8-74c3-4e9c-afe6-bea846063b8f
+          ba7360ed-18a9-4a7d-a566-465b5858221b:
+            id: 'entity_field:node:field_profile_name'
+            label: Name
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: name_default
+              settings:
+                format: default
+                markup: false
+                output: default
+                multiple: default
+                multiple_delimiter: ', '
+                multiple_and: text
+                multiple_delimiter_precedes_last: never
+                multiple_el_al_min: '3'
+                multiple_el_al_first: '1'
+              third_party_settings: {  }
+              weight: 0
+            region: subsection_right
+            weight: -7
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: ba7360ed-18a9-4a7d-a566-465b5858221b
+          0d4378f6-d3a1-4b99-beb5-9583185f60ff:
+            id: 'entity_field:node:field_profile_phone'
+            label: 'Office Phone'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: telephone_link
+              settings:
+                title: ''
+              third_party_settings: {  }
+              weight: 0
+            region: subsection_right
+            weight: -3
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 0d4378f6-d3a1-4b99-beb5-9583185f60ff
+          aebc4f4a-3062-4643-b466-c604c123cd05:
+            id: 'entity_field:node:field_profile_publications'
+            label: 'Recent Publications'
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+            region: left
+            weight: -6
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: aebc4f4a-3062-4643-b466-c604c123cd05
+          119485f8-3adb-48d3-8048-5e7629c63487:
+            id: system_breadcrumb_block
+            label: Breadcrumbs
+            provider: system
+            label_display: '0'
+            region: top
+            weight: -7
+            context_mapping: {  }
+            uuid: 119485f8-3adb-48d3-8048-5e7629c63487
+          8d99fa6a-3c98-42f5-b5d8-5c4c4aded363:
+            id: 'entity_field:node:field_profile_research_projects'
+            label: 'Research Projects'
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+            region: left
+            weight: -7
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 8d99fa6a-3c98-42f5-b5d8-5c4c4aded363
+          4dd7d8eb-5cb2-4eec-8c55-f7fc78a12088:
+            id: 'entity_field:node:field_header_image'
+            label: 'Header Image'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: entity_reference_entity_view
+              settings:
+                view_mode: default
+              third_party_settings: {  }
+              weight: 0
+            region: subsection_left
+            weight: -6
+            uuid: 4dd7d8eb-5cb2-4eec-8c55-f7fc78a12088
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          ee5bd6e2-1569-4bd4-8977-775d39c1ca80:
+            id: 'entity_field:node:field_room'
+            label: Room
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+            region: subsection_right
+            weight: -5
+            uuid: ee5bd6e2-1569-4bd4-8977-775d39c1ca80
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          bb9f5d38-7ffa-4467-942a-4676808999c7:
+            id: 'entity_field:node:field_building'
+            label: Building
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+            region: subsection_right
+            weight: -4
+            uuid: bb9f5d38-7ffa-4467-942a-4676808999c7
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          5160491a-dd3a-4399-a8ca-2d827459c7cd:
+            id: 'entity_field:node:field_department_position'
+            label: 'Department Position'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: entity_reference_revisions_entity_view
+              settings:
+                view_mode: default
+              third_party_settings: {  }
+              weight: 0
+            region: subsection_right
+            weight: -6
+            uuid: 5160491a-dd3a-4399-a8ca-2d827459c7cd
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          850ab716-c135-4ac3-ba11-78bd1858fdda:
+            id: 'entity_field:node:field_department_position'
+            label: 'Departments & Programs'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: entity_reference_revisions_entity_view
+              settings:
+                view_mode: teaser
+              third_party_settings: {  }
+              weight: 0
+            region: right
+            weight: -9
+            uuid: 850ab716-c135-4ac3-ba11-78bd1858fdda
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          d2c7e386-2c1c-446c-ba8a-9b1338b60960:
+            id: 'entity_field:node:field_curriculum_vitae'
+            label: 'Curriculum Vitae'
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+            region: left
+            weight: -9
+            uuid: d2c7e386-2c1c-446c-ba8a-9b1338b60960
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+        id: panels_variant
+        label: Default
+        uuid: ddb1eaaf-48a9-4129-83b7-c7091652680f
+        weight: 0
+        layout: glenville_twocol_with_subsection_split_sidebar_first
+        layout_settings: {  }
+        page_title: ''
+        storage_type: panelizer_default
+        storage_id: 'node:profile:default:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
+_core:
+  default_config_hash: 6-BuMoBO6N7WrkVOC4l1q9LBJ14pxaRK69OThOro__E
+id: node.profile.default
+targetEntityType: node
+bundle: profile
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_building:
+    weight: 125
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_curriculum_vitae:
+    weight: 123
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_department_position:
+    type: entity_reference_revisions_entity_view
+    weight: 124
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_has_profile:
+    weight: 127
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_header_image:
+    weight: 122
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_meta_tags:
+    weight: 128
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_profile_cv:
+    weight: 103
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_profile_education:
+    weight: 118
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_profile_email:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_profile_image:
+    weight: 107
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_profile_name:
+    weight: 109
+    label: above
+    settings:
+      format: default
+      markup: false
+      output: default
+      multiple: default
+      multiple_delimiter: ', '
+      multiple_and: text
+      multiple_delimiter_precedes_last: never
+      multiple_el_al_min: '3'
+      multiple_el_al_first: '1'
+    third_party_settings: {  }
+    type: name_default
+    region: content
+  field_profile_phone:
+    weight: 111
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_profile_publications:
+    weight: 114
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_profile_research_projects:
+    weight: 121
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_profile_type:
+    weight: 112
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_room:
+    weight: 126
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_seo: true
+  panelizer: true
+  scheduled_publication: true

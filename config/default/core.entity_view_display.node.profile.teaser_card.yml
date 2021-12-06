@@ -1,0 +1,104 @@
+uuid: e10bbd08-fea0-4422-b57a-649bb72cbecb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_card
+    - field.field.node.profile.body
+    - field.field.node.profile.field_building
+    - field.field.node.profile.field_curriculum_vitae
+    - field.field.node.profile.field_department_position
+    - field.field.node.profile.field_has_profile
+    - field.field.node.profile.field_header_image
+    - field.field.node.profile.field_profile_cv
+    - field.field.node.profile.field_profile_education
+    - field.field.node.profile.field_profile_email
+    - field.field.node.profile.field_profile_image
+    - field.field.node.profile.field_profile_name
+    - field.field.node.profile.field_profile_phone
+    - field.field.node.profile.field_profile_publications
+    - field.field.node.profile.field_profile_research_projects
+    - field.field.node.profile.field_profile_type
+    - field.field.node.profile.field_room
+    - field.field.node.profile.field_seo
+    - field.field.node.profile.panelizer
+    - image.style.square_small_140_x_140_
+    - node.type.profile
+  module:
+    - image
+    - name
+    - panelizer
+    - paragraphs
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+_core:
+  default_config_hash: oefzV2VJRzhnx4_gDkO0JBt8v7yoN_PZdaedGkR0xHo
+id: node.profile.teaser_card
+targetEntityType: node
+bundle: profile
+mode: teaser_card
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 3
+    settings:
+      trim_length: 120
+    third_party_settings: {  }
+    region: content
+  field_department_position:
+    type: paragraph_summary
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_profile_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: square_small_140_x_140_
+      image_link: content
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_profile_name:
+    weight: 1
+    label: hidden
+    settings:
+      format: short_full
+      output: default
+      multiple: default
+      multiple_delimiter: ', '
+      multiple_and: text
+      multiple_delimiter_precedes_last: never
+      multiple_el_al_min: '3'
+      multiple_el_al_first: '1'
+      markup: false
+    third_party_settings: {  }
+    type: name_default
+    region: content
+hidden:
+  addtoany: true
+  field_building: true
+  field_curriculum_vitae: true
+  field_has_profile: true
+  field_header_image: true
+  field_profile_cv: true
+  field_profile_education: true
+  field_profile_email: true
+  field_profile_phone: true
+  field_profile_publications: true
+  field_profile_research_projects: true
+  field_profile_type: true
+  field_room: true
+  field_seo: true
+  links: true
+  panelizer: true
+  scheduled_publication: true

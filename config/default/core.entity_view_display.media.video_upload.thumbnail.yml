@@ -1,0 +1,34 @@
+uuid: 493480dc-fcf8-42c5-888e-bad7d5702a9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.thumbnail
+    - field.field.media.video_upload.field_media_in_library
+    - field.field.media.video_upload.field_media_video_file
+    - image.style.thumbnail
+    - media.type.video_upload
+  module:
+    - image
+id: media.video_upload.thumbnail
+targetEntityType: media
+bundle: video_upload
+mode: thumbnail
+content:
+  thumbnail:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  created: true
+  field_media_in_library: true
+  field_media_video_file: true
+  name: true
+  scheduled_publication: true
+  uid: true

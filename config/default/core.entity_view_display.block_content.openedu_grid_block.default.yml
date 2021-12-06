@@ -1,0 +1,58 @@
+uuid: 1f72a37e-0993-4ab7-a521-21e6f698f8c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.openedu_grid_block
+    - field.field.block_content.openedu_grid_block.field_grid_content
+    - field.field.block_content.openedu_grid_block.field_grid_cta
+    - field.field.block_content.openedu_grid_block.field_grid_description
+    - field.field.block_content.openedu_grid_block.field_grid_label
+    - field.field.block_content.openedu_grid_block.field_grid_layout
+  module:
+    - link
+    - text
+_core:
+  default_config_hash: bAA5nfV-5uGN_JlrXdyNT1B5Z3baHXHDP7EZh3o7hg0
+id: block_content.openedu_grid_block.default
+targetEntityType: block_content
+bundle: openedu_grid_block
+mode: default
+content:
+  field_grid_content:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_grid_cta:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_grid_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_grid_label:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_grid_layout: true
+  scheduled_publication: true

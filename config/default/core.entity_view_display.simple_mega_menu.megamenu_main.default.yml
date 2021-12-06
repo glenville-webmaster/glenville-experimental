@@ -1,0 +1,58 @@
+uuid: d642b48b-0839-42df-ba5a-21ceb9939fa0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.simple_mega_menu.megamenu_main.field_cta_block
+    - field.field.simple_mega_menu.megamenu_main.field_image
+    - field.field.simple_mega_menu.megamenu_main.field_link
+    - field.field.simple_mega_menu.megamenu_main.field_text
+    - image.style.mega_menu
+    - simple_megamenu.simple_mega_menu_type.megamenu_main
+  module:
+    - entity_reference_revisions
+    - image
+    - text
+id: simple_mega_menu.megamenu_main.default
+targetEntityType: simple_mega_menu
+bundle: megamenu_main
+mode: default
+content:
+  field_cta_block:
+    type: entity_reference_revisions_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_image:
+    type: image
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      image_style: mega_menu
+      image_link: ''
+    third_party_settings: {  }
+  field_link:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_text:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  name: true
+  scheduled_publication: true
+  user_id: true

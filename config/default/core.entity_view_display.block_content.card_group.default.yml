@@ -1,0 +1,47 @@
+uuid: a7dd399d-982c-4a7a-ba67-87e1d99e55d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_group
+    - field.field.block_content.card_group.body
+    - field.field.block_content.card_group.field_cards
+    - field.field.block_content.card_group.field_grid_layout
+    - field.field.block_content.card_group.field_group_title
+    - field.field.block_content.card_group.field_group_type
+  module:
+    - entity_reference_revisions
+    - text
+id: block_content.card_group.default
+targetEntityType: block_content
+bundle: card_group
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_cards:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_group_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_grid_layout: true
+  field_group_type: true
+  scheduled_publication: true

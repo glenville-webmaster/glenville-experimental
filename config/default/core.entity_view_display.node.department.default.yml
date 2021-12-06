@@ -1,0 +1,217 @@
+uuid: 6fdb959c-316d-4a59-bb0f-6d082a6227fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.department.body
+    - field.field.node.department.field_department_fax
+    - field.field.node.department.field_department_phone
+    - field.field.node.department.field_department_toll_free
+    - field.field.node.department.field_header_image
+    - field.field.node.department.field_meta_tags
+    - field.field.node.department.panelizer
+    - node.type.department
+  module:
+    - metatag
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: true
+    custom: true
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          7cd472a0-0bbe-4176-bc86-452ea4364100:
+            id: 'entity_field:node:body'
+            label: Body
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: right
+            weight: -9
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 7cd472a0-0bbe-4176-bc86-452ea4364100
+          a668f437-ae12-42c4-bb4e-69c88d90acde:
+            id: 'entity_field:node:field_department_phone'
+            label: Phone
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: inline
+              type: telephone_link
+              settings:
+                title: ''
+              third_party_settings: {  }
+              weight: 0
+            region: left
+            weight: -1
+            uuid: a668f437-ae12-42c4-bb4e-69c88d90acde
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          e5a57922-f46c-4276-9f60-262671bc4d3b:
+            id: 'entity_field:node:field_department_fax'
+            label: Fax
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: inline
+              type: telephone_link
+              settings:
+                title: ''
+              third_party_settings: {  }
+              weight: 0
+            region: left
+            weight: -2
+            uuid: e5a57922-f46c-4276-9f60-262671bc4d3b
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          79c36c50-cf4c-49a8-8591-36b5bf58e586:
+            id: 'entity_field:node:field_department_toll_free'
+            label: 'Toll Free'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: inline
+              type: telephone_link
+              settings:
+                title: ''
+              third_party_settings: {  }
+              weight: 0
+            region: left
+            weight: -3
+            uuid: 79c36c50-cf4c-49a8-8591-36b5bf58e586
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          6e8cba04-d32b-45b7-824a-33cec365cd3a:
+            id: system_breadcrumb_block
+            label: Breadcrumbs
+            provider: system
+            label_display: '0'
+            region: top
+            weight: 0
+            uuid: 6e8cba04-d32b-45b7-824a-33cec365cd3a
+            context_mapping: {  }
+          f9027466-0a33-4535-9cc6-f995d9dc472d:
+            id: page_title_block
+            label: 'Page title'
+            provider: core
+            label_display: '0'
+            region: subsection
+            weight: -10
+            uuid: f9027466-0a33-4535-9cc6-f995d9dc472d
+            context_mapping: {  }
+          15b694c3-3b5f-4e55-9394-d541ea8cec4f:
+            id: 'menu_block:main'
+            label: 'Main navigation'
+            provider: menu_block
+            label_display: '0'
+            follow: 1
+            follow_parent: '1'
+            level: 1
+            depth: 2
+            expand: 0
+            parent: 'main:'
+            suggestion: secondary_navigation
+            region: left
+            weight: 0
+            uuid: 15b694c3-3b5f-4e55-9394-d541ea8cec4f
+            context_mapping: {  }
+          e7b46e88-c26d-4645-8014-53d62a98ceb9:
+            id: 'entity_field:node:field_header_image'
+            label: 'Header Image'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: entity_reference_entity_view
+              settings:
+                view_mode: default
+              third_party_settings: {  }
+              weight: 0
+            region: subsection
+            weight: 0
+            uuid: e7b46e88-c26d-4645-8014-53d62a98ceb9
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+        id: panels_variant
+        label: Default
+        uuid: f5d6d6ee-f2d4-4413-b27e-5363e880cb4c
+        weight: 0
+        layout: glenville_twocol_with_subsection_left
+        layout_settings: {  }
+        page_title: '[node:title]'
+        storage_type: panelizer_default
+        storage_id: 'node:department:default:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
+_core:
+  default_config_hash: vPwhcXU3ZNQgmY6dZEtUusLWbCOwQEczcIxChtYCvn4
+id: node.department.default
+targetEntityType: node
+bundle: department
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_department_fax:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_department_phone:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_department_toll_free:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_header_image:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_meta_tags:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  panelizer: true
+  scheduled_publication: true

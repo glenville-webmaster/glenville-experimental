@@ -1,0 +1,47 @@
+uuid: b6768604-eeb3-4012-9e55-3aac1b8bc417
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.openedu_hero
+    - field.field.block_content.openedu_hero.body
+    - field.field.block_content.openedu_hero.field_hero_image
+    - field.field.block_content.openedu_hero.field_hero_video
+    - image.style.crop_hero_crop
+  module:
+    - media
+    - text
+_core:
+  default_config_hash: QeHHrv8olop0rq6OR1hwUBt9ktOoR6pXvxnBQOX8sA4
+id: block_content.openedu_hero.default
+targetEntityType: block_content
+bundle: openedu_hero
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_hero_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: crop_hero_crop
+      image_link: ''
+    third_party_settings: {  }
+    type: media_thumbnail
+    region: content
+  field_hero_video:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: embedded
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  scheduled_publication: true

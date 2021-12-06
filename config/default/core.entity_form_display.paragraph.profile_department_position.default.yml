@@ -1,0 +1,52 @@
+uuid: 6a788508-7315-415d-8cc3-a74f36466e07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.profile_department_position.field_chairperson
+    - field.field.paragraph.profile_department_position.field_dean
+    - field.field.paragraph.profile_department_position.field_department
+    - field.field.paragraph.profile_department_position.field_position
+    - paragraphs.paragraphs_type.profile_department_position
+id: paragraph.profile_department_position.default
+targetEntityType: paragraph
+bundle: profile_department_position
+mode: default
+content:
+  field_chairperson:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_dean:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_department:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_position:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  moderation_state: true
+  scheduled_publication: true
+  status: true
+  uid: true

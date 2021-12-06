@@ -1,0 +1,23 @@
+uuid: e0b861e5-e91b-4de9-9a3a-54795bf65f53
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.scripts
+    - field.field.block_content.scripts.field_code_snippet
+  module:
+    - text
+id: block_content.scripts.default
+targetEntityType: block_content
+bundle: scripts
+mode: default
+content:
+  field_code_snippet:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  scheduled_publication: true

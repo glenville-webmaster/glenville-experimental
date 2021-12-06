@@ -1,0 +1,33 @@
+uuid: 5a86d557-6696-4d4c-ba6c-9fa80d8227bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_card_type
+field_name: field_card_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: featured
+      label: Featured
+    -
+      value: overlay-black
+      label: 'Black Overlay'
+    -
+      value: overlay-blue
+      label: 'Blue Overlay'
+    -
+      value: underlay-black
+      label: 'Black Underlay'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 4afd7880-101f-4c8a-9b65-39801cc1aa41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.simple_mega_menu.field_text
+    - simple_megamenu.simple_mega_menu_type.megamenu_main
+  module:
+    - text
+id: simple_mega_menu.megamenu_main.field_text
+field_name: field_text
+entity_type: simple_mega_menu
+bundle: megamenu_main
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

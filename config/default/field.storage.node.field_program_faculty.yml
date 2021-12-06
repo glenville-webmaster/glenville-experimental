@@ -1,0 +1,19 @@
+uuid: 747e7bf8-79d5-4cbf-a522-1b4e9ff49dfa
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_program_faculty
+field_name: field_program_faculty
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

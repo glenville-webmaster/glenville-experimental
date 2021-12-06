@@ -1,0 +1,29 @@
+uuid: 7003dd39-071d-4fa9-861f-b71e8599cc30
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+_core:
+  default_config_hash: 3nr41q9_xSW4x2IlBe82cHBTuSPsHSr0Jl7tqiSduhg
+id: node.field_profile_type
+field_name: field_profile_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: staff
+      label: Staff
+    -
+      value: faculty
+      label: Faculty
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

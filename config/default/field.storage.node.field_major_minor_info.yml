@@ -1,0 +1,19 @@
+uuid: b684f384-f794-41ee-8188-caaa2e074f71
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_major_minor_info
+field_name: field_major_minor_info
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

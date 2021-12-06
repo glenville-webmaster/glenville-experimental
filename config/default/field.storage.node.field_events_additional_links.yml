@@ -1,0 +1,21 @@
+uuid: e4e713b6-fd87-4b0d-ac04-9969f36b06f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+_core:
+  default_config_hash: Sens3x2tVFe5UmUezohIBZVobio2-zWPCZIQXE-w8uQ
+id: node.field_events_additional_links
+field_name: field_events_additional_links
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

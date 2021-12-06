@@ -1,0 +1,35 @@
+uuid: f35eb928-c573-4987-b37a-c00bf7ec5197
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+_core:
+  default_config_hash: i06vzpkPcXHsTBj1b3AMItm_WQ-r_BirwWio7qGdKGw
+id: block_content.field_grid_layout
+field_name: field_grid_layout
+entity_type: block_content
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 1
+      label: '1 Per Row'
+    -
+      value: 2
+      label: '2 Per Row'
+    -
+      value: 3
+      label: '3 Per Row'
+    -
+      value: 4
+      label: '4 Per Row'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: c9d93d5e-6bc2-41a3-a9de-8bcae4752bf7
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - node
+id: node.field_success_stories
+field_name: field_success_stories
+entity_type: node
+type: entity_reference
+settings:
+  target_type: block_content
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

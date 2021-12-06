@@ -1,0 +1,21 @@
+uuid: c2bd08ca-d507-44cd-8934-2bc0915f5841
+langcode: en
+status: true
+dependencies:
+  module:
+    - google_map_field
+    - node
+_core:
+  default_config_hash: MtddFrn9KTM5DIcqiLRw-MJqMvhVOJ7RTRZ41mI9qnw
+id: node.field_events_event_map
+field_name: field_events_event_map
+entity_type: node
+type: google_map_field
+settings: {  }
+module: google_map_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,30 @@
+uuid: 2f1e5086-a0a8-41c3-b101-cb6980603765
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_protected_visibility
+field_name: field_protected_visibility
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: student
+      label: Student
+    -
+      value: faculty
+      label: Faculty
+    -
+      value: staff
+      label: Staff
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

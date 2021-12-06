@@ -1,0 +1,19 @@
+uuid: 318563c6-c6fd-4a4d-adf4-2cc5f32c91f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_curriculum_vitae
+field_name: field_curriculum_vitae
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

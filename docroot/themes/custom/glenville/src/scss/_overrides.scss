@@ -1,0 +1,770 @@
+body {
+  overflow-x: hidden;
+}
+
+// ixm-dashboard
+.ixm-dashboard footer {
+  margin-bottom: 59px;
+
+  @media (min-width: 610px) {
+    margin-bottom: 0;
+  }
+}
+
+p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#header {
+  background-color: $blue-005 !important;
+}
+
+/* Custom material social icon fixes (footer). [THESE NO LONGER INCLUDE THE PROPER SOCIAL MEDIA ICONS]
+.material-icons-social {
+  text-indent: -9999em;
+  position: relative;
+  font-size: 2.5em;
+  width: 1.25em;
+  height: 1em;
+  transition: all, .3s, ease-in-out;
+
+  &:before {
+    font-size: 1em;
+    text-indent: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.material-icons
+{
+  &.md-18 { font-size: 18px; }
+  &.md-24 { font-size: 24px; }
+  &.md-36 { font-size: 36px; }
+  &.md-48 { font-size: 48px; }
+
+}
+
+.mis {
+  @include social-media-colours();
+} */
+
+// panels
+#panels-ipe-tray {
+  z-index: 1001;
+}
+
+// Paragraphs.
+p:last-child,
+.form-group:last-child,
+.panel:last-child {
+  margin-bottom: 0;
+}
+
+// Help region.
+.region-help {
+  > .glyphicon {
+    font-size: $font-size-lg;
+    float: left;
+    margin: -0.05em 0.5em 0 0;
+  }
+
+  .block {
+    overflow: hidden;
+  }
+}
+
+.help-block,
+.control-group .help-inline {
+  color: $gray-300;
+  font-size: 12px;
+  margin: 5px 0 10px;
+  padding: 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+// headings
+h1, .h1,
+h2, .h2 { font-weight: $font-weight-bold; }
+h3, .h3 { font-weight: $font-weight-semibold; }
+
+
+// Buttons
+.btn-success {
+  color: $yiq-text-light;
+  /* color: $color-contrast-light; */
+}
+
+.btn-xs {
+  @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $font-size-xs, $btn-line-height-xs, $btn-border-radius-sm);
+  /* @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $font-size-xs, $btn-border-radius-sm); */
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+}
+
+// Media fix for BS.
+.media--type-video.media,
+.media--type-video-upload.media {
+  display: block;
+}
+
+// shadows
+.box-shadow-1 {
+  @include box-shadows(0, 0, 1px, rgba($black, .1));
+}
+.box-shadow-2 {
+  @include box-shadows(0, 0, 2px, rgba($black, .2));
+}
+.box-shadow-3 {
+  @include box-shadows(0, 0, 3px, rgba($black, .3));
+}
+.box-shadow-4 {
+  @include box-shadows(0, 0, 4px, rgba($black, .4));
+}
+.box-shadow-5 {
+  @include box-shadows(0, 0, 5px, rgba($black, .5));
+}
+
+// make links more visible, but remove underline for buttons
+section.block-entity-fieldnodebody,
+section.block--basic {
+  a {
+    text-decoration: underline;
+    font-weight: 500;
+  }
+  a.btn {
+    text-decoration: none;
+  }
+}
+
+// Fix Media Library items not aligning with list bullets
+li article.embedded-entity,
+li div.media {
+  display: inline-block;
+}
+
+//Fix mixed list links and entity references having gaps. This may be temporary until I standardize how to do these lists
+p + article.embedded-entity {
+  margin-top: -1rem;
+}
+
+// Prevent text wrapping around any images in mobile
+
+@media (max-width: 575px) {
+  article.align-right,
+  article.align-left,
+  img.align-right,
+  img.align-left {
+    float: none;
+  }
+}
+
+// Make all text and links white by default if background is bg-primary
+.bg-primary {
+  color: $white;
+  a,
+  a:link,
+  a:hover,
+  a:visited {
+    color: $white;
+  }
+  a.btn-light,
+  a.btn-light:link,
+  a.btn-light:hover,
+  a.btn-light:visited {
+    color: $blue-005;
+  }
+}
+
+// Fix image alignments for ckeditor image insert (legacy), Media Embed (legacy), and Media Library
+div.embedded-entity,
+div.embedded-entity.align-left,
+div.embedded-entity.align-right {
+  margin: 0;
+}
+
+
+article.media--type-image,
+div.embedded-entity {
+  img {
+    padding: 5px;
+    border: 1px solid $gray-400;
+    margin: 10px 0 10px 0;
+  }
+}
+
+p {
+  > img {
+    padding: 5px;
+    border: 1px solid $gray-400;
+    margin: 10px 0 10px 0;
+  }
+  > a {
+    > img {
+      padding: 5px;
+      border: 1px solid $gray-400;
+      margin: 10px 0 10px 0;
+    }
+  }
+}
+
+article.media--type-image.media--view-mode-no-border {
+  float: none;
+
+  img {
+    border: 0;
+    padding: 0;
+  }
+}
+
+div.embedded-entity {
+  img {
+    padding: 5px;
+    border: 1px solid $gray-400;
+    margin: 10px 0 0 0;
+  }
+  figcaption {
+    margin: 0 0 10px 0;
+  }
+}
+
+article.align-left,
+div.embedded-entity.align-left {
+  img {
+    margin-right: 10px;
+  }
+}
+
+img.align-left {
+  margin-right: 10px;
+}
+
+img.align-right {
+  margin-left: 10px;
+}
+
+article.align-right,
+div.embedded-entity.align-right {
+  img {
+    margin-left: 10px;
+  }
+}
+
+article.media--type-image.align-center {
+  justify-content: center;
+}
+
+article.media--view-mode-slideshow-media {
+  img {
+    padding: 0;
+    margin: auto;
+  }
+}
+
+div.card-group {
+  article.media--type-image {
+    img {
+      padding: 0;
+      margin: auto;
+    }
+  }
+}
+
+div.card-deck {
+  article.media--type-image {
+    img {
+      padding: 0;
+      margin: auto;
+      border: 0;
+    }
+  }
+}
+
+figure.caption-drupal-media,
+figure.caption-drupal-entity,
+figure.caption-img {
+  margin: 10px auto 10px auto;
+}
+
+figure.align-left {
+  margin-right: 10px;
+}
+
+figure.align-right {
+  margin-left: 10px
+}
+
+figure.caption {
+  figcaption {
+    font-size: $font-size-base;
+  }
+}
+
+article.media--type-video,
+article.media--type-video-upload {
+  margin: 10px 0;
+}
+
+article.media--type-video-upload.media--view-mode-embedded {
+  margin: 0;
+}
+
+article.media--type-video.align-right,
+article.media--type-video-upload.align-right {
+  margin-left: 10px;
+}
+
+article.media--type-video.align-left,
+article.media--type-video-upload.align-left {
+  margin-right: 10px;
+}
+
+.media--view-mode-default video,
+.media--view-mode-full-content-width video {
+  width: 100%;
+}
+
+.media--view-mode-half-content-width video {
+  width: 355px;
+}
+
+// Fix margins for inserted document links.
+// RIP, can't do until !element > element selector becomes available in CSS4
+
+// Font-Awesome Styles
+// Download Link Icons
+.document-link[href$='.pdf']::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\00a0\f1c1';
+  color: #ff0000;
+}
+
+.document-link[href$='.xlsx']::after,
+.document-link[href$='.xls']::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\00a0\f1c3';
+  color: #1d6f42;
+}
+
+.document-link[href$='.docx']::after,
+.document-link[href$='.doc']::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\00a0\f1c2';
+  color: #3277bc;
+}
+
+.document-link[href$='.pptx']::after,
+.document-link[href$='.ppt']::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\00a0\f1c4';
+  color: #d04423;
+}
+
+// Social Media Icons
+footer.footer {
+  a.social-media-footer,
+  a.social-media-footer:link,
+  a.social-media-footer:visited,
+  a.social-media-footer:hover {
+    font-size: 1em;
+    margin-left: 2em;
+  
+    .facebook {
+      color: map-get($social_colors, "facebook");
+    }
+    .twitter {
+      color: map-get($social_colors, "twitter");
+    }
+    .instagram {
+      color: map-get($social_colors, "instagram");
+    }
+    .youtube {
+      color: map-get($social_colors, "youtube");
+    }
+    .linkedin {
+      color: map-get($social_colors, "linkedin");
+    }
+  }
+}
+
+// Fix new accordion colors
+.ckeditor-accordion-container {
+  dl.styled {
+    border: 0;
+    
+    dt {
+      margin-bottom: 10px;
+      
+      a {
+        text-decoration: none;
+        /* background-color: $blue-027; */
+        background-color: $gray-200;
+        /* border-bottom: 2px solid $gray-200; */
+        border: 1px solid $gray-500;
+        color: $blue-005;
+        
+        span.ckeditor-accordion-toggle:before,
+        span.ckeditor-accordion-toggle:after {
+          background: $blue-005;
+          height: 3px;
+        }
+        
+        &:hover {
+          border-color: $gray-800;
+          background-color: $gray-350;
+        }
+      }
+      
+      &:last-of-type {
+        a {
+          border-bottom: 1px solid $gray-500;
+        }
+      }
+    }
+    dt.active {
+      margin-bottom: 0;
+      
+      a {
+        background-color: $blue-005;
+        color: $white;
+        border-color: $black;
+        
+        span.ckeditor-accordion-toggle:before,
+        span.ckeditor-accordion-toggle:after {
+          background: $white;
+          height: 3px;
+        }
+      }
+    }
+    dd {
+      padding: 15px
+    }
+    dd.active {
+      border: 2px solid $blue-005;
+      border-top: 0;
+      margin-bottom: 10px;
+      
+      p:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+// Add course schedule colors
+.course-status-hybrid {
+  color: #0072B2;
+}
+
+.course-status-online {
+  color: #009E73;
+}
+
+.course-status-off-campus {
+  color: #CC79A7;
+}
+
+.course-status-closed {
+  color: #D55E00;
+}
+
+.schedule-link {
+  color: #000000;
+  text-decoration: underline;
+}
+
+// Staff Table Styles
+div.views-row.staff-list {
+  margin-bottom: 2em;
+  
+  .staff-info {
+    background-color: #eeeeee;
+    padding-top: 1em;
+  }
+  
+  .views-field {
+    display: block;
+  }
+  
+  .views-field-field-room,
+  .views-field-field-building {
+    display: inline-block;
+    padding-right: 0.5ch;
+  }
+  
+  .views-field-field-email-address {
+    text-transform:  lowercase;
+  }
+}
+
+// Sitewide Alert styles
+// All classes *must* start with "alert-"
+
+div#sitewide-alert {
+  .alert {
+    margin-bottom: 0;
+    border: 0;
+    border-bottom: 1px solid $white;
+    border-radius: 0;
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $white;
+    
+    .close {
+      opacity: 1;
+      
+      span {
+        background: $white;
+        height: 2rem;
+        width: 2rem;
+        line-height: 2rem;
+        font-size: 2rem;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 50%;
+        text-shadow: none;
+        border: 1px solid $black;
+      }
+      
+      &:not(:disabled):not(.disabled):hover,
+      &:not(:disabled):not(.disabled):focus {
+        opacity: 1;
+        
+        span {
+          background: $gray-950;
+          color: $white;
+          border-color: $white;
+        }
+      }
+    }
+    p {
+      margin: 1em 0;
+      
+      a {
+        text-decoration: underline;
+        color: $yellow;
+        
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+  .alert.alert-yellow {
+    border-bottom: 1px solid $black;
+    color: $black;
+    background-color: $yellow;
+    
+    a {
+      color: $gray-700;
+        
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+  .alert-red {
+    background-color: #CC0000;
+  }
+  .alert-blue {
+    background-color: $blue-004;
+  }
+  .alert-green {
+    background-color: $green-dark;
+  }
+}
+
+article.media.media--type-remote-video {
+  display: block;
+}
+
+/* Give top cushion between the end of an inserted document and a following header */
+div.media--type-document,
+div.embedded-entity {
+
+  + {
+  
+    h1, h2 {
+      margin-top: 2rem;
+    }
+  
+    h3, h4, h5, h6 {
+      margin-top: 1rem;
+    }
+  
+  }
+}
+
+/* News Header styles for Layout Builder */
+div.head-section {
+  padding-top: 91px;
+  margin-top: -91px;
+  position: relative;
+  background-size: cover !important;
+  background-position: center center !important;
+  background: url(https://www.glenville.edu/sites/default/files/styles/crop_freeform/public/DSC01578.JPG?h=6f35ac62&itok=KgHWq52m);
+  color: #fff;
+  min-height: 3.625rem;
+  
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    content: "";
+    opacity: .3;
+  }
+}
+
+@media (min-width: 576px) {
+  div.head-section {
+    min-height: 6.1875rem;
+  }
+}
+
+@media (min-width: 768px) {
+  div.head-section {
+    min-height: 5.6875rem;
+  }
+}
+
+/* Homepage Statistics Bar Fix
+div.homepage-statistics {
+
+  section {
+    position: relative;
+  }
+
+} */
+
+/* Fix Profile Page styles */
+section.block-views-exposed-filter-blockprofile-list-profile-listing-block {
+  h2 {
+    display: none;
+  }
+  
+  .select-wrapper {
+    .chosen-container-single
+    {
+      min-width: 20em;
+    }
+  }
+}
+
+/* News Page figure padding override */
+.field--name-field-news-image {
+  figure {
+    margin: 1em 0;
+  }
+}
+
+/* Phoenix News Slick Carousel Styles */
+.slick-slide {
+  .views-field-title {
+    font-size: 1.7em;
+    font-weight: 500;
+  }
+  
+  .views-field-field-news-image {
+    img {
+      border: 1px solid #333333;
+    }
+  }
+}
+
+/* New Test Navigation Styles */
+div.row.equal-heights {
+  aside.panel-2col.sidebar {
+    background-color: $gray-100;
+    border-radius: 15px 0 0 15px;
+    border-right: 2px solid $blue;
+    background-image: url(/themes/custom/glenville/dist/images/bg_clock-tower.svg);
+    background-position: 20px 5em;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    padding: 0;
+    
+    ul.sidebar_nav {
+      background: none;
+      border: 0;
+      padding: 0;
+      
+      li.nav-item {
+        border-bottom: 1px solid $blue;
+        margin: 0 1em;
+        
+        &:first-child {
+          margin-top: 1em;
+          
+          &.parent-link {
+          margin: 0 0 0.5em 0;
+          padding: 0.5em 1em 0.2em 1em;
+          background-color: $blue;
+          border-radius: 15px 0 0 0;
+          font-weight: bold;
+          font-size: 1.2em;
+          
+            a {
+              color: $white;
+            
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        
+        &:last-child {
+          border: 0;
+          margin-bottom: 1em;
+        }
+      }
+      
+      &.sidebar_nav-subnav {
+        li.nav-item {
+          border: 0;
+          
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+      
+    }
+  }
+}

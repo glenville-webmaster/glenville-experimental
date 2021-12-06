@@ -1,0 +1,214 @@
+// Use Math Module
+@use 'sass:math';
+
+//
+// Typography
+// --------------------------------------------------
+
+$font-family-md-icons:    "Material Icons", sans-serif;
+$font-family-sans-serif:  "Poppins", sans-serif;
+$font-family-serif:       Georgia, serif;
+
+// heading & body font
+$headings-font-family:  $font-family-sans-serif !default;
+$font-family-base:      $font-family-sans-serif !default;
+
+//
+// Colours
+// --------------------------------------------------
+
+// grays
+$white:    #fff !default;
+$gray-100: #f4f4f4;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6;
+$gray-350: #cccccc;
+$gray-400: #999999;
+$gray-500: #979797;
+$gray-600: #757575;
+$gray-700: #4a4a4a;
+$gray-800: #373a3c;
+$gray-900: #212529 !default;
+$gray-950: #101010;
+$black:    #000 !default;
+
+//$grays: () !default;
+//$grays: map-merge((
+//    "100": $gray-100,
+//    "200": $gray-200,
+//    "300": $gray-300,
+//    "400": $gray-400,
+//    "500": $gray-500,
+//    "600": $gray-600,
+//    "700": $gray-700,
+//    "800": $gray-800,
+//    "900": $gray-900
+//), $grays);
+
+// glenville colour palette
+$blue-002:    #002f6d !default;
+$blue-004:    #0047ba !default;
+$blue-005:    #005ab6 !default;
+$blue-027:    #0275d8 !default;
+$blue-017:    #017fe1 !default;
+$blue:        $blue-005;
+
+$orange:      #ea772e;
+$yellow:      #fff10d;
+$green:       #7ed321;
+$green-dark:  #006400;
+
+//$colors: () !default;
+//$colors: map-merge((
+//    "blue":       $blue,
+//    "orange":     $orange,#
+//), $colors);
+
+// theme colours
+$primary-darker:    $blue-002;
+$secondary:         $blue-027;
+//$success:       $green !default;
+//$info:          $orange !default;
+//$warning:       $yellow !default;
+//$danger:        $red !default;
+$light:             $white;
+//$dark:          $gray-800 !default;
+//
+$theme-colors: () !default;
+$theme-colors: map-merge((
+    "primary-darker":    $primary-darker,
+    "black":             $black,
+    "gray-100":          $gray-100,
+), $theme-colors);
+
+// social media icons
+$facebook:        #4267b2;
+$twitter:         #1da1f2;
+$instagram:       #833ab4;
+$youtube:         #ff0000;
+$linkedin:        #2867b2;
+
+$social_colors: ();
+$social_colors: map-merge((
+    "facebook":    $facebook,
+    "twitter":     $twitter,
+    "instagram":   $instagram,
+    "youtube":     $youtube,
+    "linkedin":    $linkedin,
+), $social_colors);
+
+// Body
+//
+// Settings for the `<body>` element.
+$navbar-brand-height: 91;
+
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-color:      $gray-700;
+
+// Links
+//
+// Style anchor elements.
+$link-color:                $primary-darker;
+$link-decoration:           none !default;
+$link-hover-color:          $blue-027;
+$link-hover-decoration:     none;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark:   $blue;
+/* $color-contrast-dark:   $blue; */
+
+//
+// Base variables (bootstrap 3 variables)
+// @todo: eventually phase these out.
+//
+$gray-base:              #333 !default; //hsl(0°, 0%, 20%)
+$gray-darker:            adjust_hsl($gray-base, 0, 0, 9) !default;      // #4b4b4b
+$gray-dark:              adjust_hsl($gray-base, 204, 2, 39) !default;   // #95989a
+$gray:                   adjust_hsl($gray-base, 0, 0, 49) !default;     // #afafaf
+$gray-light:             adjust_hsl($gray-base, 0, 0, 69) !default;     // #e4e4e4
+$gray-lighter:           adjust_hsl($gray-base, 0, 0, 76) !default;     // #F6F6F6
+
+
+// OEDU Base Colours
+$primary-dark:          adjust_hsl($blue, 0.77, -16.1, 2.55);
+$primary-lighter:       adjust_hsl($blue, -6.06, 3.31, 21.18);
+$primary-light:         adjust_hsl($blue, 0.24, -40.51, 11.18);
+
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+$line-height-xs:              1 !default;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-size-base:              1rem !default;            // 16px
+$font-size-sm:                ($font-size-base * .875); // 14px
+$font-size-xs:                ($font-size-base * .625); // 10px
+
+$h1-font-size:                $font-size-base * 3;      // 48px (weight: 700)
+$h2-font-size:                $font-size-base * 2.25;   // 36px (weight: 700)
+$h3-font-size:                $font-size-base * 1.875;  // 30px (weight: 600)
+$h4-font-size:                $font-size-base * 1.5;    // 24px (weight: 500)
+$h5-font-size:                $font-size-base * 1.25;   // 20px (weight: 500)
+$h6-font-size:                $font-size-base * 1.125;  // 18px (weight: 500)
+
+$font-weight-light:           300 !default;
+$font-weight-normal:          500;
+$font-weight-semibold:        600;
+
+$lead-font-size:              ($font-size-base * 1.5);
+$lead-font-weight:            $font-weight-light;
+
+$line-height-base:            1.625 !default;
+
+$text-muted:                  $gray-700;
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+$input-padding-y-sm:           .25rem;
+
+$input-btn-padding-y-xs:      .125rem;
+$input-btn-padding-x-xs:      .25rem;
+$input-btn-line-height-xs:    $line-height-xs;
+
+$btn-padding-y-xs:            $input-btn-padding-y-xs;
+$btn-padding-x-xs:            $input-btn-padding-x-xs;
+$btn-line-height-xs:          $input-btn-line-height-xs;
+
+$btn-font-weight:             $font-weight-light;
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+$table-bg:                    $white;
+$table-head-color:            $gray-700 !default;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+$grid-gutter-width:           30px !default;
+
+// Cards
+$card-spacer-y:                     1.5625rem;
+$card-spacer-x:                     3rem;
+//$card-border-width:                 $border-width !default;
+$card-border-radius:                0;
+$card-border-color:                 rgba($black, .125) !default;
+$card-inner-border-radius:          0;
+$card-cap-bg:                       rgba($black, .03) !default;
+$card-bg:                           $white !default;
+
+$card-img-overlay-padding:          1.25rem !default;
+
+$card-group-margin:                 math.div($grid-gutter-width, 1.5) !default;
+//$card-deck-margin:                  $card-group-margin !default;
+
+//$card-columns-count:                3 !default;
+//$card-columns-gap:                  1.25rem !default;
+//$card-columns-margin:               $card-spacer-y !default;

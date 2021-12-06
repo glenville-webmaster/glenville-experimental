@@ -1,0 +1,242 @@
+html,
+body {
+  height: 100%;
+  position: relative;
+  margin-top: 0;
+  font-family: $font-family-sans-serif;
+}
+
+body.path-user .main-container {
+  margin: 3em auto 4em;
+}
+
+b,
+strong {
+  font-weight: $font-weight-semibold;
+}
+
+.lead {
+  @include px-to-rem(35, line-height);
+}
+
+// basic text shadow
+.text-shadow-dark {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+// image fix for img figure layout
+.img-fluid img {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-placeholder {
+  background: $gray-200;
+}
+
+div.region.region-sidebar-second {
+  background: url("../images/next-steps-bg.jpg");
+  background-size: 100%;
+  padding: 4.5em 0;
+  text-align: center;
+}
+
+%site-tag {
+  @include px-to-rem(16);
+  @include px-to-rem(34, line-height);
+  @include px-to-rem(10, margin-bottom);
+  font-weight: $font-weight-semibold;
+  display: inline-block;
+  padding: 0.125rem 1.25rem;
+  border-radius: 2rem;
+  color: $white;
+
+  a {
+    color: $gray-base;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.site-tag-clr {
+  @extend %site-tag;
+  background: none;
+  border: 1px solid $gray-700;
+  color: $gray-700;
+
+  &:hover {
+    border-color: $primary;
+
+    a {
+      color: $primary;
+    }
+  }
+}
+
+.site-tag-gry {
+  @extend %site-tag;
+
+  background-color: $gray-dark;
+}
+
+.site-tag-drk {
+  @extend %site-tag;
+
+  background-color: $primary-dark;
+}
+
+.site-tag-med {
+  @extend %site-tag;
+
+  background-color: $primary;
+}
+
+.region-content nav.tabs {
+  @include make-container();
+  @include make-container-max-widths();
+
+  .nav-tabs {
+    font-size: 0.875em;
+
+    li a {
+      padding: 5px 12px;
+    }
+  }
+}
+
+.flickity.flickity-enabled {
+  button {
+    transition: all 0.5s ease 0s;
+    opacity: 1;
+  }
+
+  &:not(:hover) {
+    .flickity-prev-next-button.previous,
+    .flickity-prev-next-button.next {
+      opacity: 0;
+    }
+  }
+}
+
+.align-center {
+  text-align: center;
+}
+
+// statistics
+.glenville-stat {
+  @include px-to-rem(122);
+  @include px-to-rem(20, margin-bottom);
+  line-height: 1;
+  color: $gray-700;
+  font-weight: $font-weight-semibold;
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    @include px-to-rem(144);
+  }
+
+  // circled stats (homepage)
+  &-circled {
+    @include px-to-rem(225, width);
+    @include px-to-rem(225, height);
+    @include px-to-rem(18);
+    @include px-to-rem(27, line-height);
+    background-color: $primary;
+    color: $white;
+    border-radius: 50%;
+    text-transform: uppercase;
+
+    // number
+    strong {
+      @include px-to-rem(54);
+      @include px-to-rem(72, line-height);
+      font-weight: $font-weight-semibold;
+    }
+
+    // icon
+    i {
+      @include px-to-rem(42);
+      @include px-to-rem(10, margin-top);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include px-to-rem(300, width);
+      @include px-to-rem(300, height);
+      @include px-to-rem(24);
+      @include px-to-rem(35, line-height);
+      background-color: $white;
+      color: $primary-darker;
+
+      strong {
+        @include px-to-rem(72);
+        @include px-to-rem(98, line-height);
+      }
+    }
+  }
+
+  // squared stats
+  &-squared {
+    @include px-to-rem(380, max-width);
+    @include px-to-rem(36);
+    @include px-to-rem(55, line-height);
+    background-color: rgba($primary, .12);
+    color: $black;
+
+    // number
+    strong {
+      @include px-to-rem(48);
+      @include px-to-rem(72, line-height);
+      @include px-to-rem(72, line-height);
+      font-weight: $font-weight-semibold;
+    }
+  }
+}
+
+.panel-1col .panel-panel {
+  width: auto !important;
+}
+
+figure.img-responsive {
+  display: inline-block;
+
+  img {
+    @extend .img-responsive;
+  }
+}
+
+figcaption {
+  @include px-to-rem(8, padding-top);
+  font-size: $font-size-sm;
+}
+
+iframe body {
+  padding: 0 !important;
+}
+
+.ipe-form {
+  @include make-container();
+  @include make-container-max-widths();
+  max-width: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: $zindex-dropdown;
+  background-color: rgba(0,0,0,0.85);
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+}
+
+.container-wide {
+  @include make-container();
+  max-width: 1600px;
+}

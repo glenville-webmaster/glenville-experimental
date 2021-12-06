@@ -1,0 +1,117 @@
+// Listing page subsection filters.
+.block-views-exposed-filter-blockprofile-list-profile-listing-block {
+  .form-item-field-profile-department {
+    clear: left;
+    margin-top: 1em;
+  }
+
+  .form-item-field-profile-research-interests {
+    clear: right;
+    margin-top: 1em;
+  }
+
+  .form-actions {
+    display: inline;
+  }
+}
+
+.block-views-blockprofile-list-profile-listing-block {
+  border: none !important;
+
+  // Right float the "Items Per Page" filter on the profile listing page.
+  .bef-exposed-form .form--inline > .form-item-items-per-page {
+    float: right;
+  }
+
+  .views-row {
+    padding: 0;
+
+    @include media-breakpoint-up(md) {
+      border-right: 4px solid transparent;
+
+      &:hover {
+        border-right: 4px solid $primary;
+      }
+    }
+  }
+
+  .content {
+    font-size: 0.875em;
+
+    .left .field--items {
+      display: inline;
+    }
+
+    .right {
+      font-weight: 600;
+      line-height: 1.571em;
+    }
+  }
+
+  .field--name-field-profile-email a {
+    word-wrap: break-word;
+  }
+
+  h4 {
+    margin: 0.438em 0;
+  }
+
+  .field--name-field-profile-name {
+    font-size: .8em;
+    font-weight: bold;
+  }
+
+  .field--name-field-profile-job-title {
+    font-style: italic;
+  }
+
+  .field--name-field-profile-department .field--item {
+    display: inline-block;
+
+    &:after {
+      content: ",";
+    }
+
+    &:last-child:after {
+      content: none;
+    }
+  }
+
+  .field--name-field-room,
+  .field--name-field-building {
+    display: inline;
+  }
+}
+
+.path-directory {
+  .panel-2col.col-sm-3 {
+    margin: 1em auto;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .block-views-exposed-filter-blockprofile-list-profile-listing-block {
+      #edit-actions {
+        clear: both;
+        margin-top: 1em;
+
+        button {
+          width: 100%;
+        }
+      }
+
+      .form-item {
+        width: 100%;
+        margin: 1em 0 0 0;
+        float: none;
+
+        .select-wrapper {
+          width: 100%;
+
+          .chosen-container {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+footer .block-webform {
+
+  form {
+    @include px-to-rem(7, margin-top);
+    background: $white;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    .form-actions {
+      @include icon(inherit, 'arrow_forward', 1.25em, middle);
+      @include px-to-rem(30, width);
+      margin: 0;
+      color: $gray-900;
+      position: absolute;
+      top: 1px;
+      right: 0;
+
+      &:after {
+        margin-right: 10px;
+      }
+
+      .form-submit {
+        @include px-to-rem(30, height);
+        text-indent: -9999em;
+        background: transparent;
+        padding: 6px 15px;
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        width: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+
+    .form-group {
+      margin: 0;
+    }
+
+    label {
+      display: none;
+    }
+
+    div.form-item {
+      @include px-to-rem(30, line-height);
+      margin: 0;
+      text-align: left;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .form-email {
+      @include px-to-rem(13);
+      @include px-to-rem(30, height);
+      padding: 6px 40px 6px 10px;
+      border: 0;
+      color: $gray-900;
+      background: transparent;
+      width: 100%;
+      outline: none;
+
+      &::placeholder {
+        font-weight: $font-weight-light;
+        color: $gray-700;
+      }
+    }
+  }
+}
+

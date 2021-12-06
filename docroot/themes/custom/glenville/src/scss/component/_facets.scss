@@ -1,0 +1,49 @@
+// sidebar facets
+.panel-container .block-facets .block-title {
+  font-size: 1.75em;
+  border: none;
+  margin-top: 0;
+}
+
+.facets-widget-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.facet-item {
+  padding: 0 0.75em;
+  background-color: $gray-lighter;
+}
+
+.facet-item a {
+  position: relative;
+  display: block;
+  width: 100%;
+  color: #8f8f8f;
+  padding: 1.135em 0.313em;
+  background-color: $gray-lighter;
+  border-bottom: 1px solid $gray-light;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+// hover & active states
+.facet-item:hover,
+.facet-item:hover a {
+  background-color: $gray-light;
+}
+
+.facet-item:last-child a {
+  border: none;
+}
+
+.facet-item a.is-active {
+  @include sideBorder($info, left);
+
+  color: $gray-darker;
+}
+
+.facet-item a.is-active:after {
+  left: -0.75em;
+}

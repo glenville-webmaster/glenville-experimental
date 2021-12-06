@@ -1,0 +1,79 @@
+// backgrounds
+.bg_fixed {
+  background-attachment: fixed !important;
+}
+
+.bg_white-80 {
+  background: rgba($white, .8);
+}
+
+.bg_clock-tower {
+  background: url('../../dist/images/bg_clock-tower.svg') center top repeat-y;
+  background-size: 105%;
+}
+
+.bg_clock-tower__white {
+  background: url('../../dist/images/bg_clock-tower-white.svg') center top repeat-y;
+  background-size: 105%;
+}
+
+.bg_clock-tower__white-20 {
+  background: url('../../dist/images/bg_clock-tower-white-20.svg') center top repeat-y;
+  background-size: 105%;
+}
+
+.bg_outstanding-program {
+  background: url('../../dist/images/bg_outstanding-program.jpg') center top;
+  background-size: cover;
+}
+
+.bg_outstanding-programs2 {
+  background: url('../../dist/images/bg_outstanding-programs2.jpg') center top;
+  background-size: cover;
+}
+
+.bg_experience {
+  background: url('../../dist/images/bg_clock-tower-white.svg') bottom right no-repeat;
+  background-size: 227px;
+  background-position-x: calc(100% + 50px);
+
+  @include media-breakpoint-up(lg) {
+    background-position-x: right;
+  }
+}
+
+.bg_support-community {
+  background: url('../../dist/images/bg_support-community.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.bg_next-steps {
+  background: url('../../dist/images/bg_next-steps.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.bg_request-info {
+  background: url("../../dist/images/bg_request-info.png") center center no-repeat;
+  background-size: cover;
+}
+
+.bg_payment-plans {
+  background: url("../../dist/images/bg_payment-plans.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.bg_aid-contact {
+  background: url("../../dist/images/bg_aid-contact.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+// majors, minors and degrees page
+.bg_academics-experience {
+  background: url("../../dist/images/bg_academics-experience.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.bg_academics-dates {
+  background: url("../../dist/images/bg_academics-dates.jpg") center center no-repeat;
+  background-size: cover;
+}

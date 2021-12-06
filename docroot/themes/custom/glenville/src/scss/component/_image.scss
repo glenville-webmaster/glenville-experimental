@@ -1,0 +1,9 @@
+.embedded-entity {
+  &.align-left {
+    @include px-to-rem(40, margin-right);
+  }
+
+  &.align-right {
+    @include px-to-rem(40, margin-left);
+  }
+}

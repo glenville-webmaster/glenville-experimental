@@ -1,0 +1,314 @@
+/**
+ * Underlined Title
+ */
+@mixin iefix() {
+  overflow: hidden;
+  position: relative;
+}
+
+/**
+ * HSL helper
+ * Adjusts HSL relative to current color
+ */
+@function adjust_hsl($color, $h, $s, $l) {
+  // The H
+  @if $h != 0 {
+    $color: adjust_hue($color, $h);
+  }
+  // The S
+  @if $s > 0 {
+    $color: saturate($color, $s);
+  }
+  @else if $s < 0 {
+    $color: desaturate($color, ($s * -1));
+  }
+  // The L
+  @if $l > 0 {
+    $color: lighten($color, $l);
+  }
+  @else if $l < 0 {
+    $color: darken($color, ($l * -1));
+  }
+
+  @return $color;
+}
+
+/**
+ * Underlined Title
+ */
+@mixin underlined-title($color: $gray-base, $width: 100px) {
+  &:after {
+    display: block;
+    content: "";
+    width: $width;
+    height: 1px;
+    background: $color;
+    background: rgba($color, 0.2);
+    margin: 20px auto;
+  }
+}
+
+/**
+ * Angled backgrounds
+ */
+@mixin angle($bgc: false, $pseudo: 'before', $flip: false, $angle: 1.75deg) {
+  // Possible values for $pseudo are: before, after, both
+  @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
+    position: relative;
+    padding: 20px 0;
+    z-index: 1;
+    $selector: if($pseudo == 'both', '&:before,&:after', '&:#{$pseudo}');
+
+    #{$selector} {
+      background: if($bgc, $bgc, 'inherit');
+      content: '';
+      display: block;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      -webkit-backface-visibility: hidden; // for Chrome Windows
+    }
+
+    @if $pseudo == 'before' {
+      #{$selector} {
+        top: 0;
+
+        @if $flip {
+          transform: skewY($angle * -1);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle);
+          transform-origin: 100% 0;
+        }
+      }
+    }
+
+    @if $pseudo == 'after' {
+      #{$selector} {
+        bottom: 0;
+
+        @if $flip {
+          transform: skewY($angle);
+          transform-origin: 0 100%;
+        } @else {
+          transform: skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+
+    @if $pseudo == 'both' {
+      &:before {
+        top: 0;
+
+        @if $flip {
+          transform: skewY($angle * -1);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle);
+          transform-origin: 100% 0;
+        }
+      }
+
+      &:after {
+        bottom: 0;
+
+        @if $flip {
+          transform: skewY($angle);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+  }
+}
+
+/*
+ * Row with equal height columns
+ * --------------------------------------------------
+ */
+%row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  & > div {
+    display: flex;
+  }
+}
+
+/**
+ * Helper for Linear Gradients
+ */
+@mixin linearGradient($first, $second, $direction: 'vertical') {
+  @if $direction == 'vertical' {
+    background: $first; /* Old browsers */
+    background: -moz-linear-gradient(top, $first 0%, $second 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, $first 0%, $second 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, $first 0%, $second 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$first', endColorstr='$second', GradientType=0); /* IE6-9 */
+  } @else {
+    background: $first;
+    background: -moz-linear-gradient(left, $first 0%, $second 100%);
+    background: -webkit-linear-gradient(left, $first 0%, $second 100%);
+    background: linear-gradient(to right, $first 0%, $second 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$first', endColorstr='$second', GradientType=1);
+  }
+}
+
+/**
+ * Vertically Center
+ */
+@mixin verticalAlign($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/**
+ * Extension of BS button-variant()
+ */
+@mixin oeduButton($hover, $active) {
+  border: none;
+  -webkit-box-shadow: 0 3px 6px 0 rgba($gray-base, 0.16);
+  -moz-box-shadow: 0 3px 6px 0 rgba($gray-base, 0.16);
+  box-shadow: 0 3px 6px 0 rgba($gray-base, 0.16);
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    background: $hover;
+  }
+  &:active,
+  &.active,
+  &.is-active {
+    background: $active;
+  }
+}
+
+/**
+ * Material Design icon mixin.
+ */
+@mixin icon($color, $icon, $size: 1em, $valign: middle, $float: none, $position: after) {
+  @if $position == after {
+    &:after {
+      font-family: $font-family-md-icons;
+      display: inline-block;
+      line-height: 1;
+      color: $color;
+      content: $icon;
+      font-size: $size;
+      vertical-align: $valign;
+      float: $float;
+    }
+  }
+
+  @if $position == before {
+    &:before {
+      font-family: $font-family-md-icons;
+      display: inline-block;
+      line-height: 1;
+      color: $color;
+      content: $icon;
+      font-size: $size;
+      vertical-align: $valign;
+      float: $float;
+    }
+  }
+}
+
+/**
+ * Box-shadowed component.
+ */
+@mixin boxedRow() {
+  box-shadow: 0 2px 6px 0 rgba($gray-base, 0.2);
+  padding: 0.5em 0;
+  margin: 0.5em 0;
+}
+
+/**
+ * Hovering
+ */
+@mixin sideBorder($color, $side: right, $thickness: 3px) {
+  &:after {
+    position: absolute;
+    background-color: $color;
+    content: '';
+    transition: all .3s ease;
+
+    @if $side == top {
+      top: 0;
+      height: $thickness;
+      width: 100%;
+    } @else if $side == bottom {
+      bottom: 0;
+      height: $thickness;
+      width: 100%;
+    } @else if $side == right {
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: $thickness;
+    } @else if $side == left {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: $thickness;
+    }
+  }
+}
+
+/**
+ * List Reset Mixin
+ */
+@mixin list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+/**
+ * Rem-converter mixin to convert px to rem
+ *
+ * Usages
+ * @include px-to-rem(20); // defaults to "font-size"
+ * @include px-to-rem(20, padding); // sets the padding property
+ */
+@mixin px-to-rem($pxValue, $property: "font-size", $standard-size: 16) {
+  //#{$property}: $pxValue + px;
+  #{$property}: $pxValue/$standard-size + rem;
+}
+
+/**
+ * Social Media Icons
+ */
+@mixin social-media-colours($attribute: 'color', $prefix: '_') {
+  @each $name, $hex in $social_colors {
+    &#{$prefix}#{$name} {
+      #{$attribute}: $hex;
+
+      &:hover {
+        #{$attribute}: lighten($hex, 10%);
+      }
+    }
+  }
+}
+
+/**
+ * Box shadows
+ */
+@mixin box-shadows($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    box-shadow: inset $top $left $blur $color;
+  } @else {
+    box-shadow: $top $left $blur $color;
+  }
+}

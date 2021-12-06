@@ -1,0 +1,220 @@
+.main_navigation-block--desktop {
+
+  // Primary menu styles
+  .menu--simple-mega-menu {
+
+    // top level links
+    li.menu-item {
+      @include px-to-rem(13, margin-left);
+      box-shadow: inset 0 -4px 0 0 transparent;
+      transition: box-shadow 0.3s ease-in-out;
+
+      > a {
+        @include px-to-rem(15);
+        @include px-to-rem(12, padding);
+        padding-left: 0;
+        padding-right: 0;
+        font-weight: $font-weight-normal;
+        color: $white;
+        display: block;
+
+        &:hover,
+        &:active,
+        &.is-active {
+          color: $yellow;
+          text-decoration: none;
+        }
+      }
+
+      &:hover,
+      &.menu-item--active-trail {
+        box-shadow: inset 0 -4px 0 0 $yellow;
+      }
+
+      &:first-child.menu-item {
+        margin: 0;
+      }
+
+      @include media-breakpoint-up(xl) {
+        @include px-to-rem(22, margin-left);
+
+        > a {
+          font-weight: $font-weight-semibold;
+        }
+      }
+    }
+  }
+
+  // Mega menu (dropdown) styles
+  .menu--simple-mega-menu {
+    > .menu-item--expanded {
+      position: relative;
+
+      > .mega-menu-wrapper {
+        @include px-to-rem(30, padding);
+        width: 100%;
+        min-width: 835px;
+        position: absolute;
+        top: 100%;
+        background: $white;
+        z-index: 9;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        flex-direction: row;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+
+        // right-align the mega menu
+        &.megamenu-align-left {
+          left: 0;
+        }
+
+        // right-align the mega menu
+        &.megamenu-align-right {
+          right: 0;
+        }
+
+        // setup our menu widths
+        &.columns-1.link-columns-1 {
+          min-width: 350px;
+        }
+
+        &.columns-1,
+        &.link-columns-2 {
+          min-width: 500px;
+        }
+
+        &.columns-2,
+        &.link-columns-3 {
+          min-width: 635px;
+        }
+
+        &.columns-2.link-columns-3,
+        &.columns-3,
+        &.link-columns-4 {
+          min-width: 835px;
+        }
+      }
+
+      // show mega menu
+      &:hover > .mega-menu-wrapper,
+      &:focus > .mega-menu-wrapper,
+      &.focused > .mega-menu-wrapper {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    // col > intro text
+    .megamenu-top {
+      @include px-to-rem(12);
+      @include px-to-rem(18, line-height);
+      color: $gray-700;
+      font-weight: $font-weight-light;
+    }
+
+    // col > links
+    .megamenu-mid {
+
+      // container
+      .mega-menu-item {
+        @include px-to-rem(14);
+        display: flex;
+        width: 100%;
+      }
+
+      // titles
+      h4 {
+        @include px-to-rem(15);
+        @include px-to-rem(10, margin-bottom);
+        color: $gray-600;
+        text-transform: uppercase;
+        font-weight: $font-weight-semibold;
+      }
+
+      .has-divider {
+        position: relative;
+
+        &:before {
+          content: '';
+          width: 0;
+          height: 100%;
+          position: absolute;
+          border: 1px solid $primary-darker;
+          top: 0;
+          left: -15px;
+        }
+      }
+
+      // links
+      a {
+        @include px-to-rem(14);
+        @include px-to-rem(10, margin-bottom);
+        color: $primary-darker;
+        font-weight: $font-weight-normal;
+        text-decoration: none;
+        display: inline-block;
+
+        &:hover {
+          font-weight: $font-weight-semibold;
+        }
+      }
+
+      .field--item:last-child a {
+        margin-bottom: 0;
+      }
+    }
+
+    // col > right cta (block)
+    .megamenu-right {
+      color: $gray-700;
+      background: rgba($primary-darker, .09);
+    }
+
+  }
+}
+
+// col > right cta (block).
+.megamenu-right {
+  @include px-to-rem(11, padding);
+  @include px-to-rem(18, line-height);
+  @include px-to-rem(12);
+  background: rgba($white, .05);
+
+  h4 {
+    @include px-to-rem(12);
+    @include px-to-rem(8, margin-bottom);
+    margin-left: 0;
+    margin-right: 0;
+
+    i {
+      display: none;
+    }
+  }
+
+  .field--name-field-body {
+    @include px-to-rem(8, margin-bottom);
+    font-weight: $font-weight-light;
+  }
+
+  .field--name-field-button a {
+    @include icon(inherit, 'arrow_forward', 1.25em, middle);
+    @include px-to-rem(5, padding);
+    @include px-to-rem(11, padding-left);
+    @include px-to-rem(11, padding-right);
+    background: $primary;
+    color: $gray-100;
+    width: 100%;
+    display: block;
+    font-weight: $font-weight-light;
+    text-decoration: none;
+
+    &:hover {
+      background: $primary-darker;
+    }
+
+    &:after {
+      float: right;
+    }
+  }
+}

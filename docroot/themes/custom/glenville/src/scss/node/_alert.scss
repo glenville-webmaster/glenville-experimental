@@ -1,0 +1,30 @@
+#glenville-alert {
+  display: none;
+  background: theme-color-level("danger");
+
+  .alert-content {
+    color: white;
+    font-size: 0.875em;
+
+    .alert-item {
+      margin: 0.875em auto;
+
+      .alert-title {
+        font-size: 1.125em;
+        font-weight: 500;
+      }
+
+      .alert-body {
+        line-height: 1.375em;
+        a {
+          text-decoration: underline;
+          color: white;
+          font-weight: 500;
+          &:hover {
+            color: rgba($white, .7)
+          }
+        }
+      }
+    }
+  }
+}

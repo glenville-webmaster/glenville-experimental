@@ -1,0 +1,195 @@
+.panel-container {
+  #views-exposed-form-event-latest-events-block {
+    display: none;
+  }
+
+  .events-filter-datepicker {
+    .responsive-dropdown {
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
+    }
+
+    .datepicker-inline {
+      @include media-breakpoint-up(md) {
+        position: relative;
+      }
+
+      &:not(.open) {
+        display: none;
+
+        @include media-breakpoint-up(md) {
+          display: block;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      position: relative;
+      text-align: right;
+    }
+  }
+}
+
+.page-node-type-event .region-container {
+
+  .panel-container {
+    .block-entity-fieldnodefield-events-event-map {
+      bottom: 1px;
+      position: relative;
+
+      .map-container {
+        width: 100% !important;
+        height: 300px !important;
+      }
+    }
+
+    .block-entity-fieldnodefield-events-category .block-title,
+    .block-entity-fieldnodefield-events-additional-links .block-title {
+      border: none;
+    }
+
+    .field--name-field-events-category .field--item {
+      @extend .site-tag-clr;
+    }
+
+    .field--type-link {
+      margin-left: 35px;
+
+      .field--item {
+        display: list-item;
+      }
+    }
+
+    .field--type-address {
+      border: 1px solid $gray-300;
+      padding: 15px 20px;
+      border-top: 5px solid $primary-darker;
+
+      .address {
+        font-size: 14px;
+        font-weight: 600;
+
+        .organization {
+          color: $primary;
+          display: block;
+          font-size: 18px;
+          margin-bottom: 10px;
+
+          &:before {
+            color: $primary-lighter;
+            content: "location_on";
+            font-family: $font-family-md-icons;
+            font-size: 1.5em;
+            margin-left: -5px;
+            padding-right: 5px;
+            vertical-align: middle;
+          }
+
+          & + br {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .field--name-field-event-directions {
+      width: 100%;
+      margin: 0;
+      bottom: 1px;
+      border: 1px solid $gray-300;
+      padding: 0 20px 10px 20px;
+      position: relative;
+      border-top: 1px solid white;
+
+      a {
+        color: $orange;
+
+        &:hover {
+          color: darken($orange, 10%);
+        }
+      }
+    }
+  }
+
+  .panel-1col {
+    &.bottom {
+      background-color: #2e75a0;
+
+      .panel-panel {
+        @include make-container();
+        @include make-container-max-widths();
+      }
+
+      section {
+        color: white;
+
+        h2,
+        a,
+        span {
+          color: white;
+        }
+      }
+    }
+
+    &.subsection {
+      @include make-container();
+
+      max-width: none;
+
+      .block-entity-fieldnodetitle {
+        margin-bottom: 0;
+        padding-bottom: 0.1em;
+      }
+
+      .field--name-field-event-date {
+        .date {
+          span {
+            font-size: 14px;
+            font-weight: 600;
+            padding-right: 10px;
+
+            i {
+              opacity: 0.8;
+              padding-right: 10px;
+              vertical-align: bottom;
+
+              &:hover {
+                color: $primary-lighter;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .field--name-field-events-related-events {
+      article {
+        margin: 10px 0;
+        background: #2b6e96;
+        border-radius: 3px;
+
+        .image {
+          width: 15%;
+          text-align: left;
+        }
+
+        .wrapper {
+          padding-left: 1em;
+
+          h2 {
+            font-size: 1.6em;
+          }
+
+          .date {
+            font-size: 14px;
+          }
+        }
+
+        .field--name-body {
+          display: none;
+        }
+      }
+    }
+  }
+}

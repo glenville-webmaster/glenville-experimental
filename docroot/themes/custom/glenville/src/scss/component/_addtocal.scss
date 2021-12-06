@@ -1,0 +1,40 @@
+.addtocal-form {
+  visibility: collapse;
+
+  .addtocal {
+    display: none;
+  }
+
+  .addtocal-container {
+    float: left;
+    visibility: initial;
+
+    .form-item {
+      margin: 0;
+
+      &:hover {
+        color: $primary;
+        background: none !important;
+      }
+    }
+
+    > div:nth-child(2) {
+      top: 5px !important;
+      left: 5px !important;
+      color: black;
+      z-index: 1;
+      display: none;
+      padding: 10px 20px;
+      position: absolute;
+      min-width: 250px;
+      border-bottom: 5px solid $primary;
+      background-color: $white;
+      border-radius: 0;
+
+      input {
+        display: inline !important;
+        margin-right: 10px;
+      }
+    }
+  }
+}

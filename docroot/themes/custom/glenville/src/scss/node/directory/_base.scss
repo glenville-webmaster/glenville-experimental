@@ -1,0 +1,212 @@
+.faculty_card--group {
+  article {
+    border-top: 1px solid $gray-100;
+    font-size: $font-size-sm;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a:not(.btn) {
+    color: $white;
+    transition: opacity .3s ease-in-out;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+
+
+.block--profile-block {
+  @include make-container();
+  @include make-container-max-widths();
+
+  .field--name-field-profile {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    & > .field--item {
+      @extend .col-lg-3, .col-md-4, .col-sm-6;
+
+      padding: 0.5em;
+      margin: 0.5em 0;
+    }
+  }
+
+  article {
+    position: relative;
+    height: 100%;
+    padding: 0.5em 0.5em 0.875em;
+    font-size: 0.8em;
+    box-shadow: 0 1px 8px 0 $gray;
+    border-bottom: 4px solid $gray;
+
+    h4 {
+      width: 100%;
+      margin-bottom: 0.2em;
+      font-family: $font-family-sans-serif;
+      font-size: 1.5em;
+      font-weight: 600;
+      color: $gray-base;
+
+      a {
+        font-family: $font-family-sans-serif;
+        color: $gray-base;
+
+        &:hover {
+          text-decoration: none;
+          color: $info;
+        }
+      }
+    }
+
+    .profile-picture {
+      display: none;
+
+      &:hover ~ h4 a {
+        color: $info;
+      }
+    }
+
+    .field--name-field-profile-department {
+      flex-direction: row;
+      width: 100%;
+      margin-bottom: 2em;
+
+      .field--item {
+        display: inline-block;
+
+        &:after {
+          content: ",";
+        }
+
+        &:last-child:after {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+.block-views-blockprofile-list-profile-listing-block {
+  .views-row {
+    @include boxedRow();
+
+    max-width: 250px;
+    margin: 5px auto 25px;
+  }
+
+  article {
+    .profile-picture {
+      float: none;
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+// small device
+@include media-breakpoint-up(sm) {
+  .node--type-profile {
+    .block-region-subsection {
+      padding-bottom: 0;
+
+      section.block {
+        text-align: center;
+      }
+
+      .block-entity-fieldnodefield-profile-image {
+        float: none;
+      }
+
+      .field--name-field-profile-image {
+        margin-bottom: 1em;
+        display: inline-block;
+      }
+
+      .field--name-field-profile-office {
+        margin-top: 2em;
+      }
+    }
+  }
+
+  .block-views-blockprofile-list-profile-listing-block {
+    article {
+      @include make-col-ready();
+
+      .profile-picture {
+        display: block;
+        float: none;
+        width: 100%;
+      }
+    }
+
+    .views-row {
+      width: 100%;
+      max-width: none;
+      margin: 5px auto;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .block--profile-block {
+    .field--name-field-profile & > .field--item {
+      width: 100%;
+      padding: 0 0.5em;
+    }
+
+    article {
+      border-bottom: none;
+
+      .profile-picture {
+        display: block;
+      }
+
+      &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        transition: height 0.1s;
+        background: $info;
+      }
+
+      &:hover:after {
+        height: 8px;
+      }
+    }
+  }
+
+  .block-views-blockprofile-list-profile-listing-block {
+    border-bottom: 2px solid $gray-light !important;
+    margin-bottom: 3em;
+
+    .pager-nav {
+      text-align: center;
+    }
+
+    .left {
+      h4 {
+        margin-bottom: 0;
+      }
+
+      .field--items {
+        display: inline;
+      }
+    }
+
+    .profile-picture img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

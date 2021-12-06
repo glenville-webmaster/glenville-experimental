@@ -1,0 +1,71 @@
+.datepicker-inline .datepicker {
+  box-shadow: none;
+  border: none;
+  width: 100%;
+
+  .datepicker--nav-title {
+    @include px-to-rem(24);
+    color: $gray-600;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    i {
+      font-weight: 400;
+    }
+  }
+
+  .datepick-content {
+    padding: 0;
+  }
+
+  .datepicker--cell {
+    height: auto !important;
+  }
+
+  .datepicker--days-names {
+    margin: 1rem 0 .5rem;
+  }
+
+  .datepicker--day-name {
+    @include px-to-rem(17);
+    color: $gray-600;
+    text-transform: capitalize;
+  }
+
+  .datepicker--cell-day {
+    @include px-to-rem(18);
+    border: 1px solid white;
+    color: $gray-600;
+    background-color: $gray-100;
+    border-radius: 0;
+    padding: 18px 10px 2px 10px;
+
+    &.-current- {
+      background-color: $primary;
+      color: $white;
+      &.-in-range- {
+        color: $gray-900;
+        background-color: rgba($gray-400, 0.7);
+      }
+    }
+
+    &.-selected- {
+      background-color: rgba($secondary, 0.7);
+      color: $white;
+    }
+
+    &.-in-range- {
+      background-color: $gray-300;
+    }
+
+    &.-selected-.-focus- {
+      background-color: $gray-300;
+    }
+
+    &.-other-month-,
+    &.-other-decade- {
+      color: $gray-300;
+    }
+  }
+}
+

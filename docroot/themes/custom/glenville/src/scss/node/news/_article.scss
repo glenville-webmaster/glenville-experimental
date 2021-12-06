@@ -1,0 +1,23 @@
+article.news.teaser-card {
+  h4 {
+    color: $primary-darker;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    padding-bottom: 0;
+
+    a {
+      color: $primary-darker;
+    }
+  }
+
+  .field--name-field-news-date {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .content {
+    font-size: 14px;
+    color: $gray-dark;
+  }
+}

@@ -1,0 +1,21 @@
+.page-node-type-news {
+  .region-container {
+
+    .panel-container {
+      .panel-1col {
+        @include make-container();
+        @include make-container-max-widths();
+      }
+
+      .panel-2col {
+        .block-entity-fieldnodebody {
+          padding: 1em 0 0;
+        }
+      }
+    }
+  }
+
+  .block-region-bottom .block:last-of-type {
+    margin-bottom: 0;
+  }
+}

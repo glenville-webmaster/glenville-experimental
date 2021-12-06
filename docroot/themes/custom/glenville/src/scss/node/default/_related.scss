@@ -1,0 +1,26 @@
+.related-content {
+
+  // titles
+  h6 {
+    @include px-to-rem(14);
+    @include px-to-rem(19, line-height);
+
+    a {
+      color: $primary;
+
+      &:hover {
+        color: $blue-017;
+      }
+    }
+  }
+
+  figcaption {
+    display: none;
+  }
+
+  // dates
+  .date {
+    @include px-to-rem(12);
+    font-weight: $font-weight-normal;
+  }
+}

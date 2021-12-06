@@ -1,0 +1,25 @@
+.featured-content {
+  padding: 0 0 2em;
+}
+
+.block-entity-fieldnodefield-news-date,
+.article-date {
+  @include px-to-rem(14);
+  @include px-to-rem(12, padding-right);
+  color: $gray-700;
+
+  i {
+    @include px-to-rem(19);
+    color: $gray-400;
+  }
+}
+
+.block-entity-fieldnodefield-news-date {
+  @include px-to-rem(5, margin-top);
+  @include px-to-rem(40, margin-bottom);
+  @include icon($gray-400, 'date_range', 1.1875rem, bottom, left, $position: before);
+
+  &:before {
+    @include px-to-rem(8, padding-right);
+  }
+}

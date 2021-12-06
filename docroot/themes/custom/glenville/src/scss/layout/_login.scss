@@ -1,0 +1,50 @@
+body.path-user:not(.user-logged-in) {
+  background: linear-gradient($primary-darker, $primary);
+
+  .dialog-off-canvas-main-canvas {
+    height: 100%;
+  }
+}
+
+.my-login-page {
+  .brand {
+    margin: 1em auto 2em auto;
+  }
+
+  .region-content {
+    > .container {
+      padding: 0;
+    }
+
+    nav.tabs {
+      margin-bottom: 2em;
+    }
+  }
+
+  .card {
+    padding: .75em;
+    border-color: transparent;
+    box-shadow: 0 0 40px rgba(0, 0, 0, .05);
+  }
+
+  .card .card-title {
+    margin-bottom: 1.5em;
+  }
+
+  .form-control {
+    border-width: 2px;
+  }
+
+  .user-pass p,
+  .description {
+    font-size: .75em;
+    color: $gray;
+    margin: .5em 0 1em;
+  }
+
+  .form-submit {
+    margin-top: 1em;
+    padding: 1em;
+    width: 100%;
+  }
+}

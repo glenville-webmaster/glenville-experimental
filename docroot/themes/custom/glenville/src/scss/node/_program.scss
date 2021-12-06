@@ -1,0 +1,111 @@
+.page-node-type-program {
+
+  .band-wrapper {
+    @include px-to-rem(50, margin-bottom);
+
+    @include media-breakpoint-up(md) {
+      @include px-to-rem(75, margin-bottom);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include px-to-rem(100, margin-bottom);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // titles
+  .block-title {
+    @include px-to-rem(30, margin-bottom);
+  }
+
+  // images
+  .embedded-entity img {
+    box-shadow: 0 0 5px rgba($black, .5);
+  }
+
+  // outcomes
+  .field--name-field-grid-description,
+  .field--name-field-grid-content .embedded-entity {
+    @include px-to-rem(50, margin-bottom);
+  }
+
+  .field--name-field-grid-content {
+    @include px-to-rem(60, margin-bottom);
+  }
+
+  // success stories
+  .field--name-field-success-stories .field--name-body {
+    @include px-to-rem(50, margin-bottom);
+  }
+
+  // courses
+  .block-entity-fieldnodefield-program-course-intro {
+    @include px-to-rem(50, margin-bottom);
+  }
+
+  .block-entity-fieldnodefield-stories-content {
+    @include make-container();
+    @include make-container-max-widths();
+  }
+
+  .bg_request-info .block-webform-block {
+    @include px-to-rem(30, padding-top);
+    @include px-to-rem(30, padding-bottom);
+
+    @include media-breakpoint-up(lg) {
+      padding: 60px 90px;
+    }
+
+    color: $white;
+
+    .block-title {
+      text-align: center;
+      font-weight: $font-weight-semibold;
+    }
+
+    .form-control {
+      font-size: $h5-font-size;
+    }
+
+    .form-required {
+      &::after {
+        display: none;
+      }
+    }
+
+    .request-info-send {
+      @extend .btn-success;
+      @extend .btn-lg;
+
+      @include icon(inherit, 'send', $font-size-sm);
+
+      &::after {
+        @include px-to-rem(5, padding-left);
+      }
+    }
+
+  }
+}
+
+// Course Schedule
+.course-schedule-form {
+
+  .text-closed {
+    color: #f26910 !important;
+  }
+
+  .text-off-campus {
+    color: #8510ed;
+  }
+
+  .text-online {
+    color: #f2b810;
+  }
+
+  .schedule-legend {
+    font-size: 0.875em;
+  }
+}

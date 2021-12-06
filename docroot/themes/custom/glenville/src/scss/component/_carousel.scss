@@ -1,0 +1,116 @@
+.carousel:not(.slideshow) {
+  @include make-container();
+  padding: 0 50px;
+
+  @include media-breakpoint-up(sm) {
+    padding: 40px 0;
+  }
+
+  .gallery-cell {
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin: 0;
+
+    @include media-breakpoint-up(sm) {
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+
+    @include media-breakpoint-up(md) {
+      max-width: 33.3333333333%;
+      flex: 0 0 33.3333333333%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: 25%;
+      flex: 0 0 25%;
+    }
+
+    article {
+      padding: 6px;
+
+      .content {
+        @include px-to-rem(365, min-height);
+        color: $gray-800;
+        position: relative;
+        background: $white;
+        box-shadow: 0 2px 5px 0 rgba($gray-base, 0.5);
+        border-radius: $border-radius;
+        overflow: hidden;
+
+        @include media-breakpoint-up(lg) {
+          @include px-to-rem(410, min-height);
+        }
+      }
+
+      .wrapper {
+        @include px-to-rem(16);
+        @include px-to-rem(25, line-height);
+        padding: 38px 17px;
+      }
+
+      h2 {
+        @include px-to-rem(18);
+        @include px-to-rem(25, line-height);
+        font-weight: $font-weight-semibold;
+
+        a {
+          color: $gray-800;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .flickity-prev-next-button {
+    @include px-to-rem(30, width);
+    @include px-to-rem(28, height);
+    opacity: 1 !important;
+    cursor: pointer;
+    border-radius: $border-radius;
+    border: 1px solid $gray-300;
+    background: $white;
+    color: $gray-800;
+    padding: 0;
+    box-shadow: 0 0 5px rgba($black, .5);
+
+    @include media-breakpoint-up(sm) {
+      @include px-to-rem(41, width);
+      @include px-to-rem(38, height);
+    }
+
+    svg {
+      display: none;
+      opacity: 0;
+    }
+
+    &.previous {
+      @include icon(inherit, 'keyboard_arrow_left', 1.5em);
+
+      @include media-breakpoint-up(sm) {
+        @include icon(inherit, 'keyboard_arrow_left', 2em);
+        top: 0;
+        right: 65px;
+        left: auto;
+      }
+    }
+
+    &.next {
+      @include icon(inherit, 'keyboard_arrow_right', 1.5em);
+
+      @include media-breakpoint-up(sm) {
+        @include icon(inherit, 'keyboard_arrow_right', 2em);
+        top: 0;
+        right: 7px;
+      }
+    }
+
+    &:hover {
+      color: $gray-300;
+      background: $gray-100;
+    }
+  }
+}

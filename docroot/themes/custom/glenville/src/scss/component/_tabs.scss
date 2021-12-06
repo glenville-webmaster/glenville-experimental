@@ -1,0 +1,103 @@
+// program page sticky tabs
+.glenville-tabs {
+  &.sticky {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+    }
+
+    &.stuck {
+      background: rgba($white, .9);
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+  }
+}
+
+// tabs used on
+.gv-tabs {
+  li {
+    a {
+      @include box-shadows(0, -2px, 0, $white, true);
+      @include px-to-rem(15, padding-top);
+      @include px-to-rem(15, padding-bottom);
+      font-weight: $font-weight-semibold;
+    }
+
+    &:first-child a {
+      border-top: 2px solid $white;
+    }
+
+    @include media-breakpoint-up(md) {
+      a {
+        @include px-to-rem(24);
+        @include px-to-rem(35, line-height);
+        @include px-to-rem(22, padding-top);
+        @include px-to-rem(22, padding-bottom);
+        box-shadow: none;
+      }
+
+      &:first-child a {
+        border: none;
+      }
+    }
+  }
+
+  // blue tabs (program pages)
+  &-blue {
+    li {
+      a {
+        &.active {
+          @include box-shadows(0, -6px, 0, $primary, true);
+          color: $primary !important;
+
+          @include media-breakpoint-up(md) {
+            @include box-shadows(0, -8px, 0, $primary, true);
+          }
+        }
+
+        &:hover {
+          color: $primary !important;
+        }
+      }
+    }
+  }
+
+  // yellow tabs (homepage)
+  &-yellow {
+    li {
+      a {
+        &.active {
+          @include box-shadows(0, -6px, 0, $yellow, true);
+          color: $yellow !important;
+
+          @include media-breakpoint-up(md) {
+            @include box-shadows(0, -8px, 0, $yellow, true);
+          }
+        }
+
+        &:hover {
+          color: $yellow !important;
+        }
+      }
+    }
+  }
+}
+
+// tab content
+.tab-content {
+  @include px-to-rem(32, line-height);
+}
+
+.bg-primary .tab-content a {
+  color: inherit;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

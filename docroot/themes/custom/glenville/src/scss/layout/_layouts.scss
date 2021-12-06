@@ -1,0 +1,116 @@
+.region-container {
+  .block-region-subsection {
+    @include make-container();
+    @include make-container-max-widths();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .panel-container {
+    margin-bottom: 3em;
+  }
+
+  .form-control {
+    @include px-to-rem(13);
+
+    &::placeholder {
+      color: $gray-400;
+    }
+  }
+}
+
+// subsection headers
+.page-header {
+  @include px-to-rem(36);
+  @include px-to-rem(72, line-height);
+  margin: 0;
+  color: $white;
+  font-weight: $font-weight-semibold;
+
+  @include media-breakpoint-up(md) {
+    @include px-to-rem(48);
+  }
+}
+
+// 1 column layouts (headers)
+.panel-1col {
+  &.subsection {
+    @include px-to-rem(58, min-height);
+    background: $black;
+    background-size: cover !important;
+    background-position: center center !important;
+    color: $white;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: $black;
+      content: "";
+      opacity: 0.3;
+    }
+
+    @include media-breakpoint-up(sm) {
+      @include px-to-rem(99, min-height);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include px-to-rem(91, min-height);
+    }
+
+    .panel-panel {
+      position: relative;
+    }
+
+    .views-exposed-form {
+      padding: 0;
+    }
+
+    .form-text {
+      width: 100%;
+
+      @include media-breakpoint-up(md) {
+        width: auto;
+      }
+    }
+
+    .form-item,
+    .btn {
+      margin: 1em 0 0;
+      width: 100%;
+
+      @include media-breakpoint-up(md) {
+        margin: 1em .5em 0 0;
+        width: auto;
+      }
+    }
+
+    .select-wrapper,
+    .chosen-container {
+      width: 100%;
+
+      @include media-breakpoint-up(md) {
+        width: auto;
+      }
+    }
+
+    .ipe-actions-block,
+    .ipe-actions {
+      background: rgba(#fff, 0.6);
+      color: $gray-base;
+    }
+  }
+}
+
+// interior sidebar (right)
+.block-region-right {
+  .block-entity-fieldnodetitle {
+    @include px-to-rem(36);
+    @include px-to-rem(55, line-height);
+    color: $primary-darker;
+    font-weight: $font-weight-normal;
+  }
+}

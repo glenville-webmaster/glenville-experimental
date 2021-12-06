@@ -1,0 +1,137 @@
+.block--openedu-hero,
+.block-entity-fieldnodefield-program-hero {
+  background: $black;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 250px;
+
+  &.has-video {
+    .video-upload-control {
+      display: none;
+      position: absolute;
+      bottom: 24px;
+      right: 40px;
+
+      .material-icons {
+        font-size: 4em;
+        color: white;
+        cursor: pointer;
+        display: block;
+      }
+
+      .play {
+        display: none;
+      }
+
+      &.paused {
+        .pause {
+          display: none;
+        }
+        .play {
+          display: block;
+        }
+      }
+    }
+
+    .field--name-field-hero-video {
+      display: none;
+
+      .media--type-video-upload {
+        video {
+          width: 100%;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: auto;
+      max-height: 550px;
+
+      .video-upload-control {
+        display: block;
+      }
+
+      .field--name-field-hero-video {
+        display: block;
+        video {
+          display: block;
+        }
+      }
+
+      .field--name-field-hero-image {
+        display: none;
+      }
+
+      .field--name-body {
+        padding-top: $navbar-brand-height;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-height: 650px;
+    }
+
+  }
+
+  @include media-breakpoint-up(md) {
+    height: 350px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 550px;
+  }
+
+  .field--name-field-hero-image img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 100vw;
+    height: 50vh;
+    min-width: 100vw;
+    object-fit: cover;
+    width: 100%;
+    opacity: .7;
+
+    @include media-breakpoint-up(md) {
+      height: auto;
+    }
+  }
+
+  h1 {
+    @include px-to-rem(24);
+
+    @include media-breakpoint-up(lg) {
+      @include px-to-rem(48);
+    }
+  }
+
+  .field--name-body {
+    @include make-container();
+    @include make-container-max-widths();
+    @include verticalAlign(absolute);
+    color: $white;
+    padding: 0 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    p {
+      @include px-to-rem(16);
+      @include px-to-rem(24, line-height);
+      @include px-to-rem(10, margin-top);
+
+      @include media-breakpoint-up(lg) {
+        @include px-to-rem(24);
+        @include px-to-rem(35, line-height);
+        @include px-to-rem(30, margin-top);
+      }
+    }
+  }
+
+  // panels fixes
+  div.ipe-actions {
+    position: relative;
+    z-index: 1;
+  }
+}

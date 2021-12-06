@@ -1,0 +1,64 @@
+.node--type-profile {
+  .block-region-subsection {
+    padding-bottom: 2em;
+
+    .field--item.field--type-name {
+      margin-top: 0;
+      line-height: 1.1em;
+    }
+  }
+
+  .block-region-right {
+    .field--name-field-profile-research-interests .field__items {
+      text-align: center;
+    }
+
+    .block {
+      padding: 0;
+      margin: 1em auto;
+
+      .field {
+        .field--label {
+          @include icon(inherit, 'add_circle', 1.5em, $float: right);
+          cursor: pointer;
+          background: $primary-darker;
+          color: $white;
+          font-weight: $font-weight-semibold;
+          padding: 10px 20px;
+          margin: 0;
+
+          &:after {
+            float: right;
+            opacity: 0.65;
+          }
+
+          &:hover,
+          &.active {
+            background: $primary;
+
+            &:after {
+              opacity: 1;
+            }
+          }
+
+          &.active {
+            @include icon(inherit, 'remove_circle', 1.5em, $float: right);
+          }
+        }
+
+        .field__items {
+          margin: -5px auto 0;
+          padding: 20px;
+          border: 1px solid $gray-600;
+          border-top: none;
+        }
+
+        &.field--name-field-profile-research-interests .field--item {
+          margin: 1em auto;
+          max-width: 300px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

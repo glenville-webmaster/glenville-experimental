@@ -1,0 +1,91 @@
+/**
+ * Filter styles.
+ */
+
+// Mimic .panel-default styling.
+.filter-wrapper {
+  background-color: $white;
+  border: 1px solid $gray-300;
+  border-top: 0;
+  border-radius: 0 0 $border-radius $border-radius;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  margin-bottom: 0;
+  padding: 10px;
+  height: 51px;
+}
+
+.filter-help {
+  float: right;
+  line-height: 1;
+  margin: .5em 0 0;
+}
+
+// Full list page.
+.nav.nav-tabs.filter-formats {
+  margin-bottom: 15px;
+}
+
+// Exposed Form Theming
+.views-exposed-form {
+  padding: 1em 0;
+
+  .select-wrapper {
+    width: 30%;
+
+    a.chosen-single {
+      background: $primary-darker;
+      color: $white;
+      border: 1px solid $primary-darker;
+      box-shadow: none;
+    }
+
+    select {
+      background-color: $gray-300;
+      width: 100%;
+      border: none;
+      font-weight: 500;
+      box-shadow: none;
+      color: $gray-base;
+      padding-top: 0.8em;
+      padding-bottom: 0.8em;
+      border-radius: 0.5em;
+    }
+
+    &:after {
+      color: #fff;
+    }
+  }
+
+  .form-item-items-per-page {
+    float: right;
+  }
+}
+
+.form-group header {
+  margin: 1em auto;
+}
+
+// Query Filter Card Theming
+.query-filter-cards {
+  display: inline-block;
+  margin: 0 0 1em 1em;
+
+  .card {
+    &:not(.clear) {
+      @extend .site-tag-clr;
+      margin: 0 0 0 0.625rem;
+    }
+
+    &.clear {
+      @extend .btn;
+      margin: 0 0 0 0.625rem;
+      color: $blue-005;
+      background-color: #fff;
+      border-color: #fff;
+    }
+
+    a {
+      margin: 0 0 0 0.625rem;
+    }
+  }
+}

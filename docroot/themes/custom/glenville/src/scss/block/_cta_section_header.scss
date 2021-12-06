@@ -1,0 +1,15 @@
+.block--cta-section-header,
+.region-container section.block.block--cta-section-header {
+  background-color: $gray-300;
+  padding: 2em 1em;
+
+  h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 0;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

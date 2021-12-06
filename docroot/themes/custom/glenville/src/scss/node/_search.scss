@@ -1,0 +1,42 @@
+// Results page header.
+.view-openedu-search .view-header {
+  padding-bottom: 1.75em;
+  margin-bottom: 2.5em;
+  border-bottom: 1px solid #f1f1f1;
+  color: $gray-darker;
+}
+
+// Results page container.
+.view-openedu-search .view-content {
+  margin: 0 0 2em;
+}
+
+// Results row.
+.search-result {
+  position: relative;
+  padding-right: 1.25em;
+  margin-bottom: 1.25em;
+
+  h2 {
+    padding: 0;
+    margin: 0 0 0.125em;
+    font-family: $font-family-base;
+    font-size: 1.75em;
+    font-weight: 600;
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  cite {
+    font-size: .875em;
+    font-style: normal;
+    color: $gray-darker;
+  }
+
+  .content {
+    margin-top: 1em;
+    color: $gray-darker;
+  }
+}

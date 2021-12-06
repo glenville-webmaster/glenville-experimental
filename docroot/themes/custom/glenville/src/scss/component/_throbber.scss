@@ -1,0 +1,58 @@
+$size: 23px;
+$position: 50%;
+$duration: 2s;
+$stroke-dash--end: 150;
+$colour-start: $primary;
+$colour-end: lighten($colour-start, 30%);
+
+.progress-throbber {
+  opacity: 0;
+  z-index: 2;
+  position: absolute;
+  top: $position;
+  right: $position;
+  margin: -($size / 2) 0 0 -($size / 2);
+  width: $size;
+  height: $size;
+  animation: rotate $duration linear infinite;
+
+  & .path {
+    stroke: $colour-start;
+    stroke-linecap: round;
+    animation: dash $duration ease-in-out infinite, colors $duration ease-in-out infinite;
+  }
+}
+
+.form-autocomplete.ui-autocomplete-loading ~ .progress-throbber {
+  opacity: 1;
+}
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, $stroke-dash--end;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, $stroke-dash--end;
+    stroke-dashoffset: -35;
+  }
+
+  100% {
+    stroke-dasharray: 90, $stroke-dash--end;
+    stroke-dashoffset: -124;
+  }
+}
+
+// adding a gradient
+@keyframes colors {
+  0% { stroke: $colour-start; }
+
+  50% { stroke: $colour-end; }
+
+  100% { stroke: $colour-start; }
+}

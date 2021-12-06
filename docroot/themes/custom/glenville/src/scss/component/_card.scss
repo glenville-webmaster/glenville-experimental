@@ -1,0 +1,140 @@
+// add margins to group decks
+.card-group {
+
+  @include media-breakpoint-up(sm) {
+    @include px-to-rem(-15, margin-right);
+    @include px-to-rem(-15, margin-left);
+
+    > .card {
+      @include px-to-rem(15, margin-right);
+      @include px-to-rem(15, margin-left);
+    }
+  }
+}
+
+// Card deck
+.card-deck {
+  @include media-breakpoint-up(sm) {
+
+    .card {
+      @include px-to-rem(15, margin-right);
+      @include px-to-rem(15, margin-left);
+    }
+  }
+}
+
+.card {
+
+  // adjust margins to match left/right
+  @include media-breakpoint-up(md) {
+    margin-bottom: $grid-gutter-width;
+  }
+}
+
+.card-header {
+  h3 {
+    font-weight: $font-weight-normal;
+  }
+  h4 {
+    font-weight: $font-weight-bold;
+  }
+}
+
+.card-title a {
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.card-body-media {
+  overflow-y: hidden;
+  background-color: $black;
+}
+
+// overlay cards
+.overlay {
+  &-black,
+  &-blue {
+    .card-header {
+      @include media-breakpoint-down(md) {
+        h4 {
+          font-size: $h6-font-size;
+        }
+      }
+
+      position: absolute;
+      z-index: 1;
+    }
+
+    .field--type-image,
+    .field--type-image img {
+      width: 100%;
+    }
+
+    .card-img-overlay {
+
+      // only for small devices
+      @include media-breakpoint-down(md) {
+        h4 {
+          font-size: $h6-font-size;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+      }
+
+      position: static;
+    }
+
+  }
+
+  &-black .card-img-overlay {
+    @include media-breakpoint-up(lg) {
+      background: rgba($black, .7);
+    }
+
+    background: $black;
+    top: auto;
+  }
+
+  &-blue .card-img-overlay {
+    @include media-breakpoint-up(lg) {
+      background: rgba($primary, .7);
+    }
+
+    background: $primary;
+    top: auto;
+  }
+}
+
+// underlay cards
+.underlay-black {
+  .card-title {
+    padding: 15px 0;
+    background: rgba($black, .7);
+    text-transform: uppercase;
+  }
+}
+
+// fix for academics dates
+.cards-per-row-4 {
+  .featured {
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    .card-header {
+      padding: 1.5625rem 1rem;
+
+      h3 {
+        font-size: $h6-font-size;
+      }
+    }
+
+    .card-body {
+      @include px-to-rem(16, padding);
+    }
+  }
+}

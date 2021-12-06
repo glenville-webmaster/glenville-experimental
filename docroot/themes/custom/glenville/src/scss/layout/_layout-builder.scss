@@ -1,0 +1,23 @@
+// Styles for Layout Builder, if needed
+
+form.layout-builder-form {
+  width: 90%;
+  margin: auto;
+  
+  + div#layout-builder {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+div.layout-builder__section {
+
+  section.block--openedu-hero {
+    margin-top: 0;
+  }
+
+}
+
+section.layout-builder-block {
+  background: inherit;
+}

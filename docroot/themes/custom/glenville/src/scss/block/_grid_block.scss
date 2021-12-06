@@ -1,0 +1,12 @@
+.field--name-field-grid-content {
+  @include make-row();
+
+  .img-responsive {
+    margin: auto;
+  }
+
+  & > .field--item {
+    margin-bottom: 2em;
+  }
+}
+

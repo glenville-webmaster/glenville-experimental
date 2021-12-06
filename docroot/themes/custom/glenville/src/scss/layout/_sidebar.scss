@@ -1,0 +1,123 @@
+// sidebar navigation
+.sidebar_nav {
+  @include px-to-rem(15, padding);
+  @include px-to-rem(16);
+  border-top: 1px solid $white;
+  background-color: $gray-100;
+  width: 100%;
+
+  a {
+    @include px-to-rem(20, padding);
+    @include px-to-rem(8, padding-top);
+    @include px-to-rem(8, padding-bottom);
+    display: block;
+    color: $gray-700;
+    transition: color .3s ease-in-out;
+
+    &:hover,
+    &.is-active {
+      color: $primary;
+    }
+
+    &.is-active {
+      font-weight: $font-weight-normal;
+    }
+  }
+
+  // Second level
+  li > ul {
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+// interior sidebar (left)
+.sidebar {
+  section {
+    @include px-to-rem(40, margin-top);
+
+    &:first-child {
+      margin: 0;
+    }
+
+    // reset margins
+    &.block-entity-fieldnodefield-event-directions,
+    &.block-entity-fieldnodefield-events-event-map {
+      margin: 0;
+    }
+  }
+
+  .block-title {
+    @include px-to-rem(24);
+    @include px-to-rem(25, padding-bottom);
+    color: $gray-700;
+    font-weight: $font-weight-normal;
+  }
+
+  .field--label {
+    @include px-to-rem(15);
+    @include px-to-rem(20, padding-bottom);
+    font-weight: $font-weight-semibold;
+  }
+}
+
+// interior sidebar (right)
+.block-region-right {
+  .block-title {
+    @include px-to-rem(36);
+    font-weight: $font-weight-bold;
+    padding: 0;
+    color: $primary;
+  }
+
+  .flickity-viewport {
+    @include px-to-rem(30, margin-bottom);
+    border-bottom: 2px solid rgba($gray-darker, 0.2);
+
+    .gallery-cell .image img {
+      width: 100%;
+      border-radius: $border-radius-lg;
+    }
+  }
+
+  .flickity-prev-next-button {
+    @include media-breakpoint-down(xs) {
+      top: 25%;
+    }
+  }
+}
+
+// categories
+.block-entity-fieldnodefield-news-categories .field--item,
+.block-entity-fieldnodefield-phoenix-categories .field--item {
+  @include px-to-rem(16);
+  @include px-to-rem(15, padding-left);
+  @include px-to-rem(8, padding-bottom);
+  font-weight: $font-weight-normal;
+
+  &:before{
+    @include px-to-rem(22, padding-right);
+    content: '•';
+  }
+}
+
+// tags
+.block-entity-fieldnodefield-news-tags .field--item,
+.block-entity-fieldnodefield-phoenix-tags .field--item {
+  @extend .site-tag-clr;
+}
+
+// social sharing
+.block-addtoany-block {
+  display: flex;
+  align-items: center;
+  margin: 0.875em auto 1.6em;
+
+  h2 {
+    @include px-to-rem(16);
+    @include px-to-rem(0, margin);
+    @include px-to-rem(10, padding-right);
+    color: $gray-700;
+    font-weight: $font-weight-semibold;
+  }
+}

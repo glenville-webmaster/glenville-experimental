@@ -1,0 +1,299 @@
+// Glenville Header
+.site-header {
+  position: relative;
+  z-index: $zindex-sticky;
+
+  .navbar-light {
+    @include media-breakpoint-up(lg) {
+      background-color: rgba($primary-darker, .4) !important;
+    }
+  }
+}
+
+// Adjust Logo Size
+.navbar-brand {
+  @include px-to-rem(102, max-width);
+
+  @include media-breakpoint-up(md) {
+    max-width: unset;
+  }
+}
+
+// Top Header Navbar.
+.header__bar {
+  @include px-to-rem(16);
+  background-color: $primary-darker;
+
+  // Resources & Utility Navigation.
+  h2 {
+    @include px-to-rem(16);
+    @include px-to-rem(15, margin-bottom);
+    font-weight: $font-weight-light;
+    color: $gray-400;
+  }
+
+  span:not(.caret) {
+    @include px-to-rem(16);
+    font-weight: $font-weight-light;
+    color: $gray-400;
+    text-transform: uppercase;
+  }
+
+  a {
+    font-weight: $font-weight-normal;
+    transition: all, .3s ease-in-out;
+
+    // submenu links (gateway & quick links)
+    &:not(.nav-link, .btn-light, .dropdown-item-link) {
+      font-weight: $font-weight-light;
+      text-transform: uppercase;
+    }
+
+    &:not(.btn-light) {
+      color: $white;
+
+      &:hover {
+        color: $yellow;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    @include px-to-rem(12);
+    background-color: $primary;
+    text-transform: uppercase;
+
+    h2 {
+      @include px-to-rem(12);
+    }
+
+    .menu--utility-navigation h2 {
+      display: none;
+    }
+
+    h2,
+    span {
+      @include px-to-rem(10, margin-right);
+      margin-bottom: 0;
+      color: $white;
+    }
+
+    a {
+      @include px-to-rem(15, margin-right);
+
+      &:not(.nav-link, .btn-light, .dropdown-item-link) {
+        font-weight: $font-weight-normal;
+      }
+    }
+
+    li:last-child a {
+      margin: 0;
+    }
+  }
+}
+
+
+// Search & Menu Button
+.header__bar--menu_btn {
+  @include px-to-rem(8, padding);
+  @include px-to-rem(5, margin-left);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+
+  span {
+    @include px-to-rem(10);
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:after {
+    display: none;
+  }
+}
+
+/**
+* Search Bar Navbar.
+*/
+.search_bar {
+  @include px-to-rem(-45, bottom);
+  position: absolute;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  .form--inline {
+    @include px-to-rem(38, height);
+    align-items: stretch !important;
+    flex-direction: column;
+
+    .form-item {
+      @include px-to-rem(3, padding-right);
+      float: none;
+      margin: 0;
+      width: calc(100% - 80px);
+    }
+  }
+
+  .views-exposed-form {
+    padding: 0;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .form-control,
+  .form-submit {
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .form-control {
+    @include px-to-rem(16);
+    @include px-to-rem(3, border-radius);
+    float: none;
+    width: 100%;
+    border: 1px solid transparent;
+    background-color: $white;
+    font-weight: $font-weight-light;
+    box-shadow: none;
+    border-radius: 3px;
+
+    &:focus {
+      border-color: $primary;
+    }
+
+    &::placeholder {
+      color: $gray-400;
+    }
+  }
+
+  // submit button
+  .form-actions {
+    margin: 0;
+  }
+
+  .form-submit {
+    @include px-to-rem(3, border-radius);
+    @include px-to-rem(80, width);
+    background-color: $blue-027;
+    font-weight: $font-weight-light;
+
+    &:hover {
+      background-color: $primary;
+    }
+  }
+}
+
+// navbar search & site search page
+.search-form-wrapper {
+  .progress-throbber {
+    right: 10px;
+  }
+
+  .form--inline .form-item {
+    position: relative;
+  }
+
+  .form-control {
+    background-image: none !important;
+  }
+}
+
+/**
+* Main Header Navbar.
+*/
+#navbar {
+  @include make-container();
+  @include make-container-max-widths();
+  /* @include media-breakpoint-down(xxl); */
+
+  // top level links
+  // here down ↓ (only used when mega menu not in use)
+  .nav-item {
+    a {
+      @include px-to-rem(15);
+      @include px-to-rem(12, padding);
+      font-weight: $font-weight-semibold;
+      color: $white;
+      display: block;
+
+      &:hover,
+      &:active,
+      &.is-active {
+        color: $yellow;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .nav .dropdown {
+    .dropdown-toggle {
+      &.active {
+        color: #555;
+        background-color: #e7e7e7;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    // main nav > dropdown
+    .dropdown-menu {
+      border-radius: 0;
+
+      a {
+        font-size: .875rem;
+        color: $gray-darker;
+        display: block;
+      }
+
+      li:hover,
+      li.active,
+      li:active {
+        background: $primary-lighter;
+
+        a {
+          color: $white;
+          text-decoration: none;
+        }
+      }
+
+      li.active,
+      li:active {
+        background: $primary-light;
+      }
+    }
+
+    // show subnav on hover
+    &:hover .dropdown-menu {
+      display: block;
+    }
+  }
+}
+
+// Move hero & subsections up
+// Make sure panelizer isn't active
+section.block--openedu-hero:not(.active),
+.block--openedu-hero:not(.active),
+section.subsection:not(.active),
+section.block-entity-fieldnodefield-program-hero:not(.active),
+.block-entity-fieldnodefield-program-hero:not(.active) {
+  position: relative;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: -$navbar-brand-height + px;
+
+    &:not(.has-video) {
+      padding-top: $navbar-brand-height + px;
+    }
+  }
+}
+

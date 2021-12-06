@@ -1,0 +1,78 @@
+// greasy
+.homepage .field--name-body {
+
+  @include media-breakpoint-down(xs) {
+    h2 {
+      font-size: $h4-font-size;
+    }
+
+    .lead {
+      @include px-to-rem(25, line-height);
+      font-size: $font-size-base;
+    }
+  }
+}
+
+// homepage
+.homepage-statistics {
+  @include px-to-rem(-30, margin-top);
+
+  @include media-breakpoint-up(lg) {
+    @include px-to-rem(-95, margin-top);
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include px-to-rem(-120, margin-top);
+  }
+}
+
+.homepage-aside > div {
+  @include px-to-rem(10, padding);
+  height: 100%;
+  background-color: $gray-100;
+  font-size: $font-size-sm;
+
+  h4 {
+    font-size: $h6-font-size;
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include px-to-rem(37, padding);
+
+    h4 {
+      font-size: $h4-font-size;
+    }
+  }
+}
+
+.homepage-cards {
+  .card {
+    @include px-to-rem(10, margin-bottom);
+  }
+
+  @include media-breakpoint-up(sm) {
+    .card {
+      @include px-to-rem(8, margin-bottom);
+    }
+
+    .col-sm {
+      &:first-child {
+        @include px-to-rem(4, padding-right);
+      }
+
+      &:last-child {
+        @include px-to-rem(4, padding-left);
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    .col-sm {
+      padding: 0;
+    }
+
+    .card-text {
+      @include px-to-rem(14);
+    }
+  }
+}

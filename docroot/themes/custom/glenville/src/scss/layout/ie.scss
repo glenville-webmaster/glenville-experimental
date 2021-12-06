@@ -1,0 +1,11 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .card {
+    @include iefix;
+
+    > a,
+    .field--name-field-card-media,
+    .field--name-image {
+      @include iefix;
+    }
+  }
+}

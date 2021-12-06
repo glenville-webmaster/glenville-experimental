@@ -1,0 +1,65 @@
+footer.footer {
+  @include px-to-rem(13);
+
+  // titles
+  h2 {
+    @include px-to-rem(12);
+    color: $gray-100;
+    text-transform: uppercase;
+  }
+
+  // links
+  a {
+    color: $gray-100;
+
+    &:hover {
+      color: $yellow;
+      text-decoration: none;
+    }
+  }
+
+  // social
+  .footer-top {
+    background-color: $gray-100;
+
+    h5 {
+      @include px-to-rem(16);
+      @include px-to-rem(30, margin-bottom);
+      color: $primary-darker;
+      text-transform: uppercase;
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  // logo & menus
+  .footer-main {
+    @include px-to-rem(28, line-height);
+    color: $white;
+    background-color: $primary-darker;
+
+    p:first-child {
+      @include px-to-rem(-5, margin-top);
+    }
+
+    // navs
+    .nav {
+      flex-direction: column !important;
+    }
+  }
+
+  // copyright & links
+  .footer-bottom {
+    @include px-to-rem(11);
+    color: $white;
+    background-color: $primary;
+    text-transform: uppercase;
+    font-weight: $font-weight-semibold;
+  }
+
+  @include media-breakpoint-up(md) {
+    .footer-top h5 {
+      margin-bottom: 0;
+    }
+  }
+
+}

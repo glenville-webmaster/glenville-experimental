@@ -1,0 +1,23 @@
+blockquote {
+  @include px-to-rem(21);
+  @include px-to-rem(28, line-height);
+  position: relative;
+  font-family: $font-family-serif;
+  color: $primary;
+  padding: 20px 10px 10px  55px;
+  border: none;
+  font-weight: $font-weight-normal;
+  background: none;
+  
+  &:before {
+    @include px-to-rem(60);
+    @include px-to-rem(24, left);
+    @include px-to-rem(24, top);
+    display: block;
+    content: "\201C";
+    position: absolute;
+    color: $primary;
+    font-weight: $font-weight-normal;
+    line-height: 1;
+  }
+}

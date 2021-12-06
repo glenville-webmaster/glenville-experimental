@@ -1,0 +1,55 @@
+li a.btn-cta,
+.btn-cta {
+  background: $gray-dark;
+  display: inline-block;
+  color: white;
+  font-size: 0.9em;
+  font-weight: 600;
+  padding: 1em 2.5em;
+  box-shadow: 0 0 0 1px $gray-light;
+
+  &:hover {
+    opacity: 0.9;
+    text-decoration: none;
+  }
+
+  &.call-out {
+    @include icon(inherit, 'arrow_forward', 1.25em, bottom);
+
+    padding-right: 1.2em;
+    background: linear-gradient(60deg, #3283b5 65%, #2d739f 54%);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#3283b5', endColorstr='#2d739f', GradientType=1);
+
+    &:after {
+      padding-left: 1em;
+    }
+  }
+}
+
+.responsive-dropdown {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 3px;
+  background-color: $gray-lighter;
+
+  i {
+    padding-right: 5px;
+  }
+
+  p {
+    @include icon(inherit, 'keyboard_arrow_down', 1.5em);
+
+    display: inline-block;
+
+    &:after {
+      padding-left: 5px;
+    }
+  }
+
+  &.open p {
+    @include icon(inherit, 'keyboard_arrow_up', 1.5em);
+  }
+}
